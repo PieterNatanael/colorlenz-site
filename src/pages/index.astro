@@ -161,6 +161,7 @@ import { SITE_TITLE, SITE_DESCRIPTION, APP_STORE_URL } from '../consts';
                 join the list and we'll tell you the moment it's ready.
               </p>
               <form class="waitlist-form" id="waitlist-form">
+                <input type="hidden" name="form_type" value="windows-waitlist" />
                 <input
                   type="email"
                   name="email"
@@ -197,7 +198,7 @@ import { SITE_TITLE, SITE_DESCRIPTION, APP_STORE_URL } from '../consts';
 
     try {
       // Replace with your Formspree / Cloudflare Worker endpoint
-      const res = await fetch('https://formspree.io/f/YOUR_FORM_ID', {
+      const res = await fetch('https://formspree.io/f/mrejvron', {
         method: 'POST',
         headers: { 'Content-Type': 'application/json', Accept: 'application/json' },
         body: JSON.stringify({ email }),
