@@ -1,0 +1,295 @@
+---
+import BaseHead from '../components/BaseHead.astro';
+import Header from '../components/Header.astro';
+import Footer from '../components/Footer.astro';
+import { APP_STORE_URL } from '../consts';
+---
+
+<!doctype html>
+<html lang="en">
+  <head>
+    <BaseHead
+      title="Support"
+      description="Get help with ColorLenz. Answers to common questions about installation, presets, Privacy Mode, and more."
+    />
+  </head>
+  <body>
+    <Header />
+    <main>
+      <div class="container page-wrap">
+
+        <header class="page-header">
+          <div class="section-label">Help & FAQ</div>
+          <h1>Support</h1>
+          <p class="page-intro">
+            Quick answers to common questions. If something isn't here,
+            <a href="mailto:hello@colorlenz.com">send us a note</a>.
+          </p>
+        </header>
+
+        <div class="faq-sections">
+
+          <div class="faq-group">
+            <h2>Getting started</h2>
+            <dl class="faq-list">
+
+              <div class="faq-item">
+                <dt>How do I install ColorLenz?</dt>
+                <dd>
+                  Download it from the <a href={APP_STORE_URL} target="_blank" rel="noopener">Mac App Store</a>.
+                  Once installed, open the app — it lives in your menu bar and starts working immediately.
+                  No account, no setup required.
+                </dd>
+              </div>
+
+              <div class="faq-item">
+                <dt>Is ColorLenz really free?</dt>
+                <dd>
+                  Yes. ColorLenz is free to start. Some advanced features or additional presets may be
+                  available as optional upgrades, but the core experience costs nothing.
+                </dd>
+              </div>
+
+              <div class="faq-item">
+                <dt>What macOS version do I need?</dt>
+                <dd>
+                  ColorLenz requires macOS 13 (Ventura) or later. It's optimized for Apple Silicon but
+                  runs great on Intel Macs too.
+                </dd>
+              </div>
+
+              <div class="faq-item">
+                <dt>Will ColorLenz slow down my computer?</dt>
+                <dd>
+                  No. ColorLenz is designed to be lightweight. It uses a compositing layer that
+                  works with your display hardware rather than intercepting every frame, so CPU and
+                  battery impact are minimal.
+                </dd>
+              </div>
+
+            </dl>
+          </div>
+
+          <div class="faq-group">
+            <h2>Using the app</h2>
+            <dl class="faq-list">
+
+              <div class="faq-item">
+                <dt>What are the seven presets?</dt>
+                <dd>
+                  Cold Sheep, Brain Power, Caramel Slice, Curious Alpaca, Foggy Mind,
+                  Sick Rooster, and Tiger Toast. Each one is a carefully tuned combination of
+                  color temperature, tint, and contrast. The best way to understand them is to
+                  try them — they're designed to feel intuitive once you experience them.
+                </dd>
+              </div>
+
+              <div class="faq-item">
+                <dt>Can I create my own presets?</dt>
+                <dd>
+                  Yes. Use the Custom Presets feature to dial in your own filter combination and
+                  give it a name you'll actually remember.
+                </dd>
+              </div>
+
+              <div class="faq-item">
+                <dt>What are the 14 pill themes?</dt>
+                <dd>
+                  Pill themes change the visual style of the ColorLenz floating interface itself —
+                  think of it as choosing a case for your lens. They don't affect the color filter,
+                  just how the app looks on screen.
+                </dd>
+              </div>
+
+              <div class="faq-item">
+                <dt>How does Privacy Mode work?</dt>
+                <dd>
+                  Privacy Mode wraps your screen in a dark overlay, instantly obscuring your content
+                  from anyone nearby. One tap to activate, one tap to dismiss. It's designed for
+                  public spaces, shared offices, or any moment you need a second of visual quiet.
+                </dd>
+              </div>
+
+              <div class="faq-item">
+                <dt>Does ColorLenz work with all apps?</dt>
+                <dd>
+                  Yes. The floating lens works on top of any app or window — browsers, editors,
+                  video players, design tools, everything. A small number of full-screen video
+                  games that bypass the system compositor may be unaffected.
+                </dd>
+              </div>
+
+            </dl>
+          </div>
+
+          <div class="faq-group">
+            <h2>Windows &amp; other platforms</h2>
+            <dl class="faq-list">
+
+              <div class="faq-item">
+                <dt>Is there a Windows version?</dt>
+                <dd>
+                  Not yet, but it's coming. <a href="/#waitlist">Join the waitlist</a> and
+                  we'll email you the moment it's ready.
+                </dd>
+              </div>
+
+              <div class="faq-item">
+                <dt>What about iOS or iPadOS?</dt>
+                <dd>
+                  Not planned at the moment. We're focused on getting the desktop experience
+                  right before expanding to other platforms.
+                </dd>
+              </div>
+
+            </dl>
+          </div>
+
+          <div class="faq-group">
+            <h2>Privacy &amp; data</h2>
+            <dl class="faq-list">
+
+              <div class="faq-item">
+                <dt>Does ColorLenz collect any data about me?</dt>
+                <dd>
+                  No. ColorLenz does not collect, store, or transmit personal data. It runs
+                  entirely on your device. See our <a href="/privacy">Privacy Policy</a> for
+                  the full details.
+                </dd>
+              </div>
+
+              <div class="faq-item">
+                <dt>Does it require an internet connection?</dt>
+                <dd>
+                  No. ColorLenz works fully offline. An internet connection is only needed
+                  to download the app from the Mac App Store.
+                </dd>
+              </div>
+
+            </dl>
+          </div>
+
+        </div>
+
+        <div class="contact-block">
+          <h3>Still have a question?</h3>
+          <p>
+            We're a small team and we genuinely read every message. Reach out at{' '}
+            <a href="mailto:hello@colorlenz.com">hello@colorlenz.com</a>.
+          </p>
+        </div>
+
+      </div>
+    </main>
+    <Footer />
+  </body>
+</html>
+
+<style>
+  .page-wrap {
+    max-width: 760px;
+    padding-top: 4rem;
+    padding-bottom: 4rem;
+  }
+
+  .page-header {
+    margin-bottom: 3.5rem;
+  }
+
+  .section-label {
+    font-size: 0.75rem;
+    font-weight: 600;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+    color: var(--accent);
+    margin-bottom: 0.75rem;
+  }
+
+  .page-header h1 {
+    margin-bottom: 0.75rem;
+  }
+
+  .page-intro {
+    font-size: 1.05rem;
+    color: var(--text-muted);
+    margin: 0;
+  }
+
+  .faq-sections {
+    display: flex;
+    flex-direction: column;
+    gap: 3rem;
+  }
+
+  .faq-group h2 {
+    font-size: 1rem;
+    font-weight: 600;
+    color: var(--text-muted);
+    text-transform: uppercase;
+    letter-spacing: 0.06em;
+    margin-bottom: 1rem;
+    padding-bottom: 0.75rem;
+    border-bottom: 1px solid var(--border);
+  }
+
+  .faq-list {
+    display: flex;
+    flex-direction: column;
+    gap: 0;
+  }
+
+  .faq-item {
+    border-bottom: 1px solid var(--border);
+    padding: 1.25rem 0;
+  }
+
+  .faq-item:last-child {
+    border-bottom: none;
+  }
+
+  dt {
+    font-size: 0.97rem;
+    font-weight: 600;
+    color: var(--text);
+    margin-bottom: 0.5rem;
+    cursor: default;
+  }
+
+  dd {
+    margin: 0;
+    font-size: 0.93rem;
+    color: var(--text-muted);
+    line-height: 1.75;
+  }
+
+  dd a {
+    color: var(--accent);
+    text-decoration: underline;
+    text-underline-offset: 3px;
+  }
+
+  .contact-block {
+    margin-top: 4rem;
+    padding: 2rem;
+    background: var(--bg-card);
+    border: 1px solid var(--border);
+    border-radius: var(--radius);
+  }
+
+  .contact-block h3 {
+    margin-bottom: 0.5rem;
+    font-size: 1.1rem;
+  }
+
+  .contact-block p {
+    margin: 0;
+    font-size: 0.93rem;
+    color: var(--text-muted);
+  }
+
+  .contact-block a {
+    color: var(--accent);
+    text-decoration: underline;
+    text-underline-offset: 3px;
+  }
+</style>

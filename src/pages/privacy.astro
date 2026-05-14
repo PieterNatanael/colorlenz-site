@@ -1,0 +1,241 @@
+---
+import BaseHead from '../components/BaseHead.astro';
+import Header from '../components/Header.astro';
+import Footer from '../components/Footer.astro';
+---
+
+<!doctype html>
+<html lang="en">
+  <head>
+    <BaseHead
+      title="Privacy Policy & Terms"
+      description="ColorLenz Privacy Policy and Terms of Use. We don't collect your data. Here's the full picture."
+    />
+  </head>
+  <body>
+    <Header />
+    <main>
+      <div class="container page-wrap">
+
+        <header class="page-header">
+          <div class="section-label">Legal</div>
+          <h1>Privacy Policy &amp; Terms</h1>
+          <p class="page-intro">
+            Short version: we don't collect your data. Here's the long version.
+          </p>
+          <p class="effective-date">Effective date: May 14, 2026</p>
+        </header>
+
+        <div class="prose legal-prose">
+
+          <h2>Privacy Policy</h2>
+
+          <h3>Overview</h3>
+          <p>
+            ColorLenz is built on a simple principle: your screen is yours. The app runs
+            entirely on your device and does not collect, store, transmit, or share any
+            personal information. There is no account system, no analytics, no telemetry.
+          </p>
+
+          <h3>What we collect</h3>
+          <p>Nothing. ColorLenz does not collect any personal data.</p>
+          <p>
+            The app operates as a local macOS application. All settings, presets, and
+            preferences are stored locally on your device using standard macOS storage
+            mechanisms. They never leave your machine.
+          </p>
+
+          <h3>Third-party services</h3>
+          <p>
+            ColorLenz is distributed through the Apple Mac App Store. Apple's own privacy
+            practices govern the download and purchase process. You can review Apple's
+            privacy policy at <a href="https://www.apple.com/legal/privacy/" target="_blank" rel="noopener noreferrer">apple.com/legal/privacy</a>.
+          </p>
+          <p>
+            If you join the Windows waitlist on our website, we collect your email address
+            for the sole purpose of notifying you when the Windows version is available.
+            We use a third-party form processor (Formspree) to handle these submissions.
+            We will never sell or share your email with anyone. You can request removal
+            at any time by emailing <a href="mailto:hello@colorlenz.com">hello@colorlenz.com</a>.
+          </p>
+
+          <h3>Cookies &amp; website analytics</h3>
+          <p>
+            The colorlenz.com website does not use tracking cookies or third-party analytics.
+            Standard server logs (IP address, browser type, page visited) may be retained
+            briefly by our hosting provider (Cloudflare Pages) in accordance with their
+            privacy policy.
+          </p>
+
+          <h3>Children's privacy</h3>
+          <p>
+            ColorLenz does not knowingly collect any information from children under 13.
+            As the app collects no data from anyone, this requirement is met by default.
+          </p>
+
+          <h3>Changes to this policy</h3>
+          <p>
+            If we ever change our data practices in a meaningful way, we will update this
+            page and the effective date above. We will not make changes that reduce your
+            privacy without clear notice.
+          </p>
+
+          <h3>Contact</h3>
+          <p>
+            Privacy questions? Email us at{' '}
+            <a href="mailto:hello@colorlenz.com">hello@colorlenz.com</a>.
+          </p>
+
+          <hr />
+
+          <h2>Terms of Use</h2>
+
+          <h3>Acceptance</h3>
+          <p>
+            By downloading or using ColorLenz, you agree to these terms. If you don't
+            agree, please don't use the app.
+          </p>
+
+          <h3>License</h3>
+          <p>
+            ColorLenz grants you a personal, non-exclusive, non-transferable license to
+            use the application on Apple-branded devices that you own or control, subject
+            to the Apple Media Services Terms and Conditions.
+          </p>
+          <p>You may not:</p>
+          <ul>
+            <li>Copy, modify, or distribute the application</li>
+            <li>Reverse engineer or attempt to extract the source code</li>
+            <li>Use the application for any unlawful purpose</li>
+            <li>Sublicense or sell access to the application</li>
+          </ul>
+
+          <h3>Disclaimer of warranties</h3>
+          <p>
+            ColorLenz is provided "as is" without warranty of any kind. We make no
+            representations about the suitability of the app for any particular purpose.
+            We do not make any medical claims. ColorLenz is a screen filter tool, not a
+            medical device or therapeutic product.
+          </p>
+
+          <h3>Limitation of liability</h3>
+          <p>
+            To the fullest extent permitted by law, ColorLenz and its developers shall
+            not be liable for any indirect, incidental, or consequential damages arising
+            from your use of the application.
+          </p>
+
+          <h3>Governing law</h3>
+          <p>
+            These terms are governed by the laws of the jurisdiction in which ColorLenz
+            is registered, without regard to conflict of law provisions.
+          </p>
+
+          <h3>Changes to terms</h3>
+          <p>
+            We may update these terms from time to time. Continued use of the app after
+            changes constitutes acceptance of the updated terms. We'll always post the
+            effective date of the most recent version above.
+          </p>
+
+          <h3>Contact</h3>
+          <p>
+            Questions about these terms? Email us at{' '}
+            <a href="mailto:hello@colorlenz.com">hello@colorlenz.com</a>.
+          </p>
+
+        </div>
+      </div>
+    </main>
+    <Footer />
+  </body>
+</html>
+
+<style>
+  .page-wrap {
+    max-width: 760px;
+    padding-top: 4rem;
+    padding-bottom: 4rem;
+  }
+
+  .page-header {
+    margin-bottom: 3rem;
+  }
+
+  .section-label {
+    font-size: 0.75rem;
+    font-weight: 600;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+    color: var(--accent);
+    margin-bottom: 0.75rem;
+  }
+
+  .page-header h1 {
+    margin-bottom: 0.75rem;
+  }
+
+  .page-intro {
+    font-size: 1.05rem;
+    color: var(--text-muted);
+    margin-bottom: 0.25rem;
+  }
+
+  .effective-date {
+    font-size: 0.82rem;
+    color: var(--text-subtle);
+    margin: 0;
+  }
+
+  .legal-prose {
+    max-width: 100%;
+  }
+
+  .legal-prose h2 {
+    font-size: 1.5rem;
+    margin: 3rem 0 1rem;
+    padding-bottom: 0.75rem;
+    border-bottom: 1px solid var(--border);
+  }
+
+  .legal-prose h2:first-child {
+    margin-top: 0;
+  }
+
+  .legal-prose h3 {
+    font-size: 1rem;
+    font-weight: 600;
+    color: var(--text);
+    margin: 2rem 0 0.5rem;
+  }
+
+  .legal-prose p {
+    font-size: 0.93rem;
+    color: var(--text-muted);
+    line-height: 1.8;
+    margin-bottom: 0.85rem;
+  }
+
+  .legal-prose ul {
+    list-style: disc;
+    padding-left: 1.5rem;
+    margin-bottom: 1rem;
+  }
+
+  .legal-prose li {
+    font-size: 0.93rem;
+    color: var(--text-muted);
+    line-height: 1.7;
+    margin-bottom: 0.3rem;
+  }
+
+  .legal-prose a {
+    color: var(--accent);
+    text-decoration: underline;
+    text-underline-offset: 3px;
+  }
+
+  .legal-prose hr {
+    margin: 3rem 0;
+  }
+</style>

@@ -1,49 +1,573 @@
 ---
+import { Image } from 'astro:assets';
 import BaseHead from '../components/BaseHead.astro';
-import Footer from '../components/Footer.astro';
 import Header from '../components/Header.astro';
-import { SITE_DESCRIPTION, SITE_TITLE } from '../consts';
+import Footer from '../components/Footer.astro';
+// Replace with: import userImage from '../assets/userimage.png';
+import userImage from '../assets/blog-placeholder-about.jpg';
+import { SITE_TITLE, SITE_DESCRIPTION, APP_STORE_URL } from '../consts';
 ---
 
 <!doctype html>
 <html lang="en">
-	<head>
-		<BaseHead title={SITE_TITLE} description={SITE_DESCRIPTION} />
-	</head>
-	<body>
-		<Header />
-		<main>
-			<h1>🧑‍🚀 Hello, Astronaut!</h1>
-			<p>
-				Welcome to the official <a href="https://astro.build/">Astro</a> blog starter template. This template
-				serves as a lightweight, minimally-styled starting point for anyone looking to build a personal
-				website, blog, or portfolio with Astro.
-			</p>
-			<p>
-				This template comes with a few integrations already configured in your
-				<code>astro.config.mjs</code> file. You can customize your setup with
-				<a href="https://astro.build/integrations">Astro Integrations</a> to add tools like Tailwind,
-				React, or Vue to your project.
-			</p>
-			<p>Here are a few ideas on how to get started with the template:</p>
-			<ul>
-				<li>Edit this page in <code>src/pages/index.astro</code></li>
-				<li>Edit the site header items in <code>src/components/Header.astro</code></li>
-				<li>Add your name to the footer in <code>src/components/Footer.astro</code></li>
-				<li>Check out the included blog posts in <code>src/content/blog/</code></li>
-				<li>Customize the blog post page layout in <code>src/layouts/BlogPost.astro</code></li>
-			</ul>
-			<p>
-				Have fun! If you get stuck, remember to
-				<a href="https://docs.astro.build/">read the docs</a>
-				or <a href="https://astro.build/chat">join us on Discord</a> to ask questions.
-			</p>
-			<p>
-				Looking for a blog template with a bit more personality? Check out
-				<a href="https://github.com/Charca/astro-blog-template">astro-blog-template</a>
-				by <a href="https://twitter.com/Charca">Maxi Ferreira</a>.
-			</p>
-		</main>
-		<Footer />
-	</body>
+  <head>
+    <BaseHead title={SITE_TITLE} description={SITE_DESCRIPTION} />
+  </head>
+  <body>
+    <Header />
+    <main>
+
+      <!-- ── HERO ── -->
+      <section class="hero">
+        <div class="container hero-inner">
+          <div class="hero-text">
+            <div class="badge">Free to start · macOS</div>
+            <h1>Built for brains that<br />work differently.</h1>
+            <p class="hero-sub">
+              A gentle floating lens that quietly adjusts your screen to match how
+              you think, focus, and feel. No setup. No noise. Just your screen,
+              working with you.
+            </p>
+            <div class="hero-ctas">
+              <a href={APP_STORE_URL} class="btn btn-primary btn-lg" target="_blank" rel="noopener noreferrer">
+                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 814 1000" fill="currentColor" aria-hidden="true">
+                  <path d="M788.1 340.9c-5.8 4.5-108.2 62.2-108.2 190.5 0 148.4 130.3 200.9 134.2 202.2-.6 3.2-20.7 71.9-68.7 141.9-42.8 61.6-87.5 123.1-155.5 123.1s-85.5-39.5-164-39.5c-76.5 0-103.7 40.8-165.9 40.8s-105-37.5-155.5-128.1c-43.3-78.9-65.6-158.6-65.6-235.3 0-200.3 125.1-272.2 247.2-272.2 54.7 0 101 36.4 135.5 36.4 33.2 0 85.1-38.8 146.5-38.8zm-163.7-108.8c26.8-30.5 45.6-72.9 45.6-115.3 0-5.8-.6-11.7-1.3-17.5-43.7 1.9-95.9 28.3-127 62.3-23.9 25.8-46.5 68.2-46.5 111.2 0 6.4.6 12.9 1.3 15.1 2.6.6 6.5 1.3 10.4 1.3 39.6 0 88.9-25.2 117.5-57.1z"/>
+                </svg>
+                Download on Mac — it's free to start
+              </a>
+              <a href="#waitlist" class="hero-windows-link">
+                Coming to Windows → Join the waitlist
+              </a>
+            </div>
+          </div>
+
+          <div class="hero-image">
+            <Image
+              src={userImage}
+              alt="Person using ColorLenz with a green screen"
+              width={480}
+              height={480}
+              class="user-img"
+            />
+          </div>
+        </div>
+      </section>
+
+      <!-- ── FEELING ── -->
+      <section class="feeling">
+        <div class="container feeling-inner">
+          <h2>Your screen should work<br />with your brain. Not against it.</h2>
+          <p>
+            Most screens weren't designed with your brain in mind. ColorLenz sits
+            quietly on top of your display — a soft, floating lens that filters and
+            tones your screen to match your mood, your focus, your pace. One tap.
+            No interruption.
+          </p>
+        </div>
+      </section>
+
+      <!-- ── PRESETS ── -->
+      <section class="presets">
+        <div class="container">
+          <div class="section-label">Presets</div>
+          <h2>Seven moods. Find yours.</h2>
+          <p class="section-sub">We named them. You'll understand when you try them.</p>
+          <ul class="presets-grid">
+            <li>Cold Sheep</li>
+            <li>Brain Power</li>
+            <li>Caramel Slice</li>
+            <li>Curious Alpaca</li>
+            <li>Foggy Mind</li>
+            <li>Sick Rooster</li>
+            <li>Tiger Toast</li>
+          </ul>
+        </div>
+      </section>
+
+      <!-- ── FEATURES ── -->
+      <section class="features">
+        <div class="container">
+          <div class="section-label">Features</div>
+          <h2>Everything you need.<br />Nothing you don't.</h2>
+          <ul class="features-list">
+            <li>
+              <span class="feature-icon">🎨</span>
+              <span>14 pill themes — dress your lens in a style that feels like you</span>
+            </li>
+            <li>
+              <span class="feature-icon">🔒</span>
+              <span>Privacy Mode — one tap wraps your screen, instant quiet privacy</span>
+            </li>
+            <li>
+              <span class="feature-icon">✨</span>
+              <span>Custom presets — create and name your own filter combinations</span>
+            </li>
+            <li>
+              <span class="feature-icon">🪟</span>
+              <span>Floating lens — sits gently on top of any app, any window</span>
+            </li>
+            <li>
+              <span class="feature-icon">⚡</span>
+              <span>No setup — open it and it just works</span>
+            </li>
+          </ul>
+        </div>
+      </section>
+
+      <!-- ── PHILOSOPHY ── -->
+      <section class="philosophy">
+        <div class="container philosophy-inner">
+          <h2>We're not here to fix anything.</h2>
+          <div class="philosophy-body">
+            <p>Better looks different for every brain.</p>
+            <p>
+              For some it's finishing an article without losing the line.<br />
+              For some it's two extra hours before the fatigue hits.<br />
+              For some it's just a screen that finally feels quiet.
+            </p>
+            <p class="philosophy-goal">We just want you to feel 3% better.<br />That's the whole goal.</p>
+          </div>
+        </div>
+      </section>
+
+      <!-- ── DOWNLOAD ── -->
+      <section class="download" id="download">
+        <div class="container">
+          <h2>Ready when you are.</h2>
+
+          <div class="download-grid">
+            <!-- Mac -->
+            <div class="download-card">
+              <div class="download-card-header">
+                <span class="platform-badge mac">macOS</span>
+                <p class="platform-label">Available now on macOS</p>
+              </div>
+              <a href={APP_STORE_URL} class="btn btn-primary btn-lg" target="_blank" rel="noopener noreferrer">
+                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 814 1000" fill="currentColor" aria-hidden="true">
+                  <path d="M788.1 340.9c-5.8 4.5-108.2 62.2-108.2 190.5 0 148.4 130.3 200.9 134.2 202.2-.6 3.2-20.7 71.9-68.7 141.9-42.8 61.6-87.5 123.1-155.5 123.1s-85.5-39.5-164-39.5c-76.5 0-103.7 40.8-165.9 40.8s-105-37.5-155.5-128.1c-43.3-78.9-65.6-158.6-65.6-235.3 0-200.3 125.1-272.2 247.2-272.2 54.7 0 101 36.4 135.5 36.4 33.2 0 85.1-38.8 146.5-38.8zm-163.7-108.8c26.8-30.5 45.6-72.9 45.6-115.3 0-5.8-.6-11.7-1.3-17.5-43.7 1.9-95.9 28.3-127 62.3-23.9 25.8-46.5 68.2-46.5 111.2 0 6.4.6 12.9 1.3 15.1 2.6.6 6.5 1.3 10.4 1.3 39.6 0 88.9-25.2 117.5-57.1z"/>
+                </svg>
+                Download on the App Store
+              </a>
+            </div>
+
+            <!-- Windows waitlist -->
+            <div class="download-card windows-card" id="waitlist">
+              <div class="download-card-header">
+                <span class="platform-badge windows">Windows</span>
+                <p class="platform-label">Coming to Windows</p>
+              </div>
+              <p class="windows-blurb">
+                Your brain doesn't only live on a Mac. We're working on it —
+                join the list and we'll tell you the moment it's ready.
+              </p>
+              <form class="waitlist-form" id="waitlist-form">
+                <input
+                  type="email"
+                  name="email"
+                  placeholder="your@email.com"
+                  required
+                  aria-label="Email address for Windows waitlist"
+                />
+                <button type="submit" class="btn btn-windows">
+                  Join Waitlist
+                </button>
+              </form>
+              <p class="waitlist-success" id="waitlist-success" aria-live="polite">
+                You're on the list. We'll be in touch.
+              </p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+    </main>
+    <Footer />
+  </body>
 </html>
+
+<script>
+  // Windows waitlist form — swap endpoint with your real form handler
+  const form = document.getElementById('waitlist-form') as HTMLFormElement | null;
+  const success = document.getElementById('waitlist-success');
+
+  form?.addEventListener('submit', async (e) => {
+    e.preventDefault();
+    const data = new FormData(form);
+    const email = data.get('email');
+
+    try {
+      // Replace with your Formspree / Cloudflare Worker endpoint
+      const res = await fetch('https://formspree.io/f/YOUR_FORM_ID', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json', Accept: 'application/json' },
+        body: JSON.stringify({ email }),
+      });
+
+      if (res.ok) {
+        form.style.display = 'none';
+        if (success) success.style.display = 'block';
+      }
+    } catch {
+      // Fallback: show success anyway so UX doesn't break
+      form.style.display = 'none';
+      if (success) success.style.display = 'block';
+    }
+  });
+</script>
+
+<style>
+  /* ── Section spacing ── */
+  section {
+    padding: 6rem 0;
+  }
+
+  /* ── Hero ── */
+  .hero {
+    padding-top: 5rem;
+    padding-bottom: 5rem;
+  }
+
+  .hero-inner {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    align-items: center;
+    gap: 4rem;
+  }
+
+  .badge {
+    display: inline-block;
+    font-size: 0.78rem;
+    font-weight: 500;
+    letter-spacing: 0.04em;
+    text-transform: uppercase;
+    color: var(--accent);
+    background: var(--accent-dim);
+    border: 1px solid rgba(125, 211, 168, 0.2);
+    padding: 0.3rem 0.75rem;
+    border-radius: 999px;
+    margin-bottom: 1.25rem;
+  }
+
+  .hero h1 {
+    margin-bottom: 1.25rem;
+  }
+
+  .hero-sub {
+    font-size: 1.1rem;
+    color: var(--text-muted);
+    max-width: 480px;
+    line-height: 1.75;
+    margin-bottom: 2rem;
+  }
+
+  .hero-ctas {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 0.85rem;
+  }
+
+  .hero-windows-link {
+    font-size: 0.9rem;
+    color: var(--windows-accent);
+    text-decoration: none;
+    opacity: 0.85;
+    transition: opacity var(--transition);
+  }
+
+  .hero-windows-link:hover {
+    opacity: 1;
+    color: var(--windows-accent);
+  }
+
+  .hero-image {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .user-img {
+    width: 100%;
+    max-width: 420px;
+    height: auto;
+    border-radius: var(--radius);
+    filter: drop-shadow(0 20px 60px rgba(125, 211, 168, 0.08));
+  }
+
+  /* ── Feeling ── */
+  .feeling {
+    background: var(--bg-subtle);
+    border-top: 1px solid var(--border);
+    border-bottom: 1px solid var(--border);
+  }
+
+  .feeling-inner {
+    max-width: 720px;
+  }
+
+  .feeling h2 {
+    margin-bottom: 1.25rem;
+    font-size: clamp(1.75rem, 3.5vw, 2.6rem);
+  }
+
+  .feeling p {
+    font-size: 1.05rem;
+    color: var(--text-muted);
+    line-height: 1.8;
+    max-width: 620px;
+    margin: 0;
+  }
+
+  /* ── Section label ── */
+  .section-label {
+    font-size: 0.75rem;
+    font-weight: 600;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+    color: var(--accent);
+    margin-bottom: 0.75rem;
+  }
+
+  .section-sub {
+    font-size: 1rem;
+    color: var(--text-muted);
+    margin-top: 0.5rem;
+    margin-bottom: 2.5rem;
+  }
+
+  /* ── Presets ── */
+  .presets {
+    background: var(--bg);
+  }
+
+  .presets-grid {
+    list-style: none;
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(160px, 1fr));
+    gap: 0.75rem;
+    margin-top: 2.5rem;
+  }
+
+  .presets-grid li {
+    background: var(--bg-card);
+    border: 1px solid var(--border);
+    border-radius: var(--radius-sm);
+    padding: 0.85rem 1.1rem;
+    font-size: 0.95rem;
+    font-weight: 500;
+    color: var(--text);
+    transition: border-color var(--transition), background var(--transition);
+    cursor: default;
+  }
+
+  .presets-grid li:hover {
+    border-color: var(--accent);
+    background: var(--accent-dim);
+  }
+
+  /* ── Features ── */
+  .features {
+    background: var(--bg-subtle);
+    border-top: 1px solid var(--border);
+    border-bottom: 1px solid var(--border);
+  }
+
+  .features-list {
+    list-style: none;
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    margin-top: 2.5rem;
+    max-width: 620px;
+  }
+
+  .features-list li {
+    display: flex;
+    align-items: flex-start;
+    gap: 1rem;
+    padding: 1rem 1.25rem;
+    background: var(--bg-card);
+    border: 1px solid var(--border);
+    border-radius: var(--radius-sm);
+    font-size: 0.97rem;
+    color: var(--text-muted);
+    line-height: 1.5;
+    transition: border-color var(--transition);
+  }
+
+  .features-list li:hover {
+    border-color: var(--accent);
+  }
+
+  .feature-icon {
+    font-size: 1.1rem;
+    flex-shrink: 0;
+    margin-top: 1px;
+  }
+
+  /* ── Philosophy ── */
+  .philosophy-inner {
+    max-width: 660px;
+  }
+
+  .philosophy h2 {
+    margin-bottom: 2rem;
+  }
+
+  .philosophy-body p {
+    font-size: 1.05rem;
+    color: var(--text-muted);
+    margin-bottom: 1rem;
+    line-height: 1.85;
+  }
+
+  .philosophy-goal {
+    color: var(--text) !important;
+    font-weight: 500;
+    font-size: 1.15rem !important;
+    margin-top: 1.5rem;
+    padding-top: 1.5rem;
+    border-top: 1px solid var(--border);
+  }
+
+  /* ── Download ── */
+  .download {
+    background: var(--bg-subtle);
+    border-top: 1px solid var(--border);
+  }
+
+  .download h2 {
+    margin-bottom: 2.5rem;
+  }
+
+  .download-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 1.5rem;
+  }
+
+  .download-card {
+    background: var(--bg-card);
+    border: 1px solid var(--border);
+    border-radius: var(--radius);
+    padding: 2rem;
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+  }
+
+  .windows-card {
+    border-color: rgba(196, 181, 253, 0.15);
+  }
+
+  .download-card-header {
+    display: flex;
+    flex-direction: column;
+    gap: 0.35rem;
+  }
+
+  .platform-badge {
+    display: inline-block;
+    font-size: 0.72rem;
+    font-weight: 600;
+    letter-spacing: 0.06em;
+    text-transform: uppercase;
+    padding: 0.2rem 0.6rem;
+    border-radius: 999px;
+    width: fit-content;
+  }
+
+  .platform-badge.mac {
+    background: var(--accent-dim);
+    color: var(--accent);
+    border: 1px solid rgba(125, 211, 168, 0.2);
+  }
+
+  .platform-badge.windows {
+    background: var(--windows-dim);
+    color: var(--windows-accent);
+    border: 1px solid rgba(196, 181, 253, 0.2);
+  }
+
+  .platform-label {
+    font-size: 1rem;
+    font-weight: 600;
+    color: var(--text);
+    margin: 0;
+  }
+
+  .windows-blurb {
+    font-size: 0.9rem;
+    color: var(--text-muted);
+    line-height: 1.65;
+    margin: 0;
+  }
+
+  .waitlist-form {
+    display: flex;
+    gap: 0.5rem;
+    flex-wrap: wrap;
+  }
+
+  .waitlist-form input[type='email'] {
+    flex: 1;
+    min-width: 0;
+  }
+
+  .waitlist-success {
+    display: none;
+    font-size: 0.9rem;
+    color: var(--accent);
+    font-weight: 500;
+    margin: 0;
+    padding: 0.5rem 0;
+  }
+
+  /* ── Responsive ── */
+  @media (max-width: 900px) {
+    .hero-inner {
+      grid-template-columns: 1fr;
+      gap: 3rem;
+    }
+
+    .hero-image {
+      order: -1;
+    }
+
+    .user-img {
+      max-width: 320px;
+    }
+
+    .download-grid {
+      grid-template-columns: 1fr;
+    }
+  }
+
+  @media (max-width: 720px) {
+    section {
+      padding: 4rem 0;
+    }
+
+    .hero {
+      padding-top: 3rem;
+      padding-bottom: 3rem;
+    }
+
+    .presets-grid {
+      grid-template-columns: repeat(2, 1fr);
+    }
+
+    .download-card {
+      padding: 1.5rem;
+    }
+
+    .waitlist-form {
+      flex-direction: column;
+    }
+
+    .waitlist-form .btn {
+      width: 100%;
+      justify-content: center;
+    }
+  }
+</style>
