@@ -20,7 +20,7 @@ import { SITE_TITLE, SITE_DESCRIPTION, APP_STORE_URL } from '../consts';
       <section class="hero">
         <div class="container hero-inner">
           <div class="hero-text">
-            <div class="badge">Free to start · macOS</div>
+            <div class="badge">Try free · Customize for $0.99/mo</div>
             <h1>Built for brains that<br />work differently.</h1>
             <p class="hero-sub">
               A gentle floating lens that quietly adjusts your screen to match how
@@ -32,8 +32,11 @@ import { SITE_TITLE, SITE_DESCRIPTION, APP_STORE_URL } from '../consts';
                 <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 814 1000" fill="currentColor" aria-hidden="true">
                   <path d="M788.1 340.9c-5.8 4.5-108.2 62.2-108.2 190.5 0 148.4 130.3 200.9 134.2 202.2-.6 3.2-20.7 71.9-68.7 141.9-42.8 61.6-87.5 123.1-155.5 123.1s-85.5-39.5-164-39.5c-76.5 0-103.7 40.8-165.9 40.8s-105-37.5-155.5-128.1c-43.3-78.9-65.6-158.6-65.6-235.3 0-200.3 125.1-272.2 247.2-272.2 54.7 0 101 36.4 135.5 36.4 33.2 0 85.1-38.8 146.5-38.8zm-163.7-108.8c26.8-30.5 45.6-72.9 45.6-115.3 0-5.8-.6-11.7-1.3-17.5-43.7 1.9-95.9 28.3-127 62.3-23.9 25.8-46.5 68.2-46.5 111.2 0 6.4.6 12.9 1.3 15.1 2.6.6 6.5 1.3 10.4 1.3 39.6 0 88.9-25.2 117.5-57.1z"/>
                 </svg>
-                Download on Mac — it's free to start
+                Download on Mac — it's free
               </a>
+              <p class="hero-pricing-note">
+                Default settings are free, forever. Unlock full personalization for $0.99/month — cancel anytime.
+              </p>
               <a href="#waitlist" class="hero-windows-link">
                 Coming to Windows → Join the waitlist
               </a>
@@ -110,6 +113,87 @@ import { SITE_TITLE, SITE_DESCRIPTION, APP_STORE_URL } from '../consts';
               <span>No setup — open it and it just works</span>
             </li>
           </ul>
+        </div>
+      </section>
+
+      <!-- ── PRICING ── -->
+      <section class="pricing" id="pricing">
+        <div class="container">
+          <div class="section-label">Pricing</div>
+          <h2>Free to use. $0.99 to make it yours.</h2>
+          <p class="section-sub">Try it with the defaults. Pay only when you want to personalize.</p>
+
+          <div class="pricing-grid">
+            <!-- Free tier -->
+            <div class="pricing-card">
+              <div class="pricing-card-top">
+                <span class="tier-badge free">Free</span>
+                <div class="pricing-price">
+                  <span class="price-amount">$0</span>
+                  <span class="price-period">forever</span>
+                </div>
+                <p class="pricing-desc">The lens works the moment you open it. No strings.</p>
+              </div>
+              <ul class="pricing-features">
+                <li>
+                  <span class="check" aria-hidden="true">✓</span>
+                  Floating lens, always on
+                </li>
+                <li>
+                  <span class="check" aria-hidden="true">✓</span>
+                  Default color settings
+                </li>
+                <li>
+                  <span class="check" aria-hidden="true">✓</span>
+                  Privacy Mode
+                </li>
+                <li>
+                  <span class="check" aria-hidden="true">✓</span>
+                  No account needed
+                </li>
+              </ul>
+              <a href={APP_STORE_URL} class="btn btn-outline" target="_blank" rel="noopener noreferrer">
+                Download free
+              </a>
+            </div>
+
+            <!-- Paid tier -->
+            <div class="pricing-card pricing-card-highlight">
+              <div class="pricing-card-top">
+                <span class="tier-badge paid">Full Access</span>
+                <div class="pricing-price">
+                  <span class="price-amount">$0.99</span>
+                  <span class="price-period">/ month</span>
+                </div>
+                <p class="pricing-desc">Personalize everything. Make the lens feel like you.</p>
+              </div>
+              <ul class="pricing-features">
+                <li>
+                  <span class="check" aria-hidden="true">✓</span>
+                  Everything in Free
+                </li>
+                <li>
+                  <span class="check" aria-hidden="true">✓</span>
+                  All 7 mood presets
+                </li>
+                <li>
+                  <span class="check" aria-hidden="true">✓</span>
+                  14 pill themes
+                </li>
+                <li>
+                  <span class="check" aria-hidden="true">✓</span>
+                  Custom preset builder
+                </li>
+                <li>
+                  <span class="check" aria-hidden="true">✓</span>
+                  Cancel anytime
+                </li>
+              </ul>
+              <a href={APP_STORE_URL} class="btn btn-primary" target="_blank" rel="noopener noreferrer">
+                Start free, then unlock
+              </a>
+            </div>
+          </div>
         </div>
       </section>
 
@@ -267,6 +351,13 @@ import { SITE_TITLE, SITE_DESCRIPTION, APP_STORE_URL } from '../consts';
     gap: 0.85rem;
   }
 
+  .hero-pricing-note {
+    font-size: 0.82rem;
+    color: var(--text-muted);
+    margin: 0;
+    line-height: 1.5;
+  }
+
   .hero-windows-link {
     font-size: 0.9rem;
     color: var(--windows-accent);
@@ -403,6 +494,122 @@ import { SITE_TITLE, SITE_DESCRIPTION, APP_STORE_URL } from '../consts';
     font-size: 1.1rem;
     flex-shrink: 0;
     margin-top: 1px;
+  }
+
+  /* ── Pricing ── */
+  .pricing {
+    background: var(--bg);
+  }
+
+  .pricing-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 1.25rem;
+    max-width: 680px;
+    margin-top: 2.5rem;
+  }
+
+  .pricing-card {
+    background: var(--bg-card);
+    border: 1px solid var(--border);
+    border-radius: var(--radius);
+    padding: 1.75rem;
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+  }
+
+  .pricing-card-highlight {
+    border-color: var(--accent);
+    background: var(--accent-dim);
+  }
+
+  .pricing-card-top {
+    display: flex;
+    flex-direction: column;
+    gap: 0.75rem;
+  }
+
+  .tier-badge {
+    display: inline-block;
+    font-size: 0.72rem;
+    font-weight: 600;
+    letter-spacing: 0.06em;
+    text-transform: uppercase;
+    padding: 0.2rem 0.6rem;
+    border-radius: 999px;
+    width: fit-content;
+  }
+
+  .tier-badge.free {
+    background: var(--bg-subtle);
+    color: var(--text-muted);
+    border: 1px solid var(--border);
+  }
+
+  .tier-badge.paid {
+    background: var(--accent-dim);
+    color: var(--accent);
+    border: 1px solid rgba(125, 211, 168, 0.3);
+  }
+
+  .pricing-price {
+    display: flex;
+    align-items: baseline;
+    gap: 0.3rem;
+  }
+
+  .price-amount {
+    font-size: 2rem;
+    font-weight: 700;
+    color: var(--text);
+    letter-spacing: -0.03em;
+    line-height: 1;
+  }
+
+  .price-period {
+    font-size: 0.85rem;
+    color: var(--text-muted);
+  }
+
+  .pricing-desc {
+    font-size: 0.88rem;
+    color: var(--text-muted);
+    line-height: 1.6;
+    margin: 0;
+  }
+
+  .pricing-features {
+    list-style: none;
+    display: flex;
+    flex-direction: column;
+    gap: 0.6rem;
+    flex: 1;
+  }
+
+  .pricing-features li {
+    display: flex;
+    align-items: center;
+    gap: 0.6rem;
+    font-size: 0.88rem;
+    color: var(--text-muted);
+  }
+
+  .pricing-card-highlight .pricing-features li {
+    color: var(--text);
+  }
+
+  .check {
+    color: var(--accent);
+    font-size: 0.85rem;
+    font-weight: 700;
+    flex-shrink: 0;
+  }
+
+  @media (max-width: 560px) {
+    .pricing-grid {
+      grid-template-columns: 1fr;
+    }
   }
 
   /* ── Philosophy ── */
