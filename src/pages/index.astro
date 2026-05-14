@@ -4,6 +4,7 @@ import BaseHead from '../components/BaseHead.astro';
 import Header from '../components/Header.astro';
 import Footer from '../components/Footer.astro';
 import userImage from '../assets/userimage.png';
+import logo from '../assets/logo.png';
 import { SITE_TITLE, SITE_DESCRIPTION, APP_STORE_URL } from '../consts';
 ---
 
@@ -20,6 +21,9 @@ import { SITE_TITLE, SITE_DESCRIPTION, APP_STORE_URL } from '../consts';
       <section class="hero">
         <div class="container hero-inner">
           <div class="hero-text">
+            <div class="hero-logo">
+              <Image src={logo} alt="ColorLenz" width={96} height={96} class="hero-logo-img" />
+            </div>
             <div class="badge">Try free · Customize for $0.99/mo</div>
             <h1>Built for brains that<br />work differently.</h1>
             <p class="hero-sub">
@@ -316,6 +320,17 @@ import { SITE_TITLE, SITE_DESCRIPTION, APP_STORE_URL } from '../consts';
     grid-template-columns: 1fr 1fr;
     align-items: center;
     gap: 4rem;
+  }
+
+  .hero-logo {
+    margin-bottom: 1.5rem;
+  }
+
+  .hero-logo-img {
+    width: 96px;
+    height: 96px;
+    border-radius: 22px;
+    box-shadow: 0 8px 32px rgba(125, 211, 168, 0.15);
   }
 
   .badge {
