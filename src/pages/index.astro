@@ -21,9 +21,6 @@ import { SITE_TITLE, SITE_DESCRIPTION, APP_STORE_URL } from '../consts';
       <section class="hero">
         <div class="container hero-inner">
           <div class="hero-text">
-            <div class="hero-logo">
-              <Image src={logo} alt="ColorLenz" width={96} height={96} class="hero-logo-img" />
-            </div>
             <div class="badge">Try free · Customize for $0.99/mo</div>
             <h1>Built for brains that<br />work differently.</h1>
             <p class="hero-sub">
@@ -62,13 +59,16 @@ import { SITE_TITLE, SITE_DESCRIPTION, APP_STORE_URL } from '../consts';
       <!-- ── FEELING ── -->
       <section class="feeling">
         <div class="container feeling-inner">
-          <h2>Your screen should work<br />with your brain. Not against it.</h2>
-          <p>
-            Most screens weren't designed with your brain in mind. ColorLenz sits
-            quietly on top of your display — a soft, floating lens that filters and
-            tones your screen to match your mood, your focus, your pace. One tap.
-            No interruption.
-          </p>
+          <Image src={logo} alt="ColorLenz" width={288} height={288} class="feeling-logo" />
+          <div class="feeling-text">
+            <h2>Your screen should work<br />with your brain. Not against it.</h2>
+            <p>
+              Most screens weren't designed with your brain in mind. ColorLenz sits
+              quietly on top of your display — a soft, floating lens that filters and
+              tones your screen to match your mood, your focus, your pace. One tap.
+              No interruption.
+            </p>
+          </div>
         </div>
       </section>
 
@@ -322,17 +322,6 @@ import { SITE_TITLE, SITE_DESCRIPTION, APP_STORE_URL } from '../consts';
     gap: 4rem;
   }
 
-  .hero-logo {
-    margin-bottom: 1.5rem;
-  }
-
-  .hero-logo-img {
-    width: 96px;
-    height: 96px;
-    border-radius: 22px;
-    box-shadow: 0 8px 32px rgba(125, 211, 168, 0.15);
-  }
-
   .badge {
     display: inline-block;
     font-size: 0.78rem;
@@ -408,20 +397,41 @@ import { SITE_TITLE, SITE_DESCRIPTION, APP_STORE_URL } from '../consts';
   }
 
   .feeling-inner {
-    max-width: 720px;
+    display: flex;
+    align-items: center;
+    gap: 4rem;
   }
 
-  .feeling h2 {
+  .feeling-logo {
+    width: 288px;
+    height: 288px;
+    border-radius: 56px;
+    flex-shrink: 0;
+    box-shadow: 0 16px 64px rgba(125, 211, 168, 0.12);
+  }
+
+  .feeling-text h2 {
     margin-bottom: 1.25rem;
     font-size: clamp(1.75rem, 3.5vw, 2.6rem);
   }
 
-  .feeling p {
+  .feeling-text p {
     font-size: 1.05rem;
     color: var(--text-muted);
     line-height: 1.8;
-    max-width: 620px;
     margin: 0;
+  }
+
+  @media (max-width: 720px) {
+    .feeling-inner {
+      flex-direction: column;
+      gap: 2rem;
+    }
+    .feeling-logo {
+      width: 160px;
+      height: 160px;
+      border-radius: 36px;
+    }
   }
 
   /* ── Section label ── */
