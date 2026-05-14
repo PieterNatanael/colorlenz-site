@@ -1,5 +1,6 @@
 ---
-// Replace with: import { Image } from 'astro:assets'; import logo from '../assets/logo.png';
+import { Image } from 'astro:assets';
+import logo from '../assets/logo.png';
 import { APP_STORE_URL } from '../consts';
 
 const currentPath = Astro.url.pathname;
@@ -7,9 +8,8 @@ const currentPath = Astro.url.pathname;
 
 <header>
   <div class="container nav-inner">
-    <!-- Logo — swap the span for <Image src={logo} ...> once logo.png is in src/assets/ -->
     <a href="/" class="logo-link" aria-label="ColorLenz home">
-      <span class="logo-mark" aria-hidden="true">◎</span>
+      <Image src={logo} alt="ColorLenz" width={28} height={28} class="logo-img" />
       <span class="logo-name">ColorLenz</span>
     </a>
 
@@ -108,10 +108,11 @@ const currentPath = Astro.url.pathname;
     flex-shrink: 0;
   }
 
-  .logo-mark {
-    font-size: 1.2rem;
-    color: var(--accent);
-    line-height: 1;
+  .logo-img {
+    width: 28px;
+    height: 28px;
+    border-radius: 6px;
+    flex-shrink: 0;
   }
 
   .logo-name {
