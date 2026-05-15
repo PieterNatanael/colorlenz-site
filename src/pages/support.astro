@@ -74,9 +74,13 @@ import { APP_STORE_URL } from '../consts';
               <div class="faq-item">
                 <dt>Will ColorLenz slow down my computer?</dt>
                 <dd>
-                  No. ColorLenz is designed to be lightweight. It uses a compositing layer that
-                  works with your display hardware rather than intercepting every frame, so CPU and
-                  battery impact are minimal.
+                  It's designed to be as light as possible. ColorLenz uses ScreenCaptureKit to
+                  capture your live display, runs each frame through a Core Image filter pipeline
+                  (color, brightness, saturation), and renders the result as a Metal-backed
+                  transparent overlay. Frames are processed in memory and discarded immediately,
+                  nothing is written to disk. On modern Macs the GPU handles most of this work,
+                  so real-world CPU and battery impact is minimal. Older or heavily loaded machines
+                  may notice a small difference.
                 </dd>
               </div>
 
