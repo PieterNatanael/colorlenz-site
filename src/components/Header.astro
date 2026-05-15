@@ -17,6 +17,7 @@ const currentPath = Astro.url.pathname;
     <nav aria-label="Main navigation">
       <a href="/" class:list={['nav-link', { active: currentPath === '/' }]}>Home</a>
       <a href="/blog" class:list={['nav-link', { active: currentPath.startsWith('/blog') }]}>Blog</a>
+      <a href="/pricing" class:list={['nav-link', { active: currentPath === '/pricing' }]}>Pricing</a>
       <a href="/support" class:list={['nav-link', { active: currentPath === '/support' }]}>Support</a>
     </nav>
 
@@ -51,6 +52,7 @@ const currentPath = Astro.url.pathname;
   <div id="mobile-nav" class="mobile-nav" aria-hidden="true">
     <a href="/" class:list={['mobile-link', { active: currentPath === '/' }]}>Home</a>
     <a href="/blog" class:list={['mobile-link', { active: currentPath.startsWith('/blog') }]}>Blog</a>
+    <a href="/pricing" class:list={['mobile-link', { active: currentPath === '/pricing' }]}>Pricing</a>
     <a href="/support" class:list={['mobile-link', { active: currentPath === '/support' }]}>Support</a>
     <a href={APP_STORE_URL} class="btn btn-primary" target="_blank" rel="noopener noreferrer" style="margin-top: 0.5rem; width: 100%; justify-content: center;">
       Download on Mac
