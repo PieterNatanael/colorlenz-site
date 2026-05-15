@@ -5,7 +5,6 @@ import Header from '../components/Header.astro';
 import Footer from '../components/Footer.astro';
 import userImage from '../assets/userimage.png';
 import userImage2 from '../assets/userimage2.jpg';
-import userImage3 from '../assets/userimage3.jpg';
 import logo from '../assets/logo.png';
 import { SITE_TITLE, SITE_DESCRIPTION, APP_STORE_URL } from '../consts';
 ---
@@ -50,6 +49,15 @@ import { SITE_TITLE, SITE_DESCRIPTION, APP_STORE_URL } from '../consts';
             </div>
           </div>
 
+          <div class="hero-image">
+            <Image
+              src={userImage}
+              alt="Person using ColorLenz with a green screen"
+              width={480}
+              height={480}
+              class="user-img"
+            />
+          </div>
         </div>
       </section>
 
@@ -82,11 +90,6 @@ import { SITE_TITLE, SITE_DESCRIPTION, APP_STORE_URL } from '../consts';
               class="screen-img"
             />
             <p class="screen-caption">Floating lens, sits gently on top of any app, any window</p>
-          </div>
-          <div class="user-row">
-            <Image src={userImage} alt="Person using ColorLenz" width={320} class="user-trio-img" />
-            <Image src={userImage2} alt="Person using ColorLenz" width={320} class="user-trio-img" />
-            <Image src={userImage3} alt="Person using ColorLenz" width={320} class="user-trio-img" />
           </div>
         </div>
       </section>
@@ -129,10 +132,9 @@ import { SITE_TITLE, SITE_DESCRIPTION, APP_STORE_URL } from '../consts';
 
   .hero-inner {
     display: grid;
-    grid-template-columns: 1fr;
+    grid-template-columns: 1fr 1fr;
     align-items: center;
     gap: 4rem;
-    max-width: 680px;
   }
 
   .badge {
@@ -191,17 +193,18 @@ import { SITE_TITLE, SITE_DESCRIPTION, APP_STORE_URL } from '../consts';
     height: auto;
   }
 
-  .user-row {
+  .hero-image {
     display: flex;
-    gap: 0.75rem;
-    margin-top: 2rem;
+    justify-content: center;
+    align-items: center;
   }
 
-  .user-trio-img {
-    width: calc(33.333% - 0.5rem);
+  .user-img {
+    width: 100%;
+    max-width: 420px;
     height: auto;
     border-radius: var(--radius);
-    display: block;
+    filter: drop-shadow(0 20px 60px rgba(125, 211, 168, 0.08));
   }
 
   /* ── Feeling ── */
@@ -381,13 +384,18 @@ import { SITE_TITLE, SITE_DESCRIPTION, APP_STORE_URL } from '../consts';
   }
 
   /* ── Responsive ── */
-  @media (max-width: 600px) {
-    .user-row {
-      flex-direction: column;
+  @media (max-width: 900px) {
+    .hero-inner {
+      grid-template-columns: 1fr;
+      gap: 3rem;
     }
 
-    .user-trio-img {
-      width: 100%;
+    .hero-image {
+      order: -1;
+    }
+
+    .user-img {
+      max-width: 320px;
     }
   }
 
