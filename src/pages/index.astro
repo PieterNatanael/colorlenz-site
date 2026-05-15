@@ -4,6 +4,7 @@ import BaseHead from '../components/BaseHead.astro';
 import Header from '../components/Header.astro';
 import Footer from '../components/Footer.astro';
 import userImage from '../assets/userimage.png';
+import userImage2 from '../assets/userimage2.jpg';
 import logo from '../assets/logo.png';
 import screenImage from '../assets/screenimage.jpg';
 import { SITE_TITLE, SITE_DESCRIPTION, APP_STORE_URL } from '../consts';
@@ -53,8 +54,15 @@ import { SITE_TITLE, SITE_DESCRIPTION, APP_STORE_URL } from '../consts';
             <Image
               src={userImage}
               alt="Person using ColorLenz with a green screen"
-              width={480}
-              height={480}
+              width={320}
+              height={320}
+              class="user-img"
+            />
+            <Image
+              src={userImage2}
+              alt="Person using ColorLenz"
+              width={320}
+              height={320}
               class="user-img"
             />
           </div>
@@ -197,11 +205,11 @@ import { SITE_TITLE, SITE_DESCRIPTION, APP_STORE_URL } from '../consts';
     display: flex;
     justify-content: center;
     align-items: center;
+    gap: 0.75rem;
   }
 
   .user-img {
-    width: 100%;
-    max-width: 420px;
+    width: calc(50% - 0.375rem);
     height: auto;
     border-radius: var(--radius);
     filter: drop-shadow(0 20px 60px rgba(125, 211, 168, 0.08));
@@ -395,7 +403,7 @@ import { SITE_TITLE, SITE_DESCRIPTION, APP_STORE_URL } from '../consts';
     }
 
     .user-img {
-      max-width: 320px;
+      width: calc(50% - 0.375rem);
     }
 
   }
