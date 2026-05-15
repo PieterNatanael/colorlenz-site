@@ -21,7 +21,7 @@ import { SITE_TITLE, SITE_DESCRIPTION, APP_STORE_URL } from '../consts';
       <section class="hero">
         <div class="container hero-inner">
           <div class="hero-text">
-            <div class="badge">Try free · Customize for $0.99/mo</div>
+            <div class="badge">macOS · Free to download</div>
             <h1>Built for brains that<br />work differently.</h1>
             <p class="hero-sub">
               A gentle floating lens that quietly adjusts your screen to match how
@@ -29,18 +29,22 @@ import { SITE_TITLE, SITE_DESCRIPTION, APP_STORE_URL } from '../consts';
               working with you.
             </p>
             <div class="hero-ctas">
-              <a href={APP_STORE_URL} class="btn btn-primary btn-lg" target="_blank" rel="noopener noreferrer">
-                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 814 1000" fill="currentColor" aria-hidden="true">
-                  <path d="M788.1 340.9c-5.8 4.5-108.2 62.2-108.2 190.5 0 148.4 130.3 200.9 134.2 202.2-.6 3.2-20.7 71.9-68.7 141.9-42.8 61.6-87.5 123.1-155.5 123.1s-85.5-39.5-164-39.5c-76.5 0-103.7 40.8-165.9 40.8s-105-37.5-155.5-128.1c-43.3-78.9-65.6-158.6-65.6-235.3 0-200.3 125.1-272.2 247.2-272.2 54.7 0 101 36.4 135.5 36.4 33.2 0 85.1-38.8 146.5-38.8zm-163.7-108.8c26.8-30.5 45.6-72.9 45.6-115.3 0-5.8-.6-11.7-1.3-17.5-43.7 1.9-95.9 28.3-127 62.3-23.9 25.8-46.5 68.2-46.5 111.2 0 6.4.6 12.9 1.3 15.1 2.6.6 6.5 1.3 10.4 1.3 39.6 0 88.9-25.2 117.5-57.1z"/>
+              <a href={APP_STORE_URL} class="appstore-badge" target="_blank" rel="noopener noreferrer" aria-label="Download ColorLenz on the Mac App Store">
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 156 52" class="appstore-svg">
+                  <rect width="156" height="52" rx="8" fill="black"/>
+                  <rect width="155" height="51" rx="7.5" x="0.5" y="0.5" fill="none" stroke="white" stroke-opacity="0.3"/>
+                  <!-- Apple logo -->
+                  <path d="M22.5 17.2c1.1-1.4 1.9-3.3 1.7-5.2-1.6.1-3.6 1.1-4.7 2.5-1 1.2-1.9 3.1-1.7 5 1.8.1 3.6-1 4.7-2.3z" fill="white"/>
+                  <path d="M24.2 19.8c-2.6-.2-4.8 1.5-6 1.5-1.3 0-3.2-1.4-5.3-1.4-2.7 0-5.2 1.6-6.6 4-2.8 4.9-.7 12.1 2 16.1 1.3 1.9 2.9 4 5 3.9 2-.1 2.7-1.3 5.1-1.3 2.4 0 3 1.3 5.1 1.2 2.2 0 3.5-1.9 4.8-3.8.9-1.3 1.6-2.8 2-4.3-3.3-1.3-4.8-4.8-4.8-8.1.1-2.9 1.4-5.5 3.7-7.1-.8-1-2.4-2.7-5-2.7z" fill="white"/>
+                  <!-- Text: Download on the -->
+                  <text x="40" y="22" font-family="-apple-system, BlinkMacSystemFont, sans-serif" font-size="10" fill="white" opacity="0.85">Download on the</text>
+                  <!-- Text: Mac App Store -->
+                  <text x="40" y="38" font-family="-apple-system, BlinkMacSystemFont, sans-serif" font-size="17" font-weight="600" fill="white">Mac App Store</text>
                 </svg>
-                Download on Mac, it's free
               </a>
               <p class="hero-pricing-note">
-                Default settings are free, forever. Unlock full personalization for $0.99/month, cancel anytime.
+                Free to download. Unlock full personalization for $0.99/month, cancel anytime.
               </p>
-              <a href="#waitlist" class="hero-windows-link">
-                Coming to Windows → Join the waitlist
-              </a>
             </div>
           </div>
 
@@ -219,52 +223,19 @@ import { SITE_TITLE, SITE_DESCRIPTION, APP_STORE_URL } from '../consts';
 
       <!-- ── DOWNLOAD ── -->
       <section class="download" id="download">
-        <div class="container">
+        <div class="container download-inner">
           <h2>Ready when you are.</h2>
-
-          <div class="download-grid">
-            <!-- Mac -->
-            <div class="download-card">
-              <div class="download-card-header">
-                <span class="platform-badge mac">macOS</span>
-                <p class="platform-label">Available now on macOS</p>
-              </div>
-              <a href={APP_STORE_URL} class="btn btn-primary btn-lg" target="_blank" rel="noopener noreferrer">
-                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 814 1000" fill="currentColor" aria-hidden="true">
-                  <path d="M788.1 340.9c-5.8 4.5-108.2 62.2-108.2 190.5 0 148.4 130.3 200.9 134.2 202.2-.6 3.2-20.7 71.9-68.7 141.9-42.8 61.6-87.5 123.1-155.5 123.1s-85.5-39.5-164-39.5c-76.5 0-103.7 40.8-165.9 40.8s-105-37.5-155.5-128.1c-43.3-78.9-65.6-158.6-65.6-235.3 0-200.3 125.1-272.2 247.2-272.2 54.7 0 101 36.4 135.5 36.4 33.2 0 85.1-38.8 146.5-38.8zm-163.7-108.8c26.8-30.5 45.6-72.9 45.6-115.3 0-5.8-.6-11.7-1.3-17.5-43.7 1.9-95.9 28.3-127 62.3-23.9 25.8-46.5 68.2-46.5 111.2 0 6.4.6 12.9 1.3 15.1 2.6.6 6.5 1.3 10.4 1.3 39.6 0 88.9-25.2 117.5-57.1z"/>
-                </svg>
-                Download on the App Store
-              </a>
-            </div>
-
-            <!-- Windows waitlist -->
-            <div class="download-card windows-card" id="waitlist">
-              <div class="download-card-header">
-                <span class="platform-badge windows">Windows</span>
-                <p class="platform-label">Coming to Windows</p>
-              </div>
-              <p class="windows-blurb">
-                Your brain doesn't only live on a Mac. We're working on it —
-                join the list and we'll tell you the moment it's ready.
-              </p>
-              <form class="waitlist-form" id="waitlist-form">
-                <input type="hidden" name="form_type" value="windows-waitlist" />
-                <input
-                  type="email"
-                  name="email"
-                  placeholder="your@email.com"
-                  required
-                  aria-label="Email address for Windows waitlist"
-                />
-                <button type="submit" class="btn btn-windows">
-                  Join Waitlist
-                </button>
-              </form>
-              <p class="waitlist-success" id="waitlist-success" aria-live="polite">
-                You're on the list. We'll be in touch.
-              </p>
-            </div>
-          </div>
+          <p class="download-sub">Available now on macOS. Free to download.</p>
+          <a href={APP_STORE_URL} class="appstore-badge" target="_blank" rel="noopener noreferrer" aria-label="Download ColorLenz on the Mac App Store">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 156 52" class="appstore-svg">
+              <rect width="156" height="52" rx="8" fill="black"/>
+              <rect width="155" height="51" rx="7.5" x="0.5" y="0.5" fill="none" stroke="white" stroke-opacity="0.3"/>
+              <path d="M22.5 17.2c1.1-1.4 1.9-3.3 1.7-5.2-1.6.1-3.6 1.1-4.7 2.5-1 1.2-1.9 3.1-1.7 5 1.8.1 3.6-1 4.7-2.3z" fill="white"/>
+              <path d="M24.2 19.8c-2.6-.2-4.8 1.5-6 1.5-1.3 0-3.2-1.4-5.3-1.4-2.7 0-5.2 1.6-6.6 4-2.8 4.9-.7 12.1 2 16.1 1.3 1.9 2.9 4 5 3.9 2-.1 2.7-1.3 5.1-1.3 2.4 0 3 1.3 5.1 1.2 2.2 0 3.5-1.9 4.8-3.8.9-1.3 1.6-2.8 2-4.3-3.3-1.3-4.8-4.8-4.8-8.1.1-2.9 1.4-5.5 3.7-7.1-.8-1-2.4-2.7-5-2.7z" fill="white"/>
+              <text x="40" y="22" font-family="-apple-system, BlinkMacSystemFont, sans-serif" font-size="10" fill="white" opacity="0.85">Download on the</text>
+              <text x="40" y="38" font-family="-apple-system, BlinkMacSystemFont, sans-serif" font-size="17" font-weight="600" fill="white">Mac App Store</text>
+            </svg>
+          </a>
         </div>
       </section>
 
@@ -273,35 +244,6 @@ import { SITE_TITLE, SITE_DESCRIPTION, APP_STORE_URL } from '../consts';
   </body>
 </html>
 
-<script>
-  // Windows waitlist form, swap endpoint with your real form handler
-  const form = document.getElementById('waitlist-form') as HTMLFormElement | null;
-  const success = document.getElementById('waitlist-success');
-
-  form?.addEventListener('submit', async (e) => {
-    e.preventDefault();
-    const data = new FormData(form);
-    const email = data.get('email');
-
-    try {
-      // Replace with your Formspree / Cloudflare Worker endpoint
-      const res = await fetch('https://formspree.io/f/mrejvron', {
-        method: 'POST',
-        headers: { 'Content-Type': 'application/json', Accept: 'application/json' },
-        body: JSON.stringify({ email }),
-      });
-
-      if (res.ok) {
-        form.style.display = 'none';
-        if (success) success.style.display = 'block';
-      }
-    } catch {
-      // Fallback: show success anyway so UX doesn't break
-      form.style.display = 'none';
-      if (success) success.style.display = 'block';
-    }
-  });
-</script>
 
 <style>
   /* ── Section spacing ── */
@@ -362,17 +304,20 @@ import { SITE_TITLE, SITE_DESCRIPTION, APP_STORE_URL } from '../consts';
     line-height: 1.5;
   }
 
-  .hero-windows-link {
-    font-size: 0.9rem;
-    color: var(--windows-accent);
-    text-decoration: none;
-    opacity: 0.85;
-    transition: opacity var(--transition);
+  .appstore-badge {
+    display: inline-block;
+    transition: opacity var(--transition), transform var(--transition);
   }
 
-  .hero-windows-link:hover {
-    opacity: 1;
-    color: var(--windows-accent);
+  .appstore-badge:hover {
+    opacity: 0.88;
+    transform: translateY(-1px);
+  }
+
+  .appstore-svg {
+    display: block;
+    width: 180px;
+    height: auto;
   }
 
   .hero-image {
@@ -668,91 +613,21 @@ import { SITE_TITLE, SITE_DESCRIPTION, APP_STORE_URL } from '../consts';
     border-top: 1px solid var(--border);
   }
 
-  .download h2 {
-    margin-bottom: 2.5rem;
-  }
-
-  .download-grid {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    gap: 1.5rem;
-  }
-
-  .download-card {
-    background: var(--bg-card);
-    border: 1px solid var(--border);
-    border-radius: var(--radius);
-    padding: 2rem;
+  .download-inner {
     display: flex;
     flex-direction: column;
+    align-items: flex-start;
     gap: 1rem;
   }
 
-  .windows-card {
-    border-color: rgba(196, 181, 253, 0.15);
+  .download-inner h2 {
+    margin: 0;
   }
 
-  .download-card-header {
-    display: flex;
-    flex-direction: column;
-    gap: 0.35rem;
-  }
-
-  .platform-badge {
-    display: inline-block;
-    font-size: 0.72rem;
-    font-weight: 600;
-    letter-spacing: 0.06em;
-    text-transform: uppercase;
-    padding: 0.2rem 0.6rem;
-    border-radius: 999px;
-    width: fit-content;
-  }
-
-  .platform-badge.mac {
-    background: var(--accent-dim);
-    color: var(--accent);
-    border: 1px solid rgba(125, 211, 168, 0.2);
-  }
-
-  .platform-badge.windows {
-    background: var(--windows-dim);
-    color: var(--windows-accent);
-    border: 1px solid rgba(196, 181, 253, 0.2);
-  }
-
-  .platform-label {
+  .download-sub {
     font-size: 1rem;
-    font-weight: 600;
-    color: var(--text);
-    margin: 0;
-  }
-
-  .windows-blurb {
-    font-size: 0.9rem;
     color: var(--text-muted);
-    line-height: 1.65;
-    margin: 0;
-  }
-
-  .waitlist-form {
-    display: flex;
-    gap: 0.5rem;
-    flex-wrap: wrap;
-  }
-
-  .waitlist-form input[type='email'] {
-    flex: 1;
-    min-width: 0;
-  }
-
-  .waitlist-success {
-    display: none;
-    font-size: 0.9rem;
-    color: var(--accent);
-    font-weight: 500;
-    margin: 0;
-    padding: 0.5rem 0;
+    margin: 0 0 0.5rem;
   }
 
   /* ── Responsive ── */
@@ -770,9 +645,6 @@ import { SITE_TITLE, SITE_DESCRIPTION, APP_STORE_URL } from '../consts';
       max-width: 320px;
     }
 
-    .download-grid {
-      grid-template-columns: 1fr;
-    }
   }
 
   @media (max-width: 720px) {
@@ -787,19 +659,6 @@ import { SITE_TITLE, SITE_DESCRIPTION, APP_STORE_URL } from '../consts';
 
     .presets-grid {
       grid-template-columns: repeat(2, 1fr);
-    }
-
-    .download-card {
-      padding: 1.5rem;
-    }
-
-    .waitlist-form {
-      flex-direction: column;
-    }
-
-    .waitlist-form .btn {
-      width: 100%;
-      justify-content: center;
     }
   }
 </style>
