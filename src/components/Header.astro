@@ -16,7 +16,6 @@ const currentPath = Astro.url.pathname;
     <!-- Nav links -->
     <nav aria-label="Main navigation">
       <a href="/" class:list={['nav-link', { active: currentPath === '/' }]}>Home</a>
-      <a href="/blog" class:list={['nav-link', { active: currentPath.startsWith('/blog') }]}>Blog</a>
       <a href="/pricing" class:list={['nav-link', { active: currentPath === '/pricing' }]}>Pricing</a>
       <a href="/support" class:list={['nav-link', { active: currentPath === '/support' }]}>Support</a>
     </nav>
@@ -55,7 +54,6 @@ const currentPath = Astro.url.pathname;
   <!-- Mobile nav drawer -->
   <div id="mobile-nav" class="mobile-nav" aria-hidden="true">
     <a href="/" class:list={['mobile-link', { active: currentPath === '/' }]}>Home</a>
-    <a href="/blog" class:list={['mobile-link', { active: currentPath.startsWith('/blog') }]}>Blog</a>
     <a href="/pricing" class:list={['mobile-link', { active: currentPath === '/pricing' }]}>Pricing</a>
     <a href="/support" class:list={['mobile-link', { active: currentPath === '/support' }]}>Support</a>
     <a href={APP_STORE_URL} class="nav-appstore-badge mobile-store-btn" target="_blank" rel="noopener noreferrer" aria-label="Download on the Mac App Store">
