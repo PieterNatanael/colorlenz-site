@@ -66,13 +66,13 @@ import { SITE_TITLE, SITE_DESCRIPTION, APP_STORE_URL } from '../consts';
         <div class="container feeling-inner">
           <Image src={logo} alt="ColorLenz" width={288} height={288} class="feeling-logo" />
           <div class="feeling-text">
-            <h2>Your screen should work<br />with your brain. Not against it.</h2>
+            <p>Color is stimulation.<br />And stimulation adds up.</p>
             <p>
-              Most screens weren't designed with your brain in mind. ColorLenz sits
-              quietly on top of your display, a soft, floating lens that filters and
-              tones your screen to match your mood, your focus, your pace. One tap.
-              No interruption.
+              ColorLenz gently turns down the noise your screen
+              sends to your brain. Things get quieter. Calmer.
+              A little more still.
             </p>
+            <p class="feeling-kicker">Some call it dull. We call it breathing room.</p>
           </div>
         </div>
       </section>
@@ -228,16 +228,25 @@ import { SITE_TITLE, SITE_DESCRIPTION, APP_STORE_URL } from '../consts';
     box-shadow: 0 16px 64px rgba(125, 211, 168, 0.12);
   }
 
-  .feeling-text h2 {
-    margin-bottom: 1.25rem;
-    font-size: clamp(1.75rem, 3.5vw, 2.6rem);
-  }
-
   .feeling-text p {
     font-size: 1.05rem;
     color: var(--text-muted);
     line-height: 1.8;
-    margin: 0;
+    margin: 0 0 1rem;
+  }
+
+  .feeling-text p:first-child {
+    font-size: 1.25rem;
+    font-weight: 600;
+    color: var(--text);
+    line-height: 1.6;
+  }
+
+  .feeling-kicker {
+    font-size: 0.95rem !important;
+    font-style: italic;
+    color: var(--text-muted);
+    margin-top: 0.5rem;
   }
 
   @media (max-width: 720px) {
