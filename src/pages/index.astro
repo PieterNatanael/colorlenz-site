@@ -5,6 +5,7 @@ import Header from '../components/Header.astro';
 import Footer from '../components/Footer.astro';
 import userImage from '../assets/userimage.png';
 import logo from '../assets/logo.png';
+import screenImage from '../assets/screenimage.jpg';
 import { SITE_TITLE, SITE_DESCRIPTION, APP_STORE_URL } from '../consts';
 ---
 
@@ -81,28 +82,15 @@ import { SITE_TITLE, SITE_DESCRIPTION, APP_STORE_URL } from '../consts';
         <div class="container">
           <div class="section-label">Features</div>
           <h2>Everything you need.<br />Nothing you don't.</h2>
-          <ul class="features-list">
-            <li>
-              <span class="feature-icon">🎨</span>
-              <span>14 pill themes, dress your lens in a style that feels like you</span>
-            </li>
-            <li>
-              <span class="feature-icon">🔒</span>
-              <span>Privacy Mode, one tap wraps your screen, instant quiet privacy</span>
-            </li>
-            <li>
-              <span class="feature-icon">✨</span>
-              <span>Custom presets, create and name your own filter combinations</span>
-            </li>
-            <li>
-              <span class="feature-icon">🪟</span>
-              <span>Floating lens, sits gently on top of any app, any window</span>
-            </li>
-            <li>
-              <span class="feature-icon">⚡</span>
-              <span>No setup, open it and it just works</span>
-            </li>
-          </ul>
+          <div class="screen-wrap">
+            <Image
+              src={screenImage}
+              alt="ColorLenz floating lens on screen"
+              width={900}
+              class="screen-img"
+            />
+            <p class="screen-caption">Floating lens, sits gently on top of any app, any window</p>
+          </div>
         </div>
       </section>
 
@@ -318,42 +306,26 @@ import { SITE_TITLE, SITE_DESCRIPTION, APP_STORE_URL } from '../consts';
     border-bottom: 1px solid var(--border);
   }
 
-  .features-list {
-    list-style: none;
+  .screen-wrap {
+    margin-top: 2.5rem;
     display: flex;
     flex-direction: column;
     gap: 1rem;
-    margin-top: 2.5rem;
-    max-width: 620px;
   }
 
-  .features-list li {
-    display: flex;
-    align-items: flex-start;
-    gap: 1rem;
-    padding: 1rem 1.25rem;
-    background: var(--bg-card);
+  .screen-img {
+    width: 100%;
+    height: auto;
+    border-radius: var(--radius);
     border: 1px solid var(--border);
-    border-radius: var(--radius-sm);
-    font-size: 0.97rem;
+    display: block;
+  }
+
+  .screen-caption {
+    font-size: 0.9rem;
     color: var(--text-muted);
-    line-height: 1.5;
-    transition: border-color var(--transition);
-  }
-
-  .features-list li:hover {
-    border-color: var(--accent);
-  }
-
-  .feature-icon {
-    font-size: 1.1rem;
-    flex-shrink: 0;
-    margin-top: 1px;
-  }
-
-  /* ── Philosophy ── */
-  .philosophy-inner {
-    max-width: 660px;
+    text-align: center;
+    margin: 0;
   }
 
   .philosophy h2 {
