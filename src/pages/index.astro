@@ -4,8 +4,9 @@ import BaseHead from '../components/BaseHead.astro';
 import Header from '../components/Header.astro';
 import Footer from '../components/Footer.astro';
 import userImage from '../assets/userimage.png';
+import userImage2 from '../assets/userimage2.jpg';
+import userImage3 from '../assets/userimage3.jpg';
 import logo from '../assets/logo.png';
-import screenImage from '../assets/screenimage.jpg';
 import { SITE_TITLE, SITE_DESCRIPTION, APP_STORE_URL } from '../consts';
 ---
 
@@ -22,7 +23,7 @@ import { SITE_TITLE, SITE_DESCRIPTION, APP_STORE_URL } from '../consts';
       <section class="hero">
         <div class="container hero-inner">
           <div class="hero-text">
-            <div class="badge">Mac OS · Free to download</div>
+            <div class="badge">macOS · Free to download</div>
             <h1>Built for brains that<br />work differently.</h1>
             <p class="hero-sub">
               A gentle floating lens that quietly adjusts your screen to match how
@@ -49,15 +50,6 @@ import { SITE_TITLE, SITE_DESCRIPTION, APP_STORE_URL } from '../consts';
             </div>
           </div>
 
-          <div class="hero-image">
-            <Image
-              src={userImage}
-              alt="Person using ColorLenz with a green screen"
-              width={480}
-              height={480}
-              class="user-img"
-            />
-          </div>
         </div>
       </section>
 
@@ -84,12 +76,17 @@ import { SITE_TITLE, SITE_DESCRIPTION, APP_STORE_URL } from '../consts';
           <h2>Everything you need.<br />Nothing you don't.</h2>
           <div class="screen-wrap">
             <Image
-              src={userimage2}
-              alt="ColorLenz floating lens on screen"
+              src={userImage2}
+              alt="Person using ColorLenz"
               width={900}
               class="screen-img"
             />
             <p class="screen-caption">Floating lens, sits gently on top of any app, any window</p>
+          </div>
+          <div class="user-row">
+            <Image src={userImage} alt="Person using ColorLenz" width={320} class="user-trio-img" />
+            <Image src={userImage2} alt="Person using ColorLenz" width={320} class="user-trio-img" />
+            <Image src={userImage3} alt="Person using ColorLenz" width={320} class="user-trio-img" />
           </div>
         </div>
       </section>
@@ -132,9 +129,10 @@ import { SITE_TITLE, SITE_DESCRIPTION, APP_STORE_URL } from '../consts';
 
   .hero-inner {
     display: grid;
-    grid-template-columns: 1fr 1fr;
+    grid-template-columns: 1fr;
     align-items: center;
     gap: 4rem;
+    max-width: 680px;
   }
 
   .badge {
@@ -193,18 +191,17 @@ import { SITE_TITLE, SITE_DESCRIPTION, APP_STORE_URL } from '../consts';
     height: auto;
   }
 
-  .hero-image {
+  .user-row {
     display: flex;
-    justify-content: center;
-    align-items: center;
+    gap: 0.75rem;
+    margin-top: 2rem;
   }
 
-  .user-img {
-    width: 100%;
-    max-width: 420px;
+  .user-trio-img {
+    width: calc(33.333% - 0.5rem);
     height: auto;
     border-radius: var(--radius);
-    filter: drop-shadow(0 20px 60px rgba(125, 211, 168, 0.08));
+    display: block;
   }
 
   /* ── Feeling ── */
@@ -384,20 +381,14 @@ import { SITE_TITLE, SITE_DESCRIPTION, APP_STORE_URL } from '../consts';
   }
 
   /* ── Responsive ── */
-  @media (max-width: 900px) {
-    .hero-inner {
-      grid-template-columns: 1fr;
-      gap: 3rem;
+  @media (max-width: 600px) {
+    .user-row {
+      flex-direction: column;
     }
 
-    .hero-image {
-      order: -1;
+    .user-trio-img {
+      width: 100%;
     }
-
-    .user-img {
-      max-width: 320px;
-    }
-
   }
 
   @media (max-width: 720px) {
