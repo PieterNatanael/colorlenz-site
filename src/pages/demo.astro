@@ -1,0 +1,304 @@
+---
+import BaseHead from '../components/BaseHead.astro';
+import Header from '../components/Header.astro';
+import Footer from '../components/Footer.astro';
+import { APP_STORE_URL } from '../consts';
+---
+
+<!doctype html>
+<html lang="en">
+  <head>
+    <BaseHead
+      title="Demo"
+      description="Watch ColorLenz in action. See how it transforms your macOS screen with gentle color adjustments for focus and calm."
+    />
+  </head>
+  <body>
+    <Header />
+    <main>
+      <div class="container page-wrap">
+
+        <!-- Page header -->
+        <header class="page-header">
+          <div class="section-label">See It In Action</div>
+          <h1>ColorLenz Demo</h1>
+          <p class="page-intro">
+            Watch how ColorLenz transforms your macOS screen. One gentle adjustment makes your display feel calmer, your focus sharper.
+          </p>
+        </header>
+
+        <!-- Demo video section -->
+        <div class="demo-section">
+          <div class="video-container">
+            <iframe
+              width="100%"
+              height="700"
+              src="https://www.youtube.com/embed/BfW8fvN-B-s?autoplay=1&loop=1&playlist=BfW8fvN-B-s&mute=1"
+              title="How to Add a Color Tint to Your macOS Screen | ColorLenz Demo"
+              allow="autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+              allowfullscreen
+              class="video-frame"
+            ></iframe>
+          </div>
+
+          <div class="video-description">
+            <h2>How to Add a Color Tint to Your macOS Screen</h2>
+            <p>
+              In this 31-second demo, you'll see ColorLenz in action. The floating lens adjusts your screen's color and brightness in real-time, creating a calm visual environment that reduces overstimulation and eye strain.
+            </p>
+            <p>
+              Notice how the screen transforms instantly when the filter is applied—warmer tones, softer contrast, less visual noise. This is what working with ColorLenz feels like throughout your entire day.
+            </p>
+
+            <!-- Key features highlight -->
+            <div class="demo-features">
+              <h3>What You're Seeing:</h3>
+              <ul class="features-list">
+                <li><span class="feature-dot"></span> Floating lens interface that sits on top of any app</li>
+                <li><span class="feature-dot"></span> Instant color and brightness adjustment</li>
+                <li><span class="feature-dot"></span> No setup required—works immediately</li>
+                <li><span class="feature-dot"></span> Available for all Mac users</li>
+              </ul>
+            </div>
+
+            <!-- CTA -->
+            <div class="demo-cta">
+              <a href={APP_STORE_URL} class="appstore-badge-demo" target="_blank" rel="noopener noreferrer" aria-label="Download ColorLenz on the Mac App Store">
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 156 52" class="appstore-svg">
+                  <rect width="156" height="52" rx="8" fill="black"/>
+                  <rect width="155" height="51" rx="7.5" x="0.5" y="0.5" fill="none" stroke="white" stroke-opacity="0.3"/>
+                  <path d="M22.5 17.2c1.1-1.4 1.9-3.3 1.7-5.2-1.6.1-3.6 1.1-4.7 2.5-1 1.2-1.9 3.1-1.7 5 1.8.1 3.6-1 4.7-2.3z" fill="white"/>
+                  <path d="M24.2 19.8c-2.6-.2-4.8 1.5-6 1.5-1.3 0-3.2-1.4-5.3-1.4-2.7 0-5.2 1.6-6.6 4-2.8 4.9-.7 12.1 2 16.1 1.3 1.9 2.9 4 5 3.9 2-.1 2.7-1.3 5.1-1.3 2.4 0 3 1.3 5.1 1.2 2.2 0 3.5-1.9 4.8-3.8.9-1.3 1.6-2.8 2-4.3-3.3-1.3-4.8-4.8-4.8-8.1.1-2.9 1.4-5.5 3.7-7.1-.8-1-2.4-2.7-5-2.7z" fill="white"/>
+                  <text x="40" y="22" font-family="-apple-system, BlinkMacSystemFont, sans-serif" font-size="10" fill="white" opacity="0.85">Download on the</text>
+                  <text x="40" y="38" font-family="-apple-system, BlinkMacSystemFont, sans-serif" font-size="17" font-weight="600" fill="white">Mac App Store</text>
+                </svg>
+              </a>
+              <p class="cta-note">Free to download. Unlock full personalization for $0.99/month, cancel anytime.</p>
+            </div>
+          </div>
+        </div>
+
+        <!-- More demos coming -->
+        <div class="more-demos">
+          <p>More demos coming soon. <a href="/blog">Read our blog</a> for evidence-backed articles about focus, screen fatigue, and neurodiversity.</p>
+        </div>
+
+      </div>
+    </main>
+    <Footer />
+  </body>
+</html>
+
+<style>
+  .page-wrap {
+    max-width: 900px;
+    padding-top: 4rem;
+    padding-bottom: 4rem;
+  }
+
+  .page-header {
+    margin-bottom: 3.5rem;
+  }
+
+  .section-label {
+    font-size: 0.75rem;
+    font-weight: 600;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+    color: var(--accent);
+    margin-bottom: 0.75rem;
+  }
+
+  .page-header h1 {
+    margin-bottom: 0.75rem;
+  }
+
+  .page-intro {
+    font-size: 1.05rem;
+    color: var(--text-muted);
+    margin: 0;
+  }
+
+  /* Demo Section */
+  .demo-section {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 3rem;
+    align-items: start;
+    margin: 3rem 0;
+  }
+
+  .video-container {
+    position: relative;
+    width: 100%;
+    background: var(--bg-card);
+    border: 1px solid var(--border);
+    border-radius: var(--radius);
+    overflow: hidden;
+  }
+
+  .video-frame {
+    display: block;
+    width: 100%;
+    height: auto;
+    border: none;
+  }
+
+  .video-description {
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+  }
+
+  .video-description h2 {
+    font-size: 1.4rem;
+    margin: 0 0 0.5rem;
+    line-height: 1.3;
+  }
+
+  .video-description p {
+    font-size: 0.95rem;
+    color: var(--text-muted);
+    line-height: 1.7;
+    margin: 0;
+  }
+
+  /* Features list */
+  .demo-features {
+    background: var(--bg-card);
+    border: 1px solid var(--border);
+    border-radius: var(--radius-sm);
+    padding: 1.5rem;
+  }
+
+  .demo-features h3 {
+    font-size: 0.95rem;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+    color: var(--accent);
+    margin: 0 0 1rem;
+  }
+
+  .features-list {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+  }
+
+  .features-list li {
+    display: flex;
+    align-items: flex-start;
+    gap: 0.75rem;
+    font-size: 0.9rem;
+    color: var(--text);
+    margin-bottom: 0.75rem;
+    line-height: 1.5;
+  }
+
+  .features-list li:last-child {
+    margin-bottom: 0;
+  }
+
+  .feature-dot {
+    display: inline-block;
+    width: 6px;
+    height: 6px;
+    border-radius: 50%;
+    background: var(--accent);
+    flex-shrink: 0;
+    margin-top: 0.5rem;
+  }
+
+  /* CTA Section */
+  .demo-cta {
+    display: flex;
+    flex-direction: column;
+    gap: 0.75rem;
+  }
+
+  .appstore-badge-demo {
+    display: flex;
+    align-items: center;
+    transition: opacity var(--transition), transform var(--transition);
+  }
+
+  .appstore-badge-demo:hover {
+    opacity: 0.85;
+    transform: translateY(-1px);
+  }
+
+  .appstore-badge-demo .appstore-svg {
+    display: block;
+    width: 140px;
+    height: auto;
+  }
+
+  .cta-note {
+    font-size: 0.8rem;
+    color: var(--text-muted);
+    margin: 0;
+  }
+
+  /* More demos section */
+  .more-demos {
+    text-align: center;
+    margin-top: 4rem;
+    padding: 2rem;
+    background: var(--bg-card);
+    border: 1px solid var(--border);
+    border-radius: var(--radius);
+  }
+
+  .more-demos p {
+    font-size: 0.95rem;
+    color: var(--text-muted);
+    margin: 0;
+  }
+
+  .more-demos a {
+    color: var(--accent);
+    text-decoration: underline;
+    text-underline-offset: 3px;
+    font-weight: 500;
+  }
+
+  .more-demos a:hover {
+    color: var(--text);
+  }
+
+  /* Responsive */
+  @media (max-width: 900px) {
+    .demo-section {
+      grid-template-columns: 1fr;
+      gap: 2rem;
+    }
+
+    .video-frame {
+      height: 400px;
+    }
+  }
+
+  @media (max-width: 720px) {
+    .page-wrap {
+      padding-top: 3rem;
+      padding-bottom: 3rem;
+    }
+
+    .page-header {
+      margin-bottom: 2rem;
+    }
+
+    .video-frame {
+      height: 300px;
+    }
+
+    .video-description h2 {
+      font-size: 1.2rem;
+    }
+
+    .demo-features {
+      padding: 1rem;
+    }
+  }
+</style>
