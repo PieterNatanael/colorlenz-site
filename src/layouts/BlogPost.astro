@@ -14,6 +14,30 @@ const { title, description, pubDate, updatedDate, heroImage } = Astro.props;
 <html lang="en">
 	<head>
 		<BaseHead title={title} description={description} />
+
+		<!-- Article Schema (JSON-LD) for Search Engines -->
+		<script type="application/ld+json" set:html={JSON.stringify({
+			"@context": "https://schema.org/",
+			"@type": "Article",
+			"headline": title,
+			"description": description,
+			"datePublished": pubDate.toISOString(),
+			...(updatedDate && { "dateModified": updatedDate.toISOString() }),
+			"author": {
+				"@type": "Organization",
+				"name": "ColorLenz",
+				"url": "https://colorlenz.com"
+			},
+			"publisher": {
+				"@type": "Organization",
+				"name": "ColorLenz",
+				"logo": {
+					"@type": "ImageObject",
+					"url": "https://colorlenz.com/favicon.png"
+				}
+			}
+		})} />
+
 		<style>
 			main {
 				width: calc(100% - 2em);
