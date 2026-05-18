@@ -51,9 +51,9 @@ ColorLenz operates on a simple principle: **your data never leaves your Mac**.
 
 Here's how it works technically:
 
-**Screen capture:** ColorLenz uses ScreenCaptureKit, Apple's official framework for capturing your display. This process happens locally—nothing is sent to our servers.
+**Screen capture:** ColorLenz captures your display locally—nothing is sent to our servers. Everything happens right on your Mac.
 
-**GPU processing:** Your screen is processed using Metal, Apple's GPU acceleration framework. The color adjustments, contrast changes, and filter effects all happen on your graphics card, in memory.
+**GPU processing:** Your screen is processed using your graphics card (not your CPU). The color adjustments, contrast changes, and filter effects all happen in the moment, in memory.
 
 **Real-time overlay:** The adjusted image is rendered as a transparent overlay on top of your apps. It's instantaneous and lightweight.
 
