@@ -130,7 +130,7 @@ const latestPosts = allPosts
             {latestPosts.map((post) => (
               <article class="blog-card">
                 {post.data.heroImage && (
-                  <a href={`/blog/${post.slug}`} class="blog-image-link">
+                  <a href={`/blog/${post.id}`} class="blog-image-link">
                     <Image
                       src={post.data.heroImage}
                       alt={post.data.title}
@@ -149,10 +149,10 @@ const latestPosts = allPosts
                     })}
                   </time>
                   <h3>
-                    <a href={`/blog/${post.slug}`} class="blog-title-link">{post.data.title}</a>
+                    <a href={`/blog/${post.id}`} class="blog-title-link">{post.data.title}</a>
                   </h3>
                   <p class="blog-description">{post.data.description}</p>
-                  <a href={`/blog/${post.slug}`} class="blog-link">Read article →</a>
+                  <a href={`/blog/${post.id}`} class="blog-link">Read article →</a>
                 </div>
               </article>
             ))}
