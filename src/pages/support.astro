@@ -227,6 +227,120 @@ import { APP_STORE_URL } from '../consts';
   </body>
 </html>
 
+<!-- FAQ Schema for Search Engines (JSON-LD) -->
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org/",
+  "@type": "FAQPage",
+  "mainEntity": [
+    {
+      "@type": "Question",
+      "name": "What's free and what's paid?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "The app is free to download and use with the default settings, no account, no time limit. The floating lens works, Privacy Mode works, and your screen starts feeling better immediately. For $0.99/month USD (pricing may vary by country) you unlock full personalization: all 7 mood presets, 14 pill themes, and the custom preset builder. You can cancel anytime from your Mac App Store subscriptions."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "How do I install ColorLenz?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Download it from the Mac App Store. Once installed, open the app, it lives in your menu bar and starts working immediately. No account, no setup required."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Is ColorLenz really free?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Yes, the core app is free, forever. You can download it and use it with the default settings at no cost, with no time limit. Personalization features (mood presets, pill themes, custom presets) are unlocked with a $0.99/month subscription."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Is ColorLenz ad-free?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "No ads. ColorLenz runs without ads on both free and paid tiers. Ads are a form of stimulation, noise your brain doesn't need."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "What macOS version do I need?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "ColorLenz requires macOS 13 (Ventura) or later. It's optimized for Apple Silicon but runs great on Intel Macs too."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Will ColorLenz slow down my computer?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "It's designed to be as light as possible. ColorLenz uses ScreenCaptureKit to capture your live display, runs each frame through a Core Image filter pipeline (color, brightness, saturation), and renders the result as a Metal-backed transparent overlay. Frames are processed in memory and discarded immediately, nothing is written to disk. On modern Macs the GPU handles most of this work, so real-world CPU and battery impact is minimal. Older or heavily loaded machines may notice a small difference."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "What are the seven presets?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Cold Sheep, Brain Power, Caramel Slice, Curious Alpaca, Foggy Mind, Sick Rooster, and Tiger Toast. Each one is a carefully tuned combination of color temperature, tint, and contrast. The best way to understand them is to try them, they're designed to feel intuitive once you experience them."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Can I create my own presets?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Yes. Use the Custom Presets feature to dial in your own filter combination and give it a name you'll actually remember."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "What are the 14 pill themes?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Pill themes change the visual style of the ColorLenz floating interface itself, think of it as choosing a case for your lens. They don't affect the color filter, just how the app looks on screen."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "How does Privacy Mode work?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Privacy Mode wraps your screen in a dark overlay, instantly obscuring your content from anyone nearby. One tap to activate, one tap to dismiss. It's designed for public spaces, shared offices, or any moment you need a second of visual quiet."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Does ColorLenz work with all apps?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Yes. The floating lens works on top of any app or window, browsers, editors, video players, design tools, everything. A small number of full-screen video games that bypass the system compositor may be unaffected."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Does ColorLenz collect any data about me?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "No. ColorLenz does not collect, store, or transmit personal data. It runs entirely on your device. See our Privacy Policy for the full details."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Does it require an internet connection?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "No. ColorLenz works fully offline. An internet connection is only needed to download the app from the Mac App Store."
+      }
+    }
+  ]
+}
+</script>
+
 <script>
   const form = document.getElementById('feedback-form') as HTMLFormElement | null;
   const success = document.getElementById('feedback-success');
