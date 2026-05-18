@@ -2,7 +2,7 @@
 title: "Digital Overstimulation & ADHD: Why Your Screen Drains You"
 description: "Understand why ADHD brains struggle with screen stimulation and how visual calm can help you focus. Evidence-backed insights for neurodivergent workers."
 pubDate: "May 18 2026"
-heroImage: "../../assets/blog-placeholder-1.jpg"
+heroImage: "../../assets/blog-placeholder-3.jpg"
 ---
 
 If you have ADHD, you know the feeling: after an hour on your computer, your brain feels exhausted. Not because of the work itself, but because your screen is *overwhelming*. Notifications, colors, movement—it all adds up. You're not lazy or undisciplined. Your brain is just processing more stimulation than it can handle.
