@@ -82,13 +82,7 @@ import { APP_STORE_URL } from '../consts';
               <div class="faq-item">
                 <dt>Will ColorLenz slow down my computer?</dt>
                 <dd>
-                  It's designed to be as light as possible. ColorLenz uses ScreenCaptureKit to
-                  capture your live display, runs each frame through a Core Image filter pipeline
-                  (color, brightness, saturation), and renders the result as a Metal-backed
-                  transparent overlay. Frames are processed in memory and discarded immediately,
-                  nothing is written to disk. On modern Macs the GPU handles most of this work,
-                  so real-world CPU and battery impact is minimal. Older or heavily loaded machines
-                  may notice a small difference.
+                  No. ColorLenz is designed to be lightweight and friendly to your Mac. It uses your graphics card (not your CPU) to apply the color adjustments, which means minimal impact on performance. Nothing is saved to disk—everything happens in the moment. On modern Macs, you won't notice any slowdown. On older machines or if you're running lots of heavy apps, there might be a tiny difference, but ColorLenz stays out of the way.
                 </dd>
               </div>
 
@@ -278,7 +272,7 @@ import { APP_STORE_URL } from '../consts';
       "name": "Will ColorLenz slow down my computer?",
       "acceptedAnswer": {
         "@type": "Answer",
-        "text": "It's designed to be as light as possible. ColorLenz uses ScreenCaptureKit to capture your live display, runs each frame through a Core Image filter pipeline (color, brightness, saturation), and renders the result as a Metal-backed transparent overlay. Frames are processed in memory and discarded immediately, nothing is written to disk. On modern Macs the GPU handles most of this work, so real-world CPU and battery impact is minimal. Older or heavily loaded machines may notice a small difference."
+        "text": "No. ColorLenz is designed to be lightweight and friendly to your Mac. It uses your graphics card (not your CPU) to apply the color adjustments, which means minimal impact on performance. Nothing is saved to disk—everything happens in the moment. On modern Macs, you won't notice any slowdown. On older machines or if you're running lots of heavy apps, there might be a tiny difference, but ColorLenz stays out of the way."
       }
     },
     {
