@@ -74,7 +74,7 @@ import { APP_STORE_URL } from '../consts';
               <div class="faq-item">
                 <dt>What macOS version do I need?</dt>
                 <dd>
-                  ColorLenz requires macOS 14.6 or later. It's optimized for Apple Silicon but
+                  ColorLenz requires macOS 13 (Ventura) or later. It's optimized for Apple Silicon but
                   runs great on Intel Macs too.
                 </dd>
               </div>
@@ -82,7 +82,10 @@ import { APP_STORE_URL } from '../consts';
               <div class="faq-item">
                 <dt>Will ColorLenz slow down my computer?</dt>
                 <dd>
-                  It's designed to be as light as possible. Frames are processed in memory and discarded immediately,
+                  It's designed to be as light as possible. ColorLenz uses ScreenCaptureKit to
+                  capture your live display, runs each frame through a Core Image filter pipeline
+                  (color, brightness, saturation), and renders the result as a Metal-backed
+                  transparent overlay. Frames are processed in memory and discarded immediately,
                   nothing is written to disk. On modern Macs the GPU handles most of this work,
                   so real-world CPU and battery impact is minimal. Older or heavily loaded machines
                   may notice a small difference.
@@ -138,29 +141,6 @@ import { APP_STORE_URL } from '../consts';
                   Yes. The floating lens works on top of any app or window, browsers, editors,
                   video players, design tools, everything. A small number of full-screen video
                   games that bypass the system compositor may be unaffected.
-                </dd>
-              </div>
-
-            </dl>
-          </div>
-
-          <div class="faq-group">
-            <h2>Windows &amp; other platforms</h2>
-            <dl class="faq-list">
-
-              <div class="faq-item">
-                <dt>Is there a Windows version?</dt>
-                <dd>
-                  Not yet.</a> 
-                 
-                </dd>
-              </div>
-
-              <div class="faq-item">
-                <dt>What about iOS or iPadOS?</dt>
-                <dd>
-                  Not planned at the moment. We're focused on getting the desktop experience
-                  right before expanding to other platforms.
                 </dd>
               </div>
 
