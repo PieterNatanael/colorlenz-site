@@ -44,6 +44,42 @@ const { title, description = SITE_DESCRIPTION, image = FallbackImage } = Astro.p
 <!-- Canonical URL -->
 <link rel="canonical" href={canonicalURL} />
 
+<!-- Product Schema (JSON-LD) -->
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org/",
+  "@type": "SoftwareApplication",
+  "name": "ColorLenz",
+  "description": "ColorLenz is a lightweight macOS screen filter that reduces visual stimulation through intelligent color adjustment. Designed for neurodivergent users with ADHD, autism, dyslexia, and sensory processing differences.",
+  "applicationCategory": "Utilities",
+  "operatingSystem": "macOS",
+  "softwareRequirements": "macOS 13 or later",
+  "offers": {
+    "@type": "Offer",
+    "price": "0",
+    "priceCurrency": "USD",
+    "name": "Free Tier"
+  },
+  "offers": [
+    {
+      "@type": "Offer",
+      "price": "0",
+      "priceCurrency": "USD",
+      "name": "Free Forever"
+    },
+    {
+      "@type": "Offer",
+      "price": "0.99",
+      "priceCurrency": "USD",
+      "name": "Full Access (Monthly Subscription)"
+    }
+  ],
+  "url": "https://colorlenz.com",
+  "downloadUrl": "https://apps.apple.com/id/app/colorlenz/id6765573775?mt=12",
+  "screenshot": "https://colorlenz.com/assets/screenimage.jpg"
+}
+</script>
+
 <!-- Primary Meta Tags -->
 <title>{title === SITE_TITLE ? title : `${title} — ${SITE_TITLE}`}</title>
 <meta name="title" content={title} />
