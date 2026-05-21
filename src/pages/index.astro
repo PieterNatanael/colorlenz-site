@@ -7,7 +7,7 @@ import Footer from '../components/Footer.astro';
 import userImage from '../assets/userimage.png';
 import userImage2 from '../assets/userimage2.jpg';
 import logo from '../assets/logo.png';
-import { SITE_TITLE, SITE_DESCRIPTION, APP_STORE_URL } from '../consts';
+import { SITE_TITLE, SITE_DESCRIPTION, APP_STORE_URL, WINDOWS_WAITLIST_FORM_ID } from '../consts';
 
 // Get latest blog posts
 const allPosts = await getCollection('blog');
@@ -161,6 +161,26 @@ const latestPosts = allPosts
           <div class="blog-cta">
             <a href="/blog" class="blog-view-all">View all articles</a>
           </div>
+        </div>
+      </section>
+
+      <!-- Windows Waitlist -->
+      <section class="windows-waitlist">
+        <div class="container waitlist-inner">
+          <div class="waitlist-content">
+            <h3>Interested in Windows?</h3>
+            <p>Leave your email and we'll let you know when it's available.</p>
+          </div>
+          <form class="waitlist-form" action={`https://formspree.io/f/${WINDOWS_WAITLIST_FORM_ID}`} method="POST">
+            <input
+              type="email"
+              name="email"
+              placeholder="your@email.com"
+              required
+              class="waitlist-input"
+            />
+            <button type="submit" class="waitlist-btn">Notify me</button>
+          </form>
         </div>
       </section>
 
@@ -629,6 +649,94 @@ const latestPosts = allPosts
 
     .presets-grid {
       grid-template-columns: repeat(2, 1fr);
+    }
+  }
+
+  /* ── Windows Waitlist ── */
+  .windows-waitlist {
+    background: var(--bg-subtle);
+    border-top: 1px solid var(--border);
+    border-bottom: 1px solid var(--border);
+  }
+
+  .waitlist-inner {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 2rem;
+    flex-wrap: wrap;
+  }
+
+  .waitlist-content h3 {
+    margin: 0 0 0.5rem;
+    font-size: 1.2rem;
+    color: var(--text);
+  }
+
+  .waitlist-content p {
+    margin: 0;
+    font-size: 0.95rem;
+    color: var(--text-muted);
+  }
+
+  .waitlist-form {
+    display: flex;
+    gap: 0.5rem;
+    min-width: 300px;
+  }
+
+  .waitlist-input {
+    flex: 1;
+    padding: 0.7rem 1rem;
+    border: 1px solid var(--border);
+    border-radius: var(--radius-sm);
+    background: var(--bg);
+    color: var(--text);
+    font-size: 0.95rem;
+    transition: border-color var(--transition);
+  }
+
+  .waitlist-input:focus {
+    outline: none;
+    border-color: var(--accent);
+  }
+
+  .waitlist-input::placeholder {
+    color: var(--text-muted);
+  }
+
+  .waitlist-btn {
+    padding: 0.7rem 1.5rem;
+    background: var(--accent);
+    color: #000;
+    border: none;
+    border-radius: var(--radius-sm);
+    font-weight: 500;
+    font-size: 0.95rem;
+    cursor: pointer;
+    transition: all var(--transition);
+  }
+
+  .waitlist-btn:hover {
+    opacity: 0.9;
+    transform: translateY(-1px);
+  }
+
+  @media (max-width: 720px) {
+    .waitlist-inner {
+      flex-direction: column;
+      gap: 1rem;
+    }
+
+    .waitlist-content {
+      text-align: center;
+      width: 100%;
+    }
+
+    .waitlist-form {
+      width: 100%;
+      min-width: unset;
+      flex-direction: column;
     }
   }
 </style>
