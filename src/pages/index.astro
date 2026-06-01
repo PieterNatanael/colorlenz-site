@@ -147,10 +147,20 @@ const latestPosts = allPosts
           ))}
         </div>
 
-        <div class="screenshots-dots" id="screenshots-dots">
-          {[0,1,2,3,4,5].map((i) => (
-            <button class={`dot-btn${i === 0 ? ' active' : ''}`} data-index={i} aria-label={`Screenshot ${i + 1}`}></button>
-          ))}
+        <div class="screenshots-controls">
+          <button class="arrow-btn" id="prev-btn" aria-label="Previous screenshot">
+            <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="15 18 9 12 15 6"/></svg>
+          </button>
+
+          <div class="screenshots-dots" id="screenshots-dots">
+            {[0,1,2,3,4,5].map((i) => (
+              <button class={`dot-btn${i === 0 ? ' active' : ''}`} data-index={i} aria-label={`Screenshot ${i + 1}`}></button>
+            ))}
+          </div>
+
+          <button class="arrow-btn" id="next-btn" aria-label="Next screenshot">
+            <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="9 18 15 12 9 6"/></svg>
+          </button>
         </div>
       </section>
 
@@ -328,11 +338,39 @@ const latestPosts = allPosts
     margin: 0;
   }
 
+  .screenshots-controls {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 1rem;
+    margin-top: 1.75rem;
+  }
+
+  .arrow-btn {
+    width: 36px;
+    height: 36px;
+    border-radius: 50%;
+    border: 1px solid var(--border);
+    background: var(--bg-card);
+    color: var(--text-muted);
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: all var(--transition);
+    flex-shrink: 0;
+  }
+
+  .arrow-btn:hover {
+    border-color: var(--accent);
+    color: var(--accent);
+    transform: scale(1.05);
+  }
+
   .screenshots-dots {
     display: flex;
     justify-content: center;
     gap: 0.5rem;
-    margin-top: 1.75rem;
   }
 
   .dot-btn {
@@ -907,23 +945,68 @@ const latestPosts = allPosts
 </style>
 
 <script>
-  const track = document.getElementById('screenshots-track');
+  const track = document.getElementById('screenshots-track') as HTMLElement | null;
   const dots = document.querySelectorAll('.dot-btn');
+  const prevBtn = document.getElementById('prev-btn');
+  const nextBtn = document.getElementById('next-btn');
+  const total = 6;
 
-  // Update active dot based on scroll position
-  track?.addEventListener('scroll', () => {
+  function getSlideWidth() {
+    return (track?.firstElementChild as HTMLElement)?.offsetWidth ?? 0;
+  }
+
+  function currentIndex() {
+    if (!track) return 0;
+    return Math.round(track.scrollLeft / (getSlideWidth() + 24));
+  }
+
+  function goTo(i: number) {
     if (!track) return;
-    const slideWidth = track.firstElementChild?.clientWidth ?? 0;
-    const index = Math.round(track.scrollLeft / (slideWidth + 24)); // 24 = gap
-    dots.forEach((d, i) => d.classList.toggle('active', i === index));
+    const clamped = Math.max(0, Math.min(total - 1, i));
+    track.scrollTo({ left: clamped * (getSlideWidth() + 24), behavior: 'smooth' });
+  }
+
+  // Update dots on scroll
+  track?.addEventListener('scroll', () => {
+    const i = currentIndex();
+    dots.forEach((d, idx) => d.classList.toggle('active', idx === i));
   }, { passive: true });
 
-  // Click dot to scroll to slide
-  dots.forEach((dot, i) => {
-    dot.addEventListener('click', () => {
-      if (!track) return;
-      const slideWidth = track.firstElementChild?.clientWidth ?? 0;
-      track.scrollTo({ left: i * (slideWidth + 24), behavior: 'smooth' });
-    });
+  // Dot clicks
+  dots.forEach((dot, i) => dot.addEventListener('click', () => goTo(i)));
+
+  // Arrow buttons
+  prevBtn?.addEventListener('click', () => goTo(currentIndex() - 1));
+  nextBtn?.addEventListener('click', () => goTo(currentIndex() + 1));
+
+  // Mouse drag on desktop
+  let isDragging = false;
+  let startX = 0;
+  let startScrollLeft = 0;
+
+  track?.addEventListener('mousedown', (e) => {
+    isDragging = true;
+    startX = e.pageX;
+    startScrollLeft = track.scrollLeft;
+    track.style.cursor = 'grabbing';
+    track.style.userSelect = 'none';
   });
+
+  document.addEventListener('mousemove', (e) => {
+    if (!isDragging || !track) return;
+    const dx = e.pageX - startX;
+    track.scrollLeft = startScrollLeft - dx;
+  });
+
+  document.addEventListener('mouseup', () => {
+    if (!isDragging || !track) return;
+    isDragging = false;
+    track.style.cursor = 'grab';
+    track.style.userSelect = '';
+    // Snap to nearest slide
+    goTo(currentIndex());
+  });
+
+  // Set initial cursor
+  if (track) track.style.cursor = 'grab';
 </script>
