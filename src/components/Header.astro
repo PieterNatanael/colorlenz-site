@@ -101,9 +101,15 @@ const currentPath = Astro.url.pathname;
     right: 0;
     z-index: 100;
     height: var(--nav-height);
-    background: var(--bg);
+    background: rgba(10, 10, 10, 0.85);
+    backdrop-filter: blur(12px);
+    -webkit-backdrop-filter: blur(12px);
     border-bottom: 1px solid var(--border);
     transition: background-color var(--transition), border-color var(--transition);
+  }
+
+  [data-theme='light'] header {
+    background: rgba(250, 250, 248, 0.85);
   }
 
   .nav-inner {
@@ -128,12 +134,25 @@ const currentPath = Astro.url.pathname;
     height: 28px;
     border-radius: 6px;
     flex-shrink: 0;
+    transition: filter var(--transition), transform var(--transition);
+  }
+
+  .logo-link:hover .logo-img {
+    filter: drop-shadow(0 0 8px rgba(125, 211, 168, 0.7));
+    transform: scale(1.05);
   }
 
   .logo-name {
-    font-weight: 600;
-    font-size: 1rem;
-    letter-spacing: -0.01em;
+    font-family: var(--font-pixel);
+    font-size: 10px;
+    letter-spacing: 0.04em;
+    color: var(--text);
+    transition: text-shadow var(--transition);
+  }
+
+  .logo-link:hover .logo-name {
+    text-shadow: var(--glow-text);
+    color: var(--accent);
   }
 
   nav {
@@ -152,10 +171,15 @@ const currentPath = Astro.url.pathname;
     transition: color var(--transition), background var(--transition);
   }
 
-  .nav-link:hover,
-  .nav-link.active {
+  .nav-link:hover {
     color: var(--text);
     background: var(--bg-card);
+  }
+
+  .nav-link.active {
+    color: var(--accent);
+    background: var(--accent-dim);
+    text-shadow: var(--glow-text);
   }
 
   .nav-right {

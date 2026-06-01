@@ -77,6 +77,8 @@ const latestPosts = allPosts
         </div>
       </section>
 
+      <hr class="pixel-divider" />
+
       <!-- ── FEELING ── -->
       <section class="feeling">
         <div class="container feeling-inner">
@@ -93,6 +95,8 @@ const latestPosts = allPosts
         </div>
       </section>
 
+
+      <hr class="pixel-divider" />
 
       <!-- ── SCREENSHOTS ── -->
       <section class="screenshots-section">
@@ -148,6 +152,8 @@ const latestPosts = allPosts
         </div>
       </section>
 
+      <hr class="pixel-divider" />
+
       <!-- ── DOWNLOAD ── -->
       <section class="download" id="download">
         <div class="container download-inner">
@@ -165,6 +171,8 @@ const latestPosts = allPosts
           </a>
         </div>
       </section>
+
+      <hr class="pixel-divider" />
 
       <!-- ── BLOG ── -->
       <section class="blog-section">
@@ -243,6 +251,29 @@ const latestPosts = allPosts
     padding: 6rem 0;
   }
 
+  /* ── Hero: pixel dot grid background ── */
+  .hero {
+    position: relative;
+    overflow: hidden;
+  }
+
+  .hero::before {
+    content: '';
+    position: absolute;
+    inset: 0;
+    background-image: var(--pixel-dot);
+    background-size: var(--pixel-dot-size);
+    pointer-events: none;
+    z-index: 0;
+    mask-image: radial-gradient(ellipse 80% 80% at 50% 50%, black 40%, transparent 100%);
+    -webkit-mask-image: radial-gradient(ellipse 80% 80% at 50% 50%, black 40%, transparent 100%);
+  }
+
+  .hero-inner {
+    position: relative;
+    z-index: 1;
+  }
+
   /* ── Screenshots ── */
   .screenshots-section {
     padding-bottom: 5rem;
@@ -282,6 +313,29 @@ const latestPosts = allPosts
     overflow: hidden;
     box-shadow: 0 20px 60px rgba(0, 0, 0, 0.35), 0 4px 16px rgba(0, 0, 0, 0.2);
     border: 1px solid rgba(255, 255, 255, 0.08);
+    position: relative;
+    transition: box-shadow var(--transition), border-color var(--transition);
+  }
+
+  .mac-window:hover {
+    border-color: var(--border-accent);
+    box-shadow: 0 20px 60px rgba(0, 0, 0, 0.4), var(--glow);
+  }
+
+  /* Subtle scanlines overlay */
+  .mac-window::after {
+    content: '';
+    position: absolute;
+    inset: 0;
+    background: repeating-linear-gradient(
+      0deg,
+      transparent,
+      transparent 3px,
+      rgba(0, 0, 0, 0.04) 3px,
+      rgba(0, 0, 0, 0.04) 4px
+    );
+    pointer-events: none;
+    z-index: 2;
   }
 
   .mac-chrome {

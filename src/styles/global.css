@@ -2,8 +2,9 @@
 :root {
   --bg: #0a0a0a;
   --bg-subtle: #111111;
-  --bg-card: #161616;
-  --border: rgba(255, 255, 255, 0.07);
+  --bg-card: #141414;
+  --border: rgba(255, 255, 255, 0.09);
+  --border-accent: rgba(125, 211, 168, 0.2);
   --text: #f0ede8;
   --text-muted: #b0ada8;
   --text-subtle: #666360;
@@ -14,19 +15,27 @@
   --windows-dim: rgba(196, 181, 253, 0.10);
   --windows-hover: #b39ef9;
   --font-main: 'Inter', system-ui, -apple-system, sans-serif;
+  --font-pixel: 'Press Start 2P', monospace;
   --nav-height: 64px;
   --max-width: 1100px;
-  --radius: 14px;
+  --radius: 12px;
   --radius-sm: 8px;
+  --radius-xs: 4px;
   --shadow: 0 4px 32px rgba(0, 0, 0, 0.5);
+  --glow: 0 0 24px rgba(125, 211, 168, 0.3), 0 0 48px rgba(125, 211, 168, 0.1);
+  --glow-sm: 0 0 14px rgba(125, 211, 168, 0.4);
+  --glow-text: 0 0 12px rgba(125, 211, 168, 0.6);
   --transition: 160ms ease;
+  --pixel-dot: radial-gradient(circle, rgba(125, 211, 168, 0.12) 1px, transparent 1px);
+  --pixel-dot-size: 22px 22px;
 }
 
 [data-theme='light'] {
   --bg: #fafaf8;
   --bg-subtle: #f2f0eb;
   --bg-card: #ffffff;
-  --border: rgba(0, 0, 0, 0.07);
+  --border: rgba(0, 0, 0, 0.08);
+  --border-accent: rgba(45, 158, 110, 0.2);
   --text: #1a1a18;
   --text-muted: #6b6b68;
   --text-subtle: #b0aea9;
@@ -37,6 +46,10 @@
   --windows-dim: rgba(124, 58, 237, 0.08);
   --windows-hover: #6d28d9;
   --shadow: 0 4px 24px rgba(0, 0, 0, 0.07);
+  --glow: 0 0 20px rgba(45, 158, 110, 0.2), 0 0 40px rgba(45, 158, 110, 0.08);
+  --glow-sm: 0 0 12px rgba(45, 158, 110, 0.3);
+  --glow-text: 0 0 8px rgba(45, 158, 110, 0.4);
+  --pixel-dot: radial-gradient(circle, rgba(0, 0, 0, 0.06) 1px, transparent 1px);
 }
 
 /* ── Reset & base ── */
@@ -140,6 +153,7 @@ main {
   background: var(--accent-hover);
   color: #0a0a0a;
   transform: translateY(-1px);
+  box-shadow: var(--glow-sm);
 }
 
 .btn-outline {
@@ -283,7 +297,46 @@ hr {
   border-width: 0;
 }
 
-/* ── Responsive ── */
+/* ── Pixel art utilities ── */
+
+/* Section label — pixel font, used sparingly */
+.section-label {
+  font-family: var(--font-pixel);
+  font-size: 8px;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: var(--accent);
+  margin-bottom: 1rem;
+  line-height: 1.8;
+}
+
+/* Pixel divider — dashed squares between sections */
+.pixel-divider {
+  width: 100%;
+  height: 2px;
+  background: repeating-linear-gradient(
+    90deg,
+    var(--accent) 0px,
+    var(--accent) 3px,
+    transparent 3px,
+    transparent 8px
+  );
+  opacity: 0.25;
+  margin: 0;
+  border: none;
+}
+
+/* Glow on card hover */
+.card-glow {
+  transition: border-color var(--transition), box-shadow var(--transition);
+}
+
+.card-glow:hover {
+  border-color: var(--border-accent);
+  box-shadow: 0 0 0 1px var(--border-accent), var(--glow);
+}
+
+/* Responsive ── */
 @media (max-width: 720px) {
   body {
     font-size: 15px;
