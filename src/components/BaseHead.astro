@@ -40,6 +40,36 @@ const { title, description = SITE_DESCRIPTION, image = FallbackImage } = Astro.p
   })();
 </script>
 
+<!-- Scroll progress bar -->
+<div id="scroll-progress"></div>
+
+<!-- Scroll animations + progress bar -->
+<script is:inline>
+  document.addEventListener('DOMContentLoaded', function () {
+    // Intersection Observer — reveal elements on scroll
+    var observer = new IntersectionObserver(function (entries) {
+      entries.forEach(function (entry) {
+        if (entry.isIntersecting) {
+          entry.target.classList.add('visible');
+          observer.unobserve(entry.target);
+        }
+      });
+    }, { threshold: 0.12, rootMargin: '0px 0px -40px 0px' });
+
+    document.querySelectorAll('.reveal').forEach(function (el) {
+      observer.observe(el);
+    });
+
+    // Scroll progress bar
+    var bar = document.getElementById('scroll-progress');
+    window.addEventListener('scroll', function () {
+      var scrolled = window.scrollY;
+      var total = document.documentElement.scrollHeight - window.innerHeight;
+      if (bar && total > 0) bar.style.width = (scrolled / total * 100) + '%';
+    }, { passive: true });
+  });
+</script>
+
 <!-- Canonical URL -->
 <link rel="canonical" href={canonicalURL} />
 

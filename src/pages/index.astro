@@ -39,14 +39,14 @@ const latestPosts = allPosts
       <section class="hero">
         <div class="container hero-inner">
           <div class="hero-text">
-            <div class="badge">macOS Screen Filter · Free to download</div>
-            <h1>Built for brains that<br />work differently.</h1>
-            <p class="hero-sub">
+            <div class="badge hero-enter">macOS Screen Filter · Free to download</div>
+            <h1 class="hero-enter-delay">Built for brains that<br />work differently.</h1>
+            <p class="hero-sub hero-enter-delay">
               A gentle screen filter for Mac that quietly adjusts your screen color
               to match how you think, focus, and feel. No setup. No noise. Just
               your MacBook or Mac, working with you.
             </p>
-            <div class="hero-ctas">
+            <div class="hero-ctas hero-enter-delay-2">
               <AppStoreBadge />
               <p class="hero-pricing-note">
                 Free to download. Unlock full personalization for $0.99/month, cancel anytime.
@@ -54,7 +54,7 @@ const latestPosts = allPosts
             </div>
           </div>
 
-          <div class="hero-image">
+          <div class="hero-image hero-enter-delay">
             <Image
               src={userImage}
               alt="Person using ColorLenz with a green screen"
@@ -71,8 +71,8 @@ const latestPosts = allPosts
       <!-- ── FEELING ── -->
       <section class="feeling">
         <div class="container feeling-inner">
-          <Image src={logo} alt="ColorLenz" width={288} height={288} class="feeling-logo" />
-          <div class="feeling-text">
+          <Image src={logo} alt="ColorLenz" width={288} height={288} class="feeling-logo reveal" />
+          <div class="feeling-text reveal">
             <p>Color is stimulation.<br />And stimulation adds up.</p>
             <p>
               ColorLenz gently turns down the noise your screen
@@ -89,7 +89,7 @@ const latestPosts = allPosts
 
       <!-- ── SCREENSHOTS ── -->
       <section class="screenshots-section">
-        <div class="container">
+        <div class="container reveal">
           <div class="section-label">See it in action</div>
           <h2>Your screen, calmer.</h2>
           <p class="section-sub">Real screenshots from the app — every view, every feature.</p>
@@ -145,7 +145,7 @@ const latestPosts = allPosts
 
       <!-- ── DOWNLOAD ── -->
       <section class="download" id="download">
-        <div class="container download-inner">
+        <div class="container download-inner reveal">
           <h2>Ready when you are.</h2>
           <p class="download-sub">Available now on macOS. Free to download.</p>
           <AppStoreBadge />
@@ -157,13 +157,13 @@ const latestPosts = allPosts
       <!-- ── BLOG ── -->
       <section class="blog-section">
         <div class="container">
-          <div class="section-label">Learn & Explore</div>
-          <h2>Latest from the blog</h2>
-          <p class="section-sub">Research-backed articles for neurodivergent focus and digital wellness</p>
+          <div class="section-label reveal">Learn & Explore</div>
+          <h2 class="reveal">Latest from the blog</h2>
+          <p class="section-sub reveal">Research-backed articles for neurodivergent focus and digital wellness</p>
 
-          <div class="blog-grid">
+          <div class="blog-grid reveal-stagger">
             {latestPosts.map((post) => (
-              <article class="blog-card">
+              <article class="blog-card reveal">
                 {post.data.heroImage && (
                   <a href={`/blog/${post.id}`} class="blog-image-link">
                     <Image

@@ -337,6 +337,62 @@ hr {
   box-shadow: 0 0 0 1px var(--border-accent), var(--glow);
 }
 
+/* ── Scroll animations ── */
+.reveal {
+  opacity: 0;
+  transform: translateY(28px);
+  transition: opacity 0.65s ease, transform 0.65s ease;
+}
+
+.reveal.visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* Stagger delays for grid children */
+.reveal-stagger > .reveal:nth-child(1) { transition-delay: 0ms; }
+.reveal-stagger > .reveal:nth-child(2) { transition-delay: 120ms; }
+.reveal-stagger > .reveal:nth-child(3) { transition-delay: 240ms; }
+.reveal-stagger > .reveal:nth-child(4) { transition-delay: 360ms; }
+.reveal-stagger > .reveal:nth-child(5) { transition-delay: 480ms; }
+.reveal-stagger > .reveal:nth-child(6) { transition-delay: 600ms; }
+
+/* Hero entrance — fires on page load */
+@keyframes heroEnter {
+  from { opacity: 0; transform: translateY(20px); }
+  to   { opacity: 1; transform: translateY(0); }
+}
+.hero-enter          { animation: heroEnter 0.7s 0.0s ease both; }
+.hero-enter-delay    { animation: heroEnter 0.7s 0.15s ease both; }
+.hero-enter-delay-2  { animation: heroEnter 0.7s 0.3s ease both; }
+
+/* Scroll progress bar */
+#scroll-progress {
+  position: fixed;
+  top: 0;
+  left: 0;
+  height: 2px;
+  width: 0%;
+  background: var(--accent);
+  box-shadow: var(--glow-sm);
+  z-index: 999;
+  transition: width 80ms linear;
+  pointer-events: none;
+}
+
+/* Respect user motion preferences */
+@media (prefers-reduced-motion: reduce) {
+  .reveal, .reveal.visible {
+    opacity: 1;
+    transform: none;
+    transition: none;
+  }
+  .hero-enter, .hero-enter-delay, .hero-enter-delay-2 {
+    animation: none;
+  }
+  #scroll-progress { display: none; }
+}
+
 /* Responsive ── */
 @media (max-width: 720px) {
   body {
