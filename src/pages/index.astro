@@ -7,6 +7,12 @@ import Footer from '../components/Footer.astro';
 import userImage from '../assets/userimage.png';
 import userImage2 from '../assets/userimage2.jpg';
 import logo from '../assets/logo.png';
+import cl1 from '../assets/Cl1.jpg';
+import cl2 from '../assets/CL2.jpg';
+import cl3 from '../assets/CL3.jpg';
+import cl4 from '../assets/CL4.jpg';
+import cl5 from '../assets/CL5.jpg';
+import cl6 from '../assets/CL6.jpg';
 import { SITE_TITLE, SITE_DESCRIPTION, APP_STORE_URL, WINDOWS_WAITLIST_FORM_ID } from '../consts';
 
 // Get latest blog posts
@@ -104,6 +110,50 @@ const latestPosts = allPosts
         </div>
       </section>
 
+      <!-- ── SCREENSHOTS ── -->
+      <section class="screenshots-section">
+        <div class="container">
+          <div class="section-label">See it in action</div>
+          <h2>Your screen, calmer.</h2>
+          <p class="section-sub">Real screenshots from the app — every view, every feature.</p>
+        </div>
+
+        <div class="screenshots-track" id="screenshots-track">
+          {[
+            { img: cl1, label: "Floating lens over any app" },
+            { img: cl2, label: "Color filter in action" },
+            { img: cl3, label: "Privacy Mode" },
+            { img: cl4, label: "Custom presets" },
+            { img: cl5, label: "14 pill themes" },
+            { img: cl6, label: "Works with everything" },
+          ].map((item, i) => (
+            <div class="screenshot-slide">
+              <div class="mac-window">
+                <div class="mac-chrome">
+                  <span class="dot dot-red"></span>
+                  <span class="dot dot-yellow"></span>
+                  <span class="dot dot-green"></span>
+                </div>
+                <Image
+                  src={item.img}
+                  alt={item.label}
+                  width={1280}
+                  height={800}
+                  class="screenshot-img"
+                />
+              </div>
+              <p class="screenshot-label">{item.label}</p>
+            </div>
+          ))}
+        </div>
+
+        <div class="screenshots-dots" id="screenshots-dots">
+          {[0,1,2,3,4,5].map((i) => (
+            <button class={`dot-btn${i === 0 ? ' active' : ''}`} data-index={i} aria-label={`Screenshot ${i + 1}`}></button>
+          ))}
+        </div>
+      </section>
+
       <!-- ── DOWNLOAD ── -->
       <section class="download" id="download">
         <div class="container download-inner">
@@ -197,6 +247,118 @@ const latestPosts = allPosts
   /* ── Section spacing ── */
   section {
     padding: 6rem 0;
+  }
+
+  /* ── Screenshots ── */
+  .screenshots-section {
+    padding-bottom: 5rem;
+  }
+
+  .screenshots-section .container {
+    text-align: center;
+    margin-bottom: 2.5rem;
+  }
+
+  .screenshots-track {
+    display: flex;
+    gap: 1.5rem;
+    overflow-x: auto;
+    scroll-snap-type: x mandatory;
+    -webkit-overflow-scrolling: touch;
+    padding: 0 calc((100vw - min(900px, 90vw)) / 2);
+    scrollbar-width: none;
+  }
+
+  .screenshots-track::-webkit-scrollbar {
+    display: none;
+  }
+
+  .screenshot-slide {
+    flex: 0 0 min(900px, 90vw);
+    scroll-snap-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 1rem;
+  }
+
+  .mac-window {
+    width: 100%;
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: 0 20px 60px rgba(0, 0, 0, 0.35), 0 4px 16px rgba(0, 0, 0, 0.2);
+    border: 1px solid rgba(255, 255, 255, 0.08);
+  }
+
+  .mac-chrome {
+    background: #2a2a2a;
+    padding: 0.55rem 0.9rem;
+    display: flex;
+    align-items: center;
+    gap: 0.45rem;
+    border-bottom: 1px solid rgba(0,0,0,0.3);
+  }
+
+  [data-theme="light"] .mac-chrome {
+    background: #e0e0e0;
+    border-bottom: 1px solid #ccc;
+  }
+
+  .dot {
+    width: 12px;
+    height: 12px;
+    border-radius: 50%;
+    flex-shrink: 0;
+  }
+
+  .dot-red    { background: #ff5f57; }
+  .dot-yellow { background: #febc2e; }
+  .dot-green  { background: #28c840; }
+
+  .screenshot-img {
+    width: 100%;
+    height: auto;
+    display: block;
+  }
+
+  .screenshot-label {
+    font-size: 0.85rem;
+    color: var(--text-muted);
+    text-align: center;
+    margin: 0;
+  }
+
+  .screenshots-dots {
+    display: flex;
+    justify-content: center;
+    gap: 0.5rem;
+    margin-top: 1.75rem;
+  }
+
+  .dot-btn {
+    width: 8px;
+    height: 8px;
+    border-radius: 50%;
+    border: none;
+    background: var(--border);
+    cursor: pointer;
+    padding: 0;
+    transition: background var(--transition), transform var(--transition);
+  }
+
+  .dot-btn.active {
+    background: var(--accent);
+    transform: scale(1.3);
+  }
+
+  @media (max-width: 600px) {
+    .screenshot-slide {
+      flex: 0 0 92vw;
+    }
+
+    .screenshots-track {
+      padding: 0 4vw;
+    }
   }
 
   /* ── Hero ── */
@@ -743,3 +905,25 @@ const latestPosts = allPosts
     }
   }
 </style>
+
+<script>
+  const track = document.getElementById('screenshots-track');
+  const dots = document.querySelectorAll('.dot-btn');
+
+  // Update active dot based on scroll position
+  track?.addEventListener('scroll', () => {
+    if (!track) return;
+    const slideWidth = track.firstElementChild?.clientWidth ?? 0;
+    const index = Math.round(track.scrollLeft / (slideWidth + 24)); // 24 = gap
+    dots.forEach((d, i) => d.classList.toggle('active', i === index));
+  }, { passive: true });
+
+  // Click dot to scroll to slide
+  dots.forEach((dot, i) => {
+    dot.addEventListener('click', () => {
+      if (!track) return;
+      const slideWidth = track.firstElementChild?.clientWidth ?? 0;
+      track.scrollTo({ left: i * (slideWidth + 24), behavior: 'smooth' });
+    });
+  });
+</script>
