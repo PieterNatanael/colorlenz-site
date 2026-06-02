@@ -2,7 +2,7 @@
 title: "The Neurodiversity Perspective: Building Software for Different Brains"
 description: "What is neurodiversity? How do ADHD, autism, and dyslexia affect how we use technology? Learn the design principles that work for different brains."
 pubDate: "May 18 2026"
-heroImage: "../../assets/blog-placeholder-4.jpg"
+heroImage: "../../assets/donut3.jpg"
 ---
 
 Most software is designed for an invisible default user: someone without sensory sensitivities, without attention challenges, without anxiety. Someone whose brain works exactly the way most brains work.

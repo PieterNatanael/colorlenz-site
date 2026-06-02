@@ -2,7 +2,7 @@
 title: "50 Best Websites, Tools & Communities for ADHD Brains in 2025"
 description: "The 50 best ADHD websites, apps, communities, and tools in 2025 — organized by what you actually need. From ADDitude to Focusmate, plus screen-friendly tools for sensory-sensitive brains."
 pubDate: "Jun 01 2026"
-heroImage: "../../assets/blog-placeholder-5.jpg"
+heroImage: "../../assets/donut6.jpg"
 ---
 
 Living with ADHD in 2025 means you have access to more support than any previous generation — but also more noise to cut through. Whether you need credible research, a community that gets it, apps that work with your brain, or tools to make your screen less overwhelming, this list has you covered.

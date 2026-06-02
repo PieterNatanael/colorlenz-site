@@ -2,7 +2,7 @@
 title: "Privacy-First Software: Why We Built ColorLenz Without Tracking"
 description: "Most apps track you. ColorLenz doesn't. Learn why privacy matters for neurodivergent users and how on-device processing keeps your data safe."
 pubDate: "May 18 2026"
-heroImage: "../../assets/blog-placeholder-3.jpg"
+heroImage: "../../assets/donut4.jpg"
 ---
 
 When you use most apps, you're not the customer—you're the product. Your behavior is tracked, analyzed, and sold to advertisers. It's become so normal that we barely notice it anymore.

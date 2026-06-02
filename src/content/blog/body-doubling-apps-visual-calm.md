@@ -2,7 +2,7 @@
 title: "Body Doubling + Visual Calm: The Complete ADHD Focus Strategy"
 description: "Body doubling apps help with accountability. Screen filters help with visual overstimulation. Together, they're the ultimate ADHD focus stack. Learn how."
 pubDate: "May 18 2026"
-heroImage: "../../assets/blog-placeholder-5.jpg"
+heroImage: "../../assets/donut1.jpg"
 ---
 
 You're staring at your screen, and you can't focus. Not because you don't *want* to work. You just... can't get started.
