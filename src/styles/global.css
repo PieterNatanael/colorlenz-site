@@ -356,6 +356,7 @@ hr {
 .reveal-stagger > .reveal:nth-child(4) { transition-delay: 360ms; }
 .reveal-stagger > .reveal:nth-child(5) { transition-delay: 480ms; }
 .reveal-stagger > .reveal:nth-child(6) { transition-delay: 600ms; }
+.reveal-stagger > .reveal:nth-child(7) { transition-delay: 720ms; }
 
 /* Hero entrance — fires on page load */
 @keyframes heroEnter {

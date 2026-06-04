@@ -8,6 +8,7 @@ import AppStoreBadge from '../components/AppStoreBadge.astro';
 import userImage from '../assets/userimage3.png';
 import userImage2 from '../assets/userimage2.jpg';
 import logo from '../assets/logoaztec.png';
+import cl7 from '../assets/cl7.jpg';
 import cl1 from '../assets/Cl1.jpg';
 import cl2 from '../assets/CL2.jpg';
 import cl3 from '../assets/CL3.jpg';
@@ -97,6 +98,7 @@ const latestPosts = allPosts
 
         <div class="screenshots-track" id="screenshots-track">
           {[
+            { img: cl7, label: "ColorLenz in action" },
             { img: cl1, label: "Floating lens over any app" },
             { img: cl2, label: "Color filter in action" },
             { img: cl3, label: "Privacy Mode" },
@@ -130,7 +132,7 @@ const latestPosts = allPosts
           </button>
 
           <div class="screenshots-dots" id="screenshots-dots">
-            {[0,1,2,3,4,5].map((i) => (
+            {[0,1,2,3,4,5,6].map((i) => (
               <button class={`dot-btn${i === 0 ? ' active' : ''}`} data-index={i} aria-label={`Screenshot ${i + 1}`}></button>
             ))}
           </div>
@@ -968,7 +970,7 @@ const latestPosts = allPosts
   const dots = document.querySelectorAll('.dot-btn');
   const prevBtn = document.getElementById('prev-btn');
   const nextBtn = document.getElementById('next-btn');
-  const total = 6;
+  const total = 7;
 
   function getSlideWidth() {
     return (track?.firstElementChild as HTMLElement)?.offsetWidth ?? 0;
