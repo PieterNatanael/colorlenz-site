@@ -175,7 +175,8 @@ import { APP_STORE_URL, WINDOWS_WAITLIST_FORM_ID, OLDER_MAC_WAITLIST_FORM_ID } f
             <h3>Using macOS 12.4 or later?</h3>
             <p>We'll keep you posted.</p>
           </div>
-          <form class="waitlist-form" action={`https://formspree.io/f/${OLDER_MAC_WAITLIST_FORM_ID}`} method="POST">
+          <form class="waitlist-form" id="waitlist-form">
+            <input type="hidden" name="form_type" value="waitlist" />
             <input
               type="email"
               name="email"
@@ -185,6 +186,7 @@ import { APP_STORE_URL, WINDOWS_WAITLIST_FORM_ID, OLDER_MAC_WAITLIST_FORM_ID } f
             />
             <button type="submit" class="waitlist-btn">Notify me</button>
           </form>
+          <p class="waitlist-success" id="waitlist-success">You're on the list!</p>
         </div>
 
         <!-- Feedback form -->
@@ -332,28 +334,38 @@ import { APP_STORE_URL, WINDOWS_WAITLIST_FORM_ID, OLDER_MAC_WAITLIST_FORM_ID } f
 </script>
 
 <script>
-  const form = document.getElementById('feedback-form') as HTMLFormElement | null;
-  const success = document.getElementById('feedback-success');
+  const FORMSPREE_ID = 'mrejvron';
 
-  form?.addEventListener('submit', async (e) => {
-    e.preventDefault();
-    const data = Object.fromEntries(new FormData(form).entries());
-
+  async function submitToFormspree(formEl: HTMLFormElement, successEl: HTMLElement | null) {
+    const data = Object.fromEntries(new FormData(formEl).entries());
     try {
-      const res = await fetch('https://formspree.io/f/mrejvron', {
+      const res = await fetch(`https://formspree.io/f/${FORMSPREE_ID}`, {
         method: 'POST',
         headers: { 'Content-Type': 'application/json', Accept: 'application/json' },
         body: JSON.stringify(data),
       });
-
       if (res.ok) {
-        form.style.display = 'none';
-        if (success) success.style.display = 'block';
+        formEl.style.display = 'none';
+        if (successEl) successEl.style.display = 'block';
       }
     } catch {
-      form.style.display = 'none';
-      if (success) success.style.display = 'block';
+      formEl.style.display = 'none';
+      if (successEl) successEl.style.display = 'block';
     }
+  }
+
+  const feedbackForm = document.getElementById('feedback-form') as HTMLFormElement | null;
+  const feedbackSuccess = document.getElementById('feedback-success');
+  feedbackForm?.addEventListener('submit', (e) => {
+    e.preventDefault();
+    submitToFormspree(feedbackForm, feedbackSuccess);
+  });
+
+  const waitlistForm = document.getElementById('waitlist-form') as HTMLFormElement | null;
+  const waitlistSuccess = document.getElementById('waitlist-success');
+  waitlistForm?.addEventListener('submit', (e) => {
+    e.preventDefault();
+    submitToFormspree(waitlistForm, waitlistSuccess);
   });
 </script>
 
@@ -546,7 +558,8 @@ import { APP_STORE_URL, WINDOWS_WAITLIST_FORM_ID, OLDER_MAC_WAITLIST_FORM_ID } f
     color: var(--text-subtle);
   }
 
-  .feedback-success {
+  .feedback-success,
+  .waitlist-success {
     display: none;
     font-size: 0.93rem;
     color: var(--accent);
