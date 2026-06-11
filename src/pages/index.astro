@@ -210,7 +210,8 @@ const latestPosts = allPosts
             <h3>Interested in Windows?</h3>
             <p>Leave your email and we'll let you know when it's available.</p>
           </div>
-          <form class="waitlist-form" action={`https://formspree.io/f/${WINDOWS_WAITLIST_FORM_ID}`} method="POST">
+          <form class="waitlist-form" id="windows-waitlist-form">
+            <input type="hidden" name="form_type" value="windows-waitlist" />
             <input
               type="email"
               name="email"
@@ -220,6 +221,7 @@ const latestPosts = allPosts
             />
             <button type="submit" class="waitlist-btn">Notify me</button>
           </form>
+          <p class="waitlist-success" id="windows-waitlist-success">You're on the list!</p>
         </div>
       </section>
 
@@ -948,6 +950,14 @@ const latestPosts = allPosts
     transform: translateY(-1px);
   }
 
+  .waitlist-success {
+    display: none;
+    font-size: 0.93rem;
+    color: var(--accent);
+    font-weight: 500;
+    margin: 0;
+  }
+
   @media (max-width: 720px) {
     .waitlist-inner {
       flex-direction: column;
@@ -1032,4 +1042,27 @@ const latestPosts = allPosts
 
   // Set initial cursor
   if (track) track.style.cursor = 'grab';
+
+  // Windows waitlist form
+  const waitlistForm = document.getElementById('windows-waitlist-form') as HTMLFormElement | null;
+  const waitlistSuccess = document.getElementById('windows-waitlist-success');
+
+  waitlistForm?.addEventListener('submit', async (e) => {
+    e.preventDefault();
+    const data = Object.fromEntries(new FormData(waitlistForm).entries());
+    try {
+      const res = await fetch('https://formspree.io/f/mrejvron', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json', Accept: 'application/json' },
+        body: JSON.stringify(data),
+      });
+      if (res.ok) {
+        waitlistForm.style.display = 'none';
+        if (waitlistSuccess) waitlistSuccess.style.display = 'block';
+      }
+    } catch {
+      waitlistForm.style.display = 'none';
+      if (waitlistSuccess) waitlistSuccess.style.display = 'block';
+    }
+  });
 </script>
