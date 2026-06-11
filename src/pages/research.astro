@@ -1,0 +1,686 @@
+---
+import BaseHead from '../components/BaseHead.astro';
+import Header from '../components/Header.astro';
+import Footer from '../components/Footer.astro';
+---
+
+<!doctype html>
+<html lang="en">
+  <head>
+    <BaseHead
+      title="Research Survey — ColorLenz"
+      description="Participate in the ColorLenz user research study. Anonymous survey about your experience using ColorLenz as a screen filter for focus and visual comfort."
+    />
+  </head>
+  <body>
+    <Header />
+    <main>
+      <div class="container page-wrap">
+
+        <header class="page-header">
+          <div class="section-label">User Study</div>
+          <h1>ColorLenz Research Survey</h1>
+          <p class="page-intro">
+            Thank you for participating in this study. Your responses are anonymous and help us understand how ColorLenz supports different types of brains.
+          </p>
+        </header>
+
+        <form class="survey-form" id="survey-form" novalidate>
+          <input type="hidden" name="form_type" value="research" />
+
+          <!-- Q1: ADHD diagnosis -->
+          <fieldset class="survey-fieldset">
+            <legend class="survey-legend">
+              <span class="q-number">01</span>
+              Do you have a formal ADHD diagnosis?
+            </legend>
+            <div class="radio-group">
+              {['Yes', 'No', 'Prefer not to say'].map((opt) => (
+                <label class="radio-label">
+                  <input type="radio" name="adhd_diagnosis" value={opt} required />
+                  <span class="radio-custom"></span>
+                  {opt}
+                </label>
+              ))}
+            </div>
+          </fieldset>
+
+          <hr class="pixel-divider survey-divider" />
+
+          <!-- Q2: Identify with -->
+          <fieldset class="survey-fieldset">
+            <legend class="survey-legend">
+              <span class="q-number">02</span>
+              Do you identify with any of the following?
+              <span class="select-hint">Select all that apply</span>
+            </legend>
+            <div class="checkbox-group">
+              {[
+                'Attention difficulties',
+                'Focus challenges',
+                'Sensory sensitivity to screens',
+                'Visual overstimulation',
+                'None of the above',
+              ].map((opt) => (
+                <label class="checkbox-label">
+                  <input type="checkbox" name="identifies_with" value={opt} />
+                  <span class="checkbox-custom"></span>
+                  {opt}
+                </label>
+              ))}
+            </div>
+          </fieldset>
+
+          <hr class="pixel-divider survey-divider" />
+
+          <!-- Q3: Days used -->
+          <fieldset class="survey-fieldset">
+            <legend class="survey-legend">
+              <span class="q-number">03</span>
+              How many days did you use ColorLenz?
+            </legend>
+            <div class="radio-group">
+              {['1–2 days', '3–4 days', '5–6 days', '7 days', 'More than 7 days'].map((opt) => (
+                <label class="radio-label">
+                  <input type="radio" name="days_used" value={opt} required />
+                  <span class="radio-custom"></span>
+                  {opt}
+                </label>
+              ))}
+            </div>
+          </fieldset>
+
+          <hr class="pixel-divider survey-divider" />
+
+          <!-- Q4: Hours per day -->
+          <fieldset class="survey-fieldset">
+            <legend class="survey-legend">
+              <span class="q-number">04</span>
+              On average, how many hours per day did you use ColorLenz?
+            </legend>
+            <div class="radio-group">
+              {[
+                'Less than 1 hour',
+                '1–2 hours',
+                '2–4 hours',
+                '4–6 hours',
+                'More than 6 hours',
+              ].map((opt) => (
+                <label class="radio-label">
+                  <input type="radio" name="hours_per_day" value={opt} required />
+                  <span class="radio-custom"></span>
+                  {opt}
+                </label>
+              ))}
+            </div>
+          </fieldset>
+
+          <hr class="pixel-divider survey-divider" />
+
+          <!-- Q5: Helpfulness scale -->
+          <fieldset class="survey-fieldset">
+            <legend class="survey-legend">
+              <span class="q-number">05</span>
+              Overall, how helpful was ColorLenz for your computer use?
+            </legend>
+            <p class="scale-hint">
+              <span>1 = Not helpful at all</span>
+              <span>10 = Extremely helpful</span>
+            </p>
+            <div class="scale-group" role="group" aria-label="Helpfulness rating 1 to 10">
+              {[1,2,3,4,5,6,7,8,9,10].map((n) => (
+                <label class="scale-label">
+                  <input type="radio" name="helpfulness" value={String(n)} required />
+                  <span class="scale-btn">{n}</span>
+                </label>
+              ))}
+            </div>
+          </fieldset>
+
+          <hr class="pixel-divider survey-divider" />
+
+          <!-- Q6: Presets -->
+          <fieldset class="survey-fieldset">
+            <legend class="survey-legend">
+              <span class="q-number">06</span>
+              Which presets did you find most helpful?
+              <span class="select-hint">Select all that apply</span>
+            </legend>
+            <div class="checkbox-group">
+              {[
+                'Cold Sheep',
+                'Brain Power',
+                'Caramel Slice',
+                'Curious Alpaca',
+                'Foggy Mind',
+                'Sick Rooster',
+                'Tiger Toast',
+              ].map((opt) => (
+                <label class="checkbox-label">
+                  <input type="checkbox" name="helpful_presets" value={opt} />
+                  <span class="checkbox-custom"></span>
+                  {opt}
+                </label>
+              ))}
+              <label class="checkbox-label other-label">
+                <input type="checkbox" name="helpful_presets" value="Other" id="preset-other-cb" />
+                <span class="checkbox-custom"></span>
+                Other:
+                <input
+                  type="text"
+                  name="helpful_presets_other"
+                  id="preset-other-text"
+                  placeholder="Please specify"
+                  class="other-input"
+                  disabled
+                />
+              </label>
+            </div>
+          </fieldset>
+
+          <hr class="pixel-divider survey-divider" />
+
+          <!-- Q7: Activities -->
+          <fieldset class="survey-fieldset">
+            <legend class="survey-legend">
+              <span class="q-number">07</span>
+              For what activities were these presets most helpful?
+              <span class="select-hint">Select all that apply</span>
+            </legend>
+            <div class="checkbox-group">
+              {[
+                'Reading',
+                'Coding',
+                'Writing',
+                'Social media',
+                'Video watching',
+                'General computer use',
+              ].map((opt) => (
+                <label class="checkbox-label">
+                  <input type="checkbox" name="helpful_activities" value={opt} />
+                  <span class="checkbox-custom"></span>
+                  {opt}
+                </label>
+              ))}
+              <label class="checkbox-label other-label">
+                <input type="checkbox" name="helpful_activities" value="Other" id="activity-other-cb" />
+                <span class="checkbox-custom"></span>
+                Other:
+                <input
+                  type="text"
+                  name="helpful_activities_other"
+                  id="activity-other-text"
+                  placeholder="Please specify"
+                  class="other-input"
+                  disabled
+                />
+              </label>
+            </div>
+          </fieldset>
+
+          <hr class="pixel-divider survey-divider" />
+
+          <!-- Q8: Changes noticed -->
+          <fieldset class="survey-fieldset">
+            <legend class="survey-legend">
+              <span class="q-number">08</span>
+              Did you notice any changes while using ColorLenz?
+              <span class="select-hint">Select all that apply</span>
+            </legend>
+            <div class="checkbox-group">
+              {[
+                'Improved focus',
+                'Reduced visual fatigue',
+                'Reduced feelings of overstimulation',
+                'More comfortable screen viewing',
+                'No noticeable change',
+              ].map((opt) => (
+                <label class="checkbox-label">
+                  <input type="checkbox" name="changes_noticed" value={opt} />
+                  <span class="checkbox-custom"></span>
+                  {opt}
+                </label>
+              ))}
+              <label class="checkbox-label other-label">
+                <input type="checkbox" name="changes_noticed" value="Other" id="changes-other-cb" />
+                <span class="checkbox-custom"></span>
+                Other:
+                <input
+                  type="text"
+                  name="changes_noticed_other"
+                  id="changes-other-text"
+                  placeholder="Please specify"
+                  class="other-input"
+                  disabled
+                />
+              </label>
+            </div>
+          </fieldset>
+
+          <hr class="pixel-divider survey-divider" />
+
+          <!-- Q9: Open feedback -->
+          <div class="survey-fieldset">
+            <label class="survey-legend open-label" for="open-feedback">
+              <span class="q-number">09</span>
+              Is there anything else you would like to share about your experience?
+              <span class="select-hint">Optional</span>
+            </label>
+            <textarea
+              id="open-feedback"
+              name="open_feedback"
+              rows="5"
+              placeholder="Any thoughts, suggestions, or observations are welcome."
+              class="survey-textarea"
+            ></textarea>
+          </div>
+
+          <div class="submit-row">
+            <button type="submit" class="btn btn-primary btn-lg submit-btn">Submit response</button>
+          </div>
+        </form>
+
+        <div class="survey-success" id="survey-success">
+          <div class="success-inner">
+            <div class="success-icon">✓</div>
+            <h2>Thank you for contributing to this research.</h2>
+            <p>Your response has been recorded. It helps us understand how ColorLenz supports different types of brains.</p>
+          </div>
+        </div>
+
+      </div>
+    </main>
+    <Footer />
+  </body>
+</html>
+
+<script>
+  // Enable "Other" text inputs when their checkbox is checked
+  const otherPairs: [string, string][] = [
+    ['preset-other-cb',  'preset-other-text'],
+    ['activity-other-cb', 'activity-other-text'],
+    ['changes-other-cb',  'changes-other-text'],
+  ];
+
+  otherPairs.forEach(([cbId, textId]) => {
+    const cb = document.getElementById(cbId) as HTMLInputElement | null;
+    const txt = document.getElementById(textId) as HTMLInputElement | null;
+    if (!cb || !txt) return;
+    cb.addEventListener('change', () => {
+      txt.disabled = !cb.checked;
+      if (cb.checked) txt.focus();
+      else txt.value = '';
+    });
+  });
+
+  // Form submission
+  const form = document.getElementById('survey-form') as HTMLFormElement | null;
+  const successBlock = document.getElementById('survey-success');
+
+  form?.addEventListener('submit', async (e) => {
+    e.preventDefault();
+
+    // Collect multi-select checkboxes as comma-separated strings
+    const raw = new FormData(form);
+    const data: Record<string, string> = {};
+    const multiKeys = ['identifies_with', 'helpful_presets', 'helpful_activities', 'changes_noticed'];
+
+    raw.forEach((value, key) => {
+      if (multiKeys.includes(key)) {
+        data[key] = data[key] ? data[key] + ', ' + value : String(value);
+      } else {
+        data[key] = String(value);
+      }
+    });
+
+    try {
+      const res = await fetch('https://formspree.io/f/mrejvron', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json', Accept: 'application/json' },
+        body: JSON.stringify(data),
+      });
+      if (res.ok) {
+        form.style.display = 'none';
+        if (successBlock) successBlock.style.display = 'flex';
+      }
+    } catch {
+      form.style.display = 'none';
+      if (successBlock) successBlock.style.display = 'flex';
+    }
+  });
+</script>
+
+<style>
+  .page-wrap {
+    max-width: 720px;
+    padding-top: 4rem;
+    padding-bottom: 5rem;
+  }
+
+  .page-header {
+    margin-bottom: 3rem;
+  }
+
+  .page-intro {
+    font-size: 1rem;
+    color: var(--text-muted);
+    margin: 0;
+    max-width: 580px;
+  }
+
+  /* ── Survey form ── */
+  .survey-form {
+    display: flex;
+    flex-direction: column;
+    gap: 0;
+  }
+
+  .survey-divider {
+    margin: 2rem 0;
+  }
+
+  .survey-fieldset {
+    border: none;
+    margin: 0;
+    padding: 0;
+  }
+
+  .survey-legend,
+  .open-label {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: baseline;
+    gap: 0.5rem;
+    font-family: var(--font-pixel);
+    font-size: clamp(0.55rem, 1.2vw, 0.72rem);
+    line-height: 1.8;
+    color: var(--text);
+    margin-bottom: 1.25rem;
+    width: 100%;
+  }
+
+  .open-label {
+    cursor: default;
+  }
+
+  .q-number {
+    font-family: var(--font-pixel);
+    font-size: 8px;
+    color: var(--accent);
+    background: var(--accent-dim);
+    border: 1px solid var(--border-accent);
+    padding: 2px 6px;
+    border-radius: 4px;
+    flex-shrink: 0;
+    line-height: 1.6;
+  }
+
+  .select-hint {
+    font-family: var(--font-main);
+    font-size: 0.78rem;
+    color: var(--text-subtle);
+    font-weight: 400;
+    font-style: italic;
+  }
+
+  /* ── Radio buttons ── */
+  .radio-group,
+  .checkbox-group {
+    display: flex;
+    flex-direction: column;
+    gap: 0.6rem;
+  }
+
+  .radio-label,
+  .checkbox-label {
+    display: flex;
+    align-items: center;
+    gap: 0.75rem;
+    cursor: pointer;
+    font-size: 0.95rem;
+    color: var(--text-muted);
+    transition: color var(--transition);
+    user-select: none;
+  }
+
+  .radio-label:hover,
+  .checkbox-label:hover {
+    color: var(--text);
+  }
+
+  .radio-label input,
+  .checkbox-label input[type="checkbox"],
+  .checkbox-label input[type="radio"] {
+    position: absolute;
+    opacity: 0;
+    width: 0;
+    height: 0;
+  }
+
+  .radio-custom,
+  .checkbox-custom {
+    width: 18px;
+    height: 18px;
+    border: 2px solid var(--border);
+    background: var(--bg-card);
+    flex-shrink: 0;
+    transition: border-color var(--transition), background var(--transition);
+    position: relative;
+  }
+
+  .radio-custom {
+    border-radius: 50%;
+  }
+
+  .checkbox-custom {
+    border-radius: 4px;
+  }
+
+  .radio-label input:checked ~ .radio-custom,
+  .checkbox-label input:checked ~ .checkbox-custom {
+    border-color: var(--accent);
+    background: var(--accent-dim);
+  }
+
+  .radio-label input:checked ~ .radio-custom::after {
+    content: '';
+    position: absolute;
+    inset: 3px;
+    background: var(--accent);
+    border-radius: 50%;
+  }
+
+  .checkbox-label input:checked ~ .checkbox-custom::after {
+    content: '';
+    position: absolute;
+    left: 4px;
+    top: 1px;
+    width: 6px;
+    height: 10px;
+    border: 2px solid var(--accent);
+    border-top: none;
+    border-left: none;
+    transform: rotate(45deg);
+  }
+
+  .radio-label input:focus-visible ~ .radio-custom,
+  .checkbox-label input:focus-visible ~ .checkbox-custom {
+    outline: 2px solid var(--accent);
+    outline-offset: 2px;
+  }
+
+  /* Checked label text turns accent */
+  .radio-label:has(input:checked),
+  .checkbox-label:has(input:checked) {
+    color: var(--text);
+  }
+
+  /* ── Other text input ── */
+  .other-label {
+    flex-wrap: wrap;
+  }
+
+  .other-input {
+    font-family: var(--font-main);
+    font-size: 0.88rem;
+    background: var(--bg-subtle);
+    border: 1px solid var(--border);
+    color: var(--text);
+    border-radius: var(--radius-xs);
+    padding: 0.3rem 0.6rem;
+    outline: none;
+    transition: border-color var(--transition), opacity var(--transition);
+    width: 200px;
+  }
+
+  .other-input:disabled {
+    opacity: 0.3;
+    cursor: not-allowed;
+  }
+
+  .other-input:focus {
+    border-color: var(--accent);
+  }
+
+  /* ── Scale 1–10 ── */
+  .scale-hint {
+    display: flex;
+    justify-content: space-between;
+    font-size: 0.78rem;
+    color: var(--text-subtle);
+    margin: 0 0 0.75rem;
+    font-style: italic;
+  }
+
+  .scale-group {
+    display: flex;
+    gap: 0.4rem;
+    flex-wrap: wrap;
+  }
+
+  .scale-label {
+    cursor: pointer;
+  }
+
+  .scale-label input {
+    position: absolute;
+    opacity: 0;
+    width: 0;
+    height: 0;
+  }
+
+  .scale-btn {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 44px;
+    height: 44px;
+    border: 2px solid var(--border);
+    border-radius: var(--radius-sm);
+    background: var(--bg-card);
+    font-family: var(--font-pixel);
+    font-size: 10px;
+    color: var(--text-muted);
+    transition: border-color var(--transition), background var(--transition), color var(--transition), box-shadow var(--transition);
+  }
+
+  .scale-label:hover .scale-btn {
+    border-color: var(--border-accent);
+    color: var(--text);
+  }
+
+  .scale-label input:checked ~ .scale-btn {
+    border-color: var(--accent);
+    background: var(--accent-dim);
+    color: var(--accent);
+    box-shadow: var(--glow-sm);
+  }
+
+  .scale-label input:focus-visible ~ .scale-btn {
+    outline: 2px solid var(--accent);
+    outline-offset: 2px;
+  }
+
+  /* ── Textarea ── */
+  .survey-textarea {
+    width: 100%;
+    font-family: var(--font-main);
+    font-size: 0.93rem;
+    background: var(--bg-subtle);
+    border: 1px solid var(--border);
+    color: var(--text);
+    border-radius: var(--radius-sm);
+    padding: 0.75rem 1rem;
+    outline: none;
+    resize: vertical;
+    transition: border-color var(--transition);
+    box-sizing: border-box;
+    line-height: 1.7;
+  }
+
+  .survey-textarea:focus {
+    border-color: var(--accent);
+  }
+
+  .survey-textarea::placeholder {
+    color: var(--text-subtle);
+  }
+
+  /* ── Submit ── */
+  .submit-row {
+    margin-top: 2.5rem;
+  }
+
+  .submit-btn {
+    font-family: var(--font-pixel);
+    font-size: 9px;
+    letter-spacing: 0.05em;
+  }
+
+  /* ── Success state ── */
+  .survey-success {
+    display: none;
+    justify-content: center;
+    align-items: center;
+    min-height: 40vh;
+  }
+
+  .success-inner {
+    text-align: center;
+    max-width: 480px;
+  }
+
+  .success-icon {
+    font-size: 2rem;
+    color: var(--accent);
+    margin-bottom: 1.25rem;
+    filter: drop-shadow(var(--glow-sm));
+  }
+
+  .success-inner h2 {
+    font-size: clamp(0.7rem, 1.4vw, 0.9rem);
+    margin-bottom: 0.75rem;
+  }
+
+  .success-inner p {
+    font-size: 0.93rem;
+    color: var(--text-muted);
+    margin: 0;
+  }
+
+  /* ── Responsive ── */
+  @media (max-width: 560px) {
+    .scale-btn {
+      width: 38px;
+      height: 38px;
+      font-size: 9px;
+    }
+    .scale-group {
+      gap: 0.3rem;
+    }
+    .other-input {
+      width: 100%;
+      margin-top: 0.35rem;
+    }
+  }
+</style>
