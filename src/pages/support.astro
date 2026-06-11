@@ -2,7 +2,7 @@
 import BaseHead from '../components/BaseHead.astro';
 import Header from '../components/Header.astro';
 import Footer from '../components/Footer.astro';
-import { APP_STORE_URL, WINDOWS_WAITLIST_FORM_ID, OLDER_MAC_WAITLIST_FORM_ID } from '../consts';
+import { APP_STORE_URL } from '../consts';
 ---
 
 <!doctype html>
@@ -167,26 +167,6 @@ import { APP_STORE_URL, WINDOWS_WAITLIST_FORM_ID, OLDER_MAC_WAITLIST_FORM_ID } f
             We're a small team and we genuinely read every message. Reach out at{' '}
             <a href="mailto:hello@colorlenz.com">hello@colorlenz.com</a> or leave feedback below.
           </p>
-        </div>
-
-        <!-- Older Mac Waitlist -->
-        <div class="older-mac-waitlist-section">
-          <div class="waitlist-content">
-            <h3>Using macOS 12.4 or later?</h3>
-            <p>We'll keep you posted.</p>
-          </div>
-          <form class="waitlist-form" id="waitlist-form">
-            <input type="hidden" name="form_type" value="waitlist" />
-            <input
-              type="email"
-              name="email"
-              placeholder="your@email.com"
-              required
-              class="waitlist-input"
-            />
-            <button type="submit" class="waitlist-btn">Notify me</button>
-          </form>
-          <p class="waitlist-success" id="waitlist-success">You're on the list!</p>
         </div>
 
         <!-- Feedback form -->
@@ -361,12 +341,6 @@ import { APP_STORE_URL, WINDOWS_WAITLIST_FORM_ID, OLDER_MAC_WAITLIST_FORM_ID } f
     submitToFormspree(feedbackForm, feedbackSuccess);
   });
 
-  const waitlistForm = document.getElementById('waitlist-form') as HTMLFormElement | null;
-  const waitlistSuccess = document.getElementById('waitlist-success');
-  waitlistForm?.addEventListener('submit', (e) => {
-    e.preventDefault();
-    submitToFormspree(waitlistForm, waitlistSuccess);
-  });
 </script>
 
 <style>
@@ -558,8 +532,7 @@ import { APP_STORE_URL, WINDOWS_WAITLIST_FORM_ID, OLDER_MAC_WAITLIST_FORM_ID } f
     color: var(--text-subtle);
   }
 
-  .feedback-success,
-  .waitlist-success {
+  .feedback-success {
     display: none;
     font-size: 0.93rem;
     color: var(--accent);
@@ -574,90 +547,4 @@ import { APP_STORE_URL, WINDOWS_WAITLIST_FORM_ID, OLDER_MAC_WAITLIST_FORM_ID } f
     }
   }
 
-  /* ── Older Mac Waitlist ── */
-  .older-mac-waitlist-section {
-    margin-top: 3rem;
-    padding: 2rem;
-    background: var(--bg-card);
-    border: 1px solid var(--border);
-    border-radius: var(--radius);
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    gap: 2rem;
-    flex-wrap: wrap;
-  }
-
-  .older-mac-waitlist-section .waitlist-content h3 {
-    margin: 0 0 0.5rem;
-    font-size: 1.1rem;
-    color: var(--text);
-  }
-
-  .older-mac-waitlist-section .waitlist-content p {
-    margin: 0;
-    font-size: 0.9rem;
-    color: var(--text-muted);
-  }
-
-  .older-mac-waitlist-section .waitlist-form {
-    display: flex;
-    gap: 0.5rem;
-    min-width: 280px;
-  }
-
-  .older-mac-waitlist-section .waitlist-input {
-    flex: 1;
-    padding: 0.6rem 0.9rem;
-    border: 1px solid var(--border);
-    border-radius: var(--radius-sm);
-    background: var(--bg);
-    color: var(--text);
-    font-size: 0.9rem;
-    transition: border-color var(--transition);
-  }
-
-  .older-mac-waitlist-section .waitlist-input:focus {
-    outline: none;
-    border-color: var(--accent);
-  }
-
-  .older-mac-waitlist-section .waitlist-input::placeholder {
-    color: var(--text-muted);
-  }
-
-  .older-mac-waitlist-section .waitlist-btn {
-    padding: 0.6rem 1.3rem;
-    background: var(--accent);
-    color: #000;
-    border: none;
-    border-radius: var(--radius-sm);
-    font-weight: 500;
-    font-size: 0.9rem;
-    cursor: pointer;
-    transition: all var(--transition);
-  }
-
-  .older-mac-waitlist-section .waitlist-btn:hover {
-    opacity: 0.9;
-    transform: translateY(-1px);
-  }
-
-  @media (max-width: 560px) {
-    .older-mac-waitlist-section {
-      flex-direction: column;
-      gap: 1rem;
-    }
-
-    .older-mac-waitlist-section .waitlist-content {
-      text-align: center;
-      width: 100%;
-    }
-
-    .older-mac-waitlist-section .waitlist-form {
-      width: 100%;
-      min-width: unset;
-      flex-direction: column;
-    }
-  }
 </style>
