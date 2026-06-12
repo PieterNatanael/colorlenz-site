@@ -8,9 +8,95 @@ import Footer from '../components/Footer.astro';
 <html lang="en">
   <head>
     <BaseHead
-      title="Research Survey — ColorLenz"
-      description="Participate in the ColorLenz user research study. Anonymous survey about your experience using ColorLenz as a screen filter for focus and visual comfort."
+      title="ADHD Screen Filter Research Survey — ColorLenz"
+      description="Anonymous research survey: how does ColorLenz screen filter help people with ADHD, sensory sensitivity, and visual overstimulation? Share your experience and contribute to neurodiversity research."
     />
+
+    <!-- Extra keywords for this page -->
+    <meta name="keywords" content="ADHD screen filter research, ColorLenz ADHD study, screen filter for ADHD, visual overstimulation ADHD, neurodivergent screen tools, ADHD focus tools survey, sensory sensitivity screen filter, macOS ADHD tools, screen fatigue ADHD research, ColorLenz user study" />
+    <meta name="robots" content="index, follow" />
+
+    <!-- JSON-LD: Study + Survey structured data -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org/",
+      "@type": "ResearchProject",
+      "name": "ColorLenz ADHD & Neurodivergent Screen Filter Research Survey",
+      "description": "An anonymous user study investigating how the ColorLenz macOS screen filter affects focus, visual fatigue, and sensory overstimulation in people with ADHD and related neurodivergent traits.",
+      "url": "https://colorlenz.com/research",
+      "keywords": [
+        "ADHD screen filter",
+        "visual overstimulation",
+        "sensory sensitivity",
+        "neurodivergent tools",
+        "screen fatigue",
+        "focus tools",
+        "macOS accessibility",
+        "ColorLenz research"
+      ],
+      "about": [
+        { "@type": "MedicalCondition", "name": "ADHD" },
+        { "@type": "MedicalCondition", "name": "Sensory Processing Sensitivity" },
+        { "@type": "Thing", "name": "Digital Overstimulation" },
+        { "@type": "Thing", "name": "Screen Fatigue" }
+      ],
+      "sponsor": {
+        "@type": "Organization",
+        "name": "ColorLenz",
+        "url": "https://colorlenz.com"
+      },
+      "subjectOf": {
+        "@type": "SoftwareApplication",
+        "name": "ColorLenz",
+        "applicationCategory": "Utilities",
+        "operatingSystem": "macOS",
+        "url": "https://colorlenz.com",
+        "downloadUrl": "https://apps.apple.com/id/app/colorlenz/id6765573775?mt=12"
+      }
+    }
+    </script>
+
+    <!-- JSON-LD: FAQ for common search queries about this research -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org/",
+      "@type": "FAQPage",
+      "mainEntity": [
+        {
+          "@type": "Question",
+          "name": "Can ColorLenz help people with ADHD?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "ColorLenz is a macOS screen filter designed to reduce visual overstimulation — a common challenge for people with ADHD. By placing a gentle color overlay over the screen, it reduces visual noise that can fragment attention and increase mental fatigue. This research survey collects anonymous data from users about their experience."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "What is the ColorLenz ADHD research survey?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "The ColorLenz research survey is an anonymous study investigating how a macOS screen color filter affects focus, sensory comfort, and visual fatigue in people with ADHD, attention difficulties, and sensory sensitivity. Participants share how many days they used the app, which presets helped most, and what changes they noticed."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Is the ColorLenz research survey anonymous?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Yes. The survey collects no personally identifiable information unless you choose to provide it. All responses are anonymous and used only to improve ColorLenz and understand how screen filters can support neurodivergent users."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "What does ColorLenz do for ADHD and sensory sensitivity?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "ColorLenz places a floating color filter over the entire macOS screen to reduce brightness, visual contrast, and color saturation. For ADHD brains that are sensitive to visual stimulation, this can reduce the cognitive load of looking at a screen for extended periods, potentially improving focus and reducing end-of-day visual fatigue."
+          }
+        }
+      ]
+    }
+    </script>
   </head>
   <body>
     <Header />
