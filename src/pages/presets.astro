@@ -1,0 +1,462 @@
+---
+import BaseHead from '../components/BaseHead.astro';
+import Header from '../components/Header.astro';
+import Footer from '../components/Footer.astro';
+
+const presets = [
+  {
+    id: 'green-tea-latte',
+    name: 'Green Tea Latte',
+    series: 'The Coffee Shop Series',
+    description: 'Soft matcha tones with an inverted overlay. Calm, focused, easy on the eyes during long sessions.',
+    vibe: ['Focus', 'Calm', 'Reading'],
+    swatch: ['#2d5a27', '#5a8a4a', '#8db87a', '#c4ddb5'],
+    code: 'CLZ:eyJnYW1tYSI6MSwic2hhcnBlbiI6MCwiY3VzdG9tVG9uZUhleCI6IiIsInNhdHVyYXRpb24iOjEsImlzSW52ZXJ0Ijp0cnVlLCJ0ZW1wZXJhdHVyZSI6NjUwMCwiY29udHJhc3QiOjEsImlzQmxhY2tBbmRXaGl0ZSI6ZmFsc2UsImlzRmxpcFYiOmZhbHNlLCJpc1NlcGlhIjpmYWxzZSwiaXNGbGlwSCI6ZmFsc2UsImJsdXJJbnRlbnNpdHkiOjAsImlkIjoiQTQ5NjFFOTYtQjM4MC00MzJELTk2NzUtRTcyQzM0RTU4RDM0Iiwic2ZTeW1ib2wiOiJzdGFyLmZpbGwiLCJjdXN0b21Ub25lSW50ZW5zaXR5IjoxLCJ6b29tIjoxLCJ2aWJyYW5jZSI6MCwiaGlnaGxpZ2h0cyI6MCwiYnJpZ2h0bmVzcyI6MCwibmFtZSI6IkdyZWVuIFRlYSBMYXR0ZSIsIm1vbm9jaHJvbWVUb25lIjoibWF0Y2hhIiwidmlnbmV0dGUiOjAsInNoYWRvd3MiOjAsImdyYWluIjowLCJodWUiOjB9',
+  },
+  {
+    id: 'caramel-latte',
+    name: 'Caramel Latte',
+    series: 'The Coffee Shop Series',
+    description: 'Warm sepia tones with a soft inverted filter. Like reading by candlelight — cozy and easy to sustain.',
+    vibe: ['Cozy', 'Writing', 'Evening'],
+    swatch: ['#3d2008', '#7a4a1a', '#b8884a', '#e0c090'],
+    code: 'CLZ:eyJuYW1lIjoiQ2FyYW1lbCBMYXR0ZSIsInNoYWRvd3MiOjAsInZpZ25ldHRlIjowLCJpc0JsYWNrQW5kV2hpdGUiOmZhbHNlLCJncmFpbiI6MCwiaXNJbnZlcnQiOnRydWUsImN1c3RvbVRvbmVIZXgiOiIiLCJzaGFycGVuIjowLCJjb250cmFzdCI6MSwiY3VzdG9tVG9uZUludGVuc2l0eSI6MSwiaGlnaGxpZ2h0cyI6MCwiaXNTZXBpYSI6dHJ1ZSwidmlicmFuY2UiOjAsImJsdXJJbnRlbnNpdHkiOjAsInNmU3ltYm9sIjoic3Rhci5maWxsIiwiYnJpZ2h0bmVzcyI6MCwiem9vbSI6MSwidGVtcGVyYXR1cmUiOjY1MDAsImlzRmxpcFYiOmZhbHNlLCJtb25vY2hyb21lVG9uZSI6IiIsImdhbW1hIjoxLCJpc0ZsaXBIIjpmYWxzZSwic2F0dXJhdGlvbiI6MSwiaWQiOiJDMTgxNTdENC1BQkFGLTQyRDktQTEwRC1GMDY1RUY1OUE0NzIiLCJodWUiOjB9',
+  },
+];
+---
+
+<!doctype html>
+<html lang="en">
+  <head>
+    <BaseHead
+      title="Preset Library — ColorLenz"
+      description="Free ColorLenz preset codes created by the community. Copy a preset code and paste it into ColorLenz settings to instantly apply a new screen filter. The Coffee Shop Series and more."
+    />
+    <meta name="keywords" content="ColorLenz presets, screen filter presets, ColorLenz codes, ADHD screen filter presets, custom screen filter, matcha screen filter, sepia screen filter, neurodivergent screen settings" />
+
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org/",
+      "@type": "CollectionPage",
+      "name": "ColorLenz Preset Library",
+      "description": "A curated collection of ColorLenz screen filter preset codes. Copy any preset and paste it into ColorLenz settings to instantly apply a custom screen filter optimized for focus, comfort, and visual calm.",
+      "url": "https://colorlenz.com/presets",
+      "about": {
+        "@type": "SoftwareApplication",
+        "name": "ColorLenz",
+        "operatingSystem": "macOS",
+        "url": "https://colorlenz.com"
+      },
+      "hasPart": [
+        {
+          "@type": "CreativeWork",
+          "name": "Green Tea Latte",
+          "description": "Soft matcha monochrome screen filter preset for ColorLenz. Calm, focused, easy on the eyes.",
+          "keywords": "matcha screen filter, focus preset, ADHD screen filter, calm screen"
+        },
+        {
+          "@type": "CreativeWork",
+          "name": "Caramel Latte",
+          "description": "Warm sepia screen filter preset for ColorLenz. Cozy evening tone for reading and writing.",
+          "keywords": "sepia screen filter, warm screen preset, reading filter, evening screen tone"
+        }
+      ]
+    }
+    </script>
+  </head>
+  <body>
+    <Header />
+    <main>
+      <div class="container page-wrap">
+
+        <header class="page-header">
+          <div class="section-label">Community Presets</div>
+          <h1>Preset Library</h1>
+          <p class="page-intro">
+            Copy any preset code below and paste it directly into ColorLenz to instantly apply a new screen filter.
+          </p>
+
+          <!-- How to use instructions -->
+          <div class="how-to">
+            <div class="how-to-steps">
+              <div class="step">
+                <span class="step-num">1</span>
+                <span>Click <strong>Copy code</strong> on any preset below</span>
+              </div>
+              <div class="step-arrow">→</div>
+              <div class="step">
+                <span class="step-num">2</span>
+                <span>Open <strong>ColorLenz</strong> on your Mac</span>
+              </div>
+              <div class="step-arrow">→</div>
+              <div class="step">
+                <span class="step-num">3</span>
+                <span>Go to <strong>Settings</strong> and paste the code</span>
+              </div>
+            </div>
+          </div>
+        </header>
+
+        <hr class="pixel-divider" />
+
+        <!-- Coffee Shop Series -->
+        <section class="series-section">
+          <div class="series-header">
+            <div class="section-label">Series 01</div>
+            <h2>The Coffee Shop Series</h2>
+            <p class="series-desc">Warm and calming presets inspired by your favourite café order. Designed to reduce visual fatigue and keep focus gentle.</p>
+          </div>
+
+          <div class="presets-grid">
+            {presets.map((preset) => (
+              <div class="preset-card" id={preset.id}>
+                <!-- Color swatch -->
+                <div
+                  class="preset-swatch"
+                  style={`background: linear-gradient(135deg, ${preset.swatch[0]} 0%, ${preset.swatch[1]} 35%, ${preset.swatch[2]} 70%, ${preset.swatch[3]} 100%);`}
+                >
+                  <span class="swatch-name">{preset.name}</span>
+                </div>
+
+                <!-- Card body -->
+                <div class="preset-body">
+                  <h3 class="preset-name">{preset.name}</h3>
+                  <p class="preset-desc">{preset.description}</p>
+
+                  <!-- Vibe tags -->
+                  <div class="vibe-tags">
+                    {preset.vibe.map((v) => (
+                      <span class="vibe-tag">{v}</span>
+                    ))}
+                  </div>
+
+                  <!-- Code display -->
+                  <div class="code-block">
+                    <span class="code-text">{preset.code.slice(0, 32)}…</span>
+                  </div>
+
+                  <!-- Copy button -->
+                  <button
+                    class="copy-btn"
+                    data-code={preset.code}
+                    data-name={preset.name}
+                    aria-label={`Copy preset code for ${preset.name}`}
+                  >
+                    <svg class="icon-copy" xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                      <rect width="14" height="14" x="8" y="8" rx="2" ry="2"/>
+                      <path d="M4 16c-1.1 0-2-.9-2-2V4c0-1.1.9-2 2-2h10c1.1 0 2 .9 2 2"/>
+                    </svg>
+                    <svg class="icon-check" xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" style="display:none">
+                      <polyline points="20 6 9 17 4 12"/>
+                    </svg>
+                    <span class="btn-label">Copy code</span>
+                  </button>
+                </div>
+              </div>
+            ))}
+          </div>
+        </section>
+
+        <!-- More coming soon -->
+        <div class="more-soon">
+          <div class="more-soon-inner">
+            <p class="section-label">Coming soon</p>
+            <p class="more-text">More series in the works — night mode, high contrast, productivity, and more. <a href="mailto:hello@colorlenz.com">Suggest a preset.</a></p>
+          </div>
+        </div>
+
+      </div>
+    </main>
+    <Footer />
+  </body>
+</html>
+
+<script>
+  document.querySelectorAll<HTMLButtonElement>('.copy-btn').forEach((btn) => {
+    btn.addEventListener('click', async () => {
+      const code = btn.dataset.code ?? '';
+      const iconCopy = btn.querySelector('.icon-copy') as HTMLElement | null;
+      const iconCheck = btn.querySelector('.icon-check') as HTMLElement | null;
+      const label = btn.querySelector('.btn-label') as HTMLElement | null;
+
+      try {
+        await navigator.clipboard.writeText(code);
+      } catch {
+        // Fallback for older browsers
+        const ta = document.createElement('textarea');
+        ta.value = code;
+        ta.style.position = 'fixed';
+        ta.style.opacity = '0';
+        document.body.appendChild(ta);
+        ta.select();
+        document.execCommand('copy');
+        document.body.removeChild(ta);
+      }
+
+      // Success state
+      if (iconCopy) iconCopy.style.display = 'none';
+      if (iconCheck) iconCheck.style.display = 'block';
+      if (label) label.textContent = 'Copied!';
+      btn.classList.add('copied');
+
+      setTimeout(() => {
+        if (iconCopy) iconCopy.style.display = 'block';
+        if (iconCheck) iconCheck.style.display = 'none';
+        if (label) label.textContent = 'Copy code';
+        btn.classList.remove('copied');
+      }, 2000);
+    });
+  });
+</script>
+
+<style>
+  .page-wrap {
+    max-width: 860px;
+    padding-top: 4rem;
+    padding-bottom: 5rem;
+  }
+
+  .page-header {
+    margin-bottom: 2.5rem;
+  }
+
+  .page-intro {
+    font-size: 1rem;
+    color: var(--text-muted);
+    margin: 0 0 1.75rem;
+    max-width: 560px;
+  }
+
+  /* ── How-to instructions ── */
+  .how-to {
+    background: var(--bg-card);
+    border: 1px solid var(--border);
+    border-radius: var(--radius);
+    padding: 1.25rem 1.5rem;
+    display: inline-block;
+  }
+
+  .how-to-steps {
+    display: flex;
+    align-items: center;
+    gap: 0.75rem;
+    flex-wrap: wrap;
+  }
+
+  .step {
+    display: flex;
+    align-items: center;
+    gap: 0.6rem;
+    font-size: 0.88rem;
+    color: var(--text-muted);
+  }
+
+  .step-num {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 22px;
+    height: 22px;
+    border-radius: 50%;
+    background: var(--accent-dim);
+    border: 1px solid var(--border-accent);
+    font-family: var(--font-pixel);
+    font-size: 8px;
+    color: var(--accent);
+    flex-shrink: 0;
+  }
+
+  .step-arrow {
+    color: var(--text-subtle);
+    font-size: 0.85rem;
+  }
+
+  /* ── Series section ── */
+  .series-section {
+    padding: 2.5rem 0;
+  }
+
+  .series-header {
+    margin-bottom: 2rem;
+  }
+
+  .series-header h2 {
+    margin-bottom: 0.5rem;
+  }
+
+  .series-desc {
+    font-size: 0.95rem;
+    color: var(--text-muted);
+    margin: 0;
+    max-width: 520px;
+  }
+
+  /* ── Presets grid ── */
+  .presets-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(320px, 1fr));
+    gap: 1.5rem;
+  }
+
+  /* ── Preset card ── */
+  .preset-card {
+    background: var(--bg-card);
+    border: 1px solid var(--border);
+    border-radius: var(--radius);
+    overflow: hidden;
+    transition: border-color var(--transition), box-shadow var(--transition);
+  }
+
+  .preset-card:hover {
+    border-color: var(--border-accent);
+    box-shadow: 0 0 0 1px var(--border-accent), var(--glow);
+  }
+
+  /* ── Color swatch ── */
+  .preset-swatch {
+    height: 100px;
+    position: relative;
+    display: flex;
+    align-items: flex-end;
+    padding: 0.75rem 1rem;
+  }
+
+  .swatch-name {
+    font-family: var(--font-pixel);
+    font-size: 8px;
+    color: rgba(255, 255, 255, 0.85);
+    text-shadow: 0 1px 4px rgba(0,0,0,0.5);
+    letter-spacing: 0.06em;
+  }
+
+  /* ── Card body ── */
+  .preset-body {
+    padding: 1.25rem;
+  }
+
+  .preset-name {
+    font-size: clamp(0.65rem, 1.3vw, 0.82rem);
+    margin-bottom: 0.5rem;
+  }
+
+  .preset-desc {
+    font-size: 0.88rem;
+    color: var(--text-muted);
+    line-height: 1.65;
+    margin-bottom: 1rem;
+  }
+
+  /* ── Vibe tags ── */
+  .vibe-tags {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.4rem;
+    margin-bottom: 1rem;
+  }
+
+  .vibe-tag {
+    font-family: var(--font-pixel);
+    font-size: 7px;
+    color: var(--accent);
+    background: var(--accent-dim);
+    border: 1px solid var(--border-accent);
+    border-radius: 4px;
+    padding: 3px 7px;
+    letter-spacing: 0.05em;
+    line-height: 1.6;
+  }
+
+  /* ── Code display ── */
+  .code-block {
+    background: var(--bg-subtle);
+    border: 1px solid var(--border);
+    border-radius: var(--radius-sm);
+    padding: 0.5rem 0.75rem;
+    margin-bottom: 1rem;
+    overflow: hidden;
+  }
+
+  .code-text {
+    font-family: var(--font-main);
+    font-size: 0.75rem;
+    color: var(--text-subtle);
+    white-space: nowrap;
+    display: block;
+    overflow: hidden;
+    text-overflow: ellipsis;
+  }
+
+  /* ── Copy button ── */
+  .copy-btn {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.5rem;
+    padding: 0.6rem 1.2rem;
+    background: var(--accent);
+    color: #0a0a0a;
+    border: none;
+    border-radius: var(--radius-sm);
+    font-family: var(--font-pixel);
+    font-size: 8px;
+    letter-spacing: 0.05em;
+    cursor: pointer;
+    transition: background var(--transition), box-shadow var(--transition), transform var(--transition);
+    width: 100%;
+    justify-content: center;
+  }
+
+  .copy-btn:hover {
+    background: var(--accent-hover);
+    transform: translateY(-1px);
+    box-shadow: var(--glow-sm);
+  }
+
+  .copy-btn.copied {
+    background: var(--accent-dim);
+    color: var(--accent);
+    border: 1px solid var(--border-accent);
+    box-shadow: var(--glow-sm);
+  }
+
+  /* ── More coming soon ── */
+  .more-soon {
+    margin-top: 3rem;
+    padding-top: 2.5rem;
+    border-top: 1px solid var(--border);
+    text-align: center;
+  }
+
+  .more-soon-inner .section-label {
+    margin-bottom: 0.5rem;
+  }
+
+  .more-text {
+    font-size: 0.93rem;
+    color: var(--text-muted);
+    margin: 0;
+  }
+
+  .more-text a {
+    color: var(--accent);
+    text-decoration: underline;
+    text-underline-offset: 3px;
+  }
+
+  /* ── Responsive ── */
+  @media (max-width: 720px) {
+    .how-to-steps {
+      flex-direction: column;
+      align-items: flex-start;
+      gap: 0.6rem;
+    }
+
+    .step-arrow {
+      transform: rotate(90deg);
+      align-self: center;
+    }
+
+    .presets-grid {
+      grid-template-columns: 1fr;
+    }
+  }
+</style>

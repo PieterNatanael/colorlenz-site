@@ -19,6 +19,7 @@ const currentPath = Astro.url.pathname;
       <a href="/" class:list={['nav-link', { active: currentPath === '/' }]}>Home</a>
       {/* Demo page hidden pending approval - <a href="/demo" class:list={['nav-link', { active: currentPath === '/demo' }]}>Demo</a> */}
       <a href="/blog" class:list={['nav-link', { active: currentPath.startsWith('/blog') }]}>Blog</a>
+      <a href="/presets" class:list={['nav-link', { active: currentPath === '/presets' }]}>Presets</a>
       <a href="/pricing" class:list={['nav-link', { active: currentPath === '/pricing' }]}>Pricing</a>
       <a href="/support" class:list={['nav-link', { active: currentPath === '/support' }]}>Support</a>
       <a href="/research" class:list={['nav-link', { active: currentPath === '/research' }]}>Research</a>
@@ -51,6 +52,7 @@ const currentPath = Astro.url.pathname;
     <a href="/" class:list={['mobile-link', { active: currentPath === '/' }]}>Home</a>
     {/* Demo page hidden pending approval - <a href="/demo" class:list={['mobile-link', { active: currentPath === '/demo' }]}>Demo</a> */}
     <a href="/blog" class:list={['mobile-link', { active: currentPath.startsWith('/blog') }]}>Blog</a>
+    <a href="/presets" class:list={['mobile-link', { active: currentPath === '/presets' }]}>Presets</a>
     <a href="/pricing" class:list={['mobile-link', { active: currentPath === '/pricing' }]}>Pricing</a>
     <a href="/support" class:list={['mobile-link', { active: currentPath === '/support' }]}>Support</a>
     <a href="/research" class:list={['mobile-link', { active: currentPath === '/research' }]}>Research</a>
