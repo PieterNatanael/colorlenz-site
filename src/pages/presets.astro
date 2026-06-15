@@ -5,22 +5,44 @@ import Footer from '../components/Footer.astro';
 
 const presets = [
   {
-    id: 'green-tea-latte',
+    id: 'green-tea-latte-dark',
     name: 'Green Tea Latte',
-    series: 'The Coffee Shop Series',
-    description: 'Soft matcha tones with an inverted overlay. Calm, focused, easy on the eyes during long sessions.',
+    mode: 'Dark Mode',
+    modeClass: 'badge-dark',
+    description: 'Soft matcha tones with an inverted overlay. Calm, focused, easy on the eyes during long dark-mode sessions.',
     vibe: ['Focus', 'Calm', 'Reading'],
-    swatch: ['#2d5a27', '#5a8a4a', '#8db87a', '#c4ddb5'],
+    swatch: ['#0d1f0d', '#1a3d1a', '#2d5a27', '#5a8a4a'],
     code: 'CLZ:eyJnYW1tYSI6MSwic2hhcnBlbiI6MCwiY3VzdG9tVG9uZUhleCI6IiIsInNhdHVyYXRpb24iOjEsImlzSW52ZXJ0Ijp0cnVlLCJ0ZW1wZXJhdHVyZSI6NjUwMCwiY29udHJhc3QiOjEsImlzQmxhY2tBbmRXaGl0ZSI6ZmFsc2UsImlzRmxpcFYiOmZhbHNlLCJpc1NlcGlhIjpmYWxzZSwiaXNGbGlwSCI6ZmFsc2UsImJsdXJJbnRlbnNpdHkiOjAsImlkIjoiQTQ5NjFFOTYtQjM4MC00MzJELTk2NzUtRTcyQzM0RTU4RDM0Iiwic2ZTeW1ib2wiOiJzdGFyLmZpbGwiLCJjdXN0b21Ub25lSW50ZW5zaXR5IjoxLCJ6b29tIjoxLCJ2aWJyYW5jZSI6MCwiaGlnaGxpZ2h0cyI6MCwiYnJpZ2h0bmVzcyI6MCwibmFtZSI6IkdyZWVuIFRlYSBMYXR0ZSIsIm1vbm9jaHJvbWVUb25lIjoibWF0Y2hhIiwidmlnbmV0dGUiOjAsInNoYWRvd3MiOjAsImdyYWluIjowLCJodWUiOjB9',
   },
   {
-    id: 'caramel-latte',
+    id: 'green-tea-latte-light',
+    name: 'Green Tea Latte',
+    mode: 'Light Mode',
+    modeClass: 'badge-light',
+    description: 'The same calm matcha tone, tuned for light mode. Reduces brightness gently without inverting — clean and easy on bright screens.',
+    vibe: ['Focus', 'Calm', 'Daytime'],
+    swatch: ['#c4ddb5', '#8db87a', '#5a8a4a', '#3a6a32'],
+    code: 'CLZ:eyJzZlN5bWJvbCI6InN0YXIuZmlsbCIsImh1ZSI6MCwiaWQiOiI4OTI4MUQ4Ri0yQkY0LTRBNUQtQUFBQi1CQUYzNDU4Rjc1MDYiLCJpc0ludmVydCI6ZmFsc2UsImJsdXJJbnRlbnNpdHkiOjAsInZpZ25ldHRlIjowLCJuYW1lIjoiR3JlZW4gVGVhIExhdHRlIiwic2F0dXJhdGlvbiI6MSwiYnJpZ2h0bmVzcyI6LTAuMjQxMjg2MzUyMDQwODE2MzMsImlzRmxpcFYiOmZhbHNlLCJpc0JsYWNrQW5kV2hpdGUiOmZhbHNlLCJ0ZW1wZXJhdHVyZSI6NjUwMCwiaXNTZXBpYSI6ZmFsc2UsImdyYWluIjowLCJnYW1tYSI6MSwiaXNGbGlwSCI6ZmFsc2UsInZpYnJhbmNlIjowLCJzaGFkb3dzIjowLCJjdXN0b21Ub25lSGV4IjoiIiwiY29udHJhc3QiOjEsInNoYXJwZW4iOjAsIm1vbm9jaHJvbWVUb25lIjoibWF0Y2hhIiwiem9vbSI6MSwiY3VzdG9tVG9uZUludGVuc2l0eSI6MSwiaGlnaGxpZ2h0cyI6MH0=',
+  },
+  {
+    id: 'caramel-latte-dark',
     name: 'Caramel Latte',
-    series: 'The Coffee Shop Series',
-    description: 'Warm sepia tones with a soft inverted filter. Like reading by candlelight — cozy and easy to sustain.',
+    mode: 'Dark Mode',
+    modeClass: 'badge-dark',
+    description: 'Warm sepia tones with a soft inverted filter. Like reading by candlelight, cozy and easy to sustain through long evening sessions.',
     vibe: ['Cozy', 'Writing', 'Evening'],
-    swatch: ['#3d2008', '#7a4a1a', '#b8884a', '#e0c090'],
+    swatch: ['#1a0a00', '#3d2008', '#7a4a1a', '#b8884a'],
     code: 'CLZ:eyJuYW1lIjoiQ2FyYW1lbCBMYXR0ZSIsInNoYWRvd3MiOjAsInZpZ25ldHRlIjowLCJpc0JsYWNrQW5kV2hpdGUiOmZhbHNlLCJncmFpbiI6MCwiaXNJbnZlcnQiOnRydWUsImN1c3RvbVRvbmVIZXgiOiIiLCJzaGFycGVuIjowLCJjb250cmFzdCI6MSwiY3VzdG9tVG9uZUludGVuc2l0eSI6MSwiaGlnaGxpZ2h0cyI6MCwiaXNTZXBpYSI6dHJ1ZSwidmlicmFuY2UiOjAsImJsdXJJbnRlbnNpdHkiOjAsInNmU3ltYm9sIjoic3Rhci5maWxsIiwiYnJpZ2h0bmVzcyI6MCwiem9vbSI6MSwidGVtcGVyYXR1cmUiOjY1MDAsImlzRmxpcFYiOmZhbHNlLCJtb25vY2hyb21lVG9uZSI6IiIsImdhbW1hIjoxLCJpc0ZsaXBIIjpmYWxzZSwic2F0dXJhdGlvbiI6MSwiaWQiOiJDMTgxNTdENC1BQkFGLTQyRDktQTEwRC1GMDY1RUY1OUE0NzIiLCJodWUiOjB9',
+  },
+  {
+    id: 'caramel-latte-light',
+    name: 'Caramel Latte',
+    mode: 'Light Mode',
+    modeClass: 'badge-light',
+    description: 'A warm golden tone for bright screens. Softens the harsh white of light-mode apps into something gentler and easier to stay with.',
+    vibe: ['Cozy', 'Writing', 'Daytime'],
+    swatch: ['#f5ecc0', '#e8d87a', '#c4a832', '#938424'],
+    code: 'CLZ:eyJ6b29tIjoxLCJicmlnaHRuZXNzIjotMC4yNDEyODYzNTIwNDA4MTYzMywiaXNJbnZlcnQiOmZhbHNlLCJzZlN5bWJvbCI6InN0YXIuZmlsbCIsIm1vbm9jaHJvbWVUb25lIjoiIiwiaWQiOiJCMTdEMjdCMC04ODI0LTRCRDAtQjU2Qi1DRjQ3NTBBNzgyMTQiLCJpc0ZsaXBIIjpmYWxzZSwibmFtZSI6IkNhcmFtZWwgTGF0dGUiLCJjdXN0b21Ub25lSGV4IjoiIzkzODQyNCIsInZpZ25ldHRlIjowLCJnYW1tYSI6MSwidmlicmFuY2UiOjAsInRlbXBlcmF0dXJlIjo2NTAwLCJjb250cmFzdCI6MSwiY3VzdG9tVG9uZUludGVuc2l0eSI6MSwiZ3JhaW4iOjAsImlzU2VwaWEiOmZhbHNlLCJzaGFycGVuIjowLCJpc0JsYWNrQW5kV2hpdGUiOmZhbHNlLCJodWUiOjAsImJsdXJJbnRlbnNpdHkiOjAsInNhdHVyYXRpb24iOjEsImhpZ2hsaWdodHMiOjAsInNoYWRvd3MiOjAsImlzRmxpcFYiOmZhbHNlfQ==',
   },
 ];
 ---
@@ -50,15 +72,27 @@ const presets = [
       "hasPart": [
         {
           "@type": "CreativeWork",
-          "name": "Green Tea Latte",
-          "description": "Soft matcha monochrome screen filter preset for ColorLenz. Calm, focused, easy on the eyes.",
-          "keywords": "matcha screen filter, focus preset, ADHD screen filter, calm screen"
+          "name": "Green Tea Latte (Dark Mode)",
+          "description": "Soft matcha monochrome screen filter preset for ColorLenz. Calm, focused, easy on the eyes in dark mode.",
+          "keywords": "matcha screen filter dark mode, focus preset, ADHD screen filter, calm dark screen"
         },
         {
           "@type": "CreativeWork",
-          "name": "Caramel Latte",
-          "description": "Warm sepia screen filter preset for ColorLenz. Cozy evening tone for reading and writing.",
-          "keywords": "sepia screen filter, warm screen preset, reading filter, evening screen tone"
+          "name": "Green Tea Latte (Light Mode)",
+          "description": "Matcha-toned screen filter for light mode. Gently reduces brightness for daytime focus sessions.",
+          "keywords": "matcha screen filter light mode, light mode focus preset, calm bright screen"
+        },
+        {
+          "@type": "CreativeWork",
+          "name": "Caramel Latte (Dark Mode)",
+          "description": "Warm sepia screen filter preset for ColorLenz. Cozy evening tone for reading and writing in dark mode.",
+          "keywords": "sepia screen filter dark mode, warm screen preset, evening screen tone"
+        },
+        {
+          "@type": "CreativeWork",
+          "name": "Caramel Latte (Light Mode)",
+          "description": "Warm golden tone screen filter for light mode. Softens bright white interfaces into something gentler.",
+          "keywords": "warm screen filter light mode, golden screen preset, light mode reading filter"
         }
       ]
     }
@@ -115,6 +149,7 @@ const presets = [
                   class="preset-swatch"
                   style={`background: linear-gradient(135deg, ${preset.swatch[0]} 0%, ${preset.swatch[1]} 35%, ${preset.swatch[2]} 70%, ${preset.swatch[3]} 100%);`}
                 >
+                  <span class={`mode-badge ${preset.modeClass}`}>{preset.mode}</span>
                   <span class="swatch-name">{preset.name}</span>
                 </div>
 
@@ -318,6 +353,7 @@ const presets = [
     position: relative;
     display: flex;
     align-items: flex-end;
+    justify-content: space-between;
     padding: 0.75rem 1rem;
   }
 
@@ -327,6 +363,31 @@ const presets = [
     color: rgba(255, 255, 255, 0.85);
     text-shadow: 0 1px 4px rgba(0,0,0,0.5);
     letter-spacing: 0.06em;
+  }
+
+  /* ── Mode badge ── */
+  .mode-badge {
+    position: absolute;
+    top: 0.6rem;
+    right: 0.6rem;
+    font-family: var(--font-pixel);
+    font-size: 7px;
+    padding: 3px 7px;
+    border-radius: 4px;
+    letter-spacing: 0.04em;
+    line-height: 1.6;
+  }
+
+  .badge-dark {
+    background: rgba(0, 0, 0, 0.55);
+    color: rgba(255, 255, 255, 0.9);
+    border: 1px solid rgba(255, 255, 255, 0.15);
+  }
+
+  .badge-light {
+    background: rgba(255, 255, 255, 0.75);
+    color: rgba(0, 0, 0, 0.75);
+    border: 1px solid rgba(0, 0, 0, 0.1);
   }
 
   /* ── Card body ── */
