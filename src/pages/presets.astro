@@ -170,22 +170,36 @@ const presets = [
                     <span class="code-text">{preset.code.slice(0, 32)}…</span>
                   </div>
 
-                  <!-- Copy button -->
-                  <button
-                    class="copy-btn"
-                    data-code={preset.code}
-                    data-name={preset.name}
-                    aria-label={`Copy preset code for ${preset.name}`}
-                  >
-                    <svg class="icon-copy" xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-                      <rect width="14" height="14" x="8" y="8" rx="2" ry="2"/>
-                      <path d="M4 16c-1.1 0-2-.9-2-2V4c0-1.1.9-2 2-2h10c1.1 0 2 .9 2 2"/>
-                    </svg>
-                    <svg class="icon-check" xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" style="display:none">
-                      <polyline points="20 6 9 17 4 12"/>
-                    </svg>
-                    <span class="btn-label">Copy code</span>
-                  </button>
+                  <!-- Actions row -->
+                  <div class="card-actions">
+                    <button
+                      class="copy-btn"
+                      data-code={preset.code}
+                      data-name={preset.name}
+                      aria-label={`Copy preset code for ${preset.name}`}
+                    >
+                      <svg class="icon-copy" xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                        <rect width="14" height="14" x="8" y="8" rx="2" ry="2"/>
+                        <path d="M4 16c-1.1 0-2-.9-2-2V4c0-1.1.9-2 2-2h10c1.1 0 2 .9 2 2"/>
+                      </svg>
+                      <svg class="icon-check" xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" style="display:none">
+                        <polyline points="20 6 9 17 4 12"/>
+                      </svg>
+                      <span class="btn-label">Copy code</span>
+                    </button>
+
+                    <!-- Like button -->
+                    <button
+                      class="like-btn"
+                      data-id={preset.id}
+                      aria-label={`Like ${preset.name}`}
+                    >
+                      <svg class="heart-icon" xmlns="http://www.w3.org/2000/svg" width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                        <path d="M19 14c1.49-1.46 3-3.21 3-5.5A5.5 5.5 0 0 0 16.5 3c-1.76 0-3 .5-4.5 2-1.5-1.5-2.74-2-4.5-2A5.5 5.5 0 0 0 2 8.5c0 2.3 1.5 4.05 3 5.5l7 7Z"/>
+                      </svg>
+                      <span class="like-count" data-id={preset.id}>...</span>
+                    </button>
+                  </div>
                 </div>
               </div>
             ))}
@@ -207,6 +221,7 @@ const presets = [
 </html>
 
 <script>
+  // ── Copy buttons ──
   document.querySelectorAll<HTMLButtonElement>('.copy-btn').forEach((btn) => {
     btn.addEventListener('click', async () => {
       const code = btn.dataset.code ?? '';
@@ -217,7 +232,6 @@ const presets = [
       try {
         await navigator.clipboard.writeText(code);
       } catch {
-        // Fallback for older browsers
         const ta = document.createElement('textarea');
         ta.value = code;
         ta.style.position = 'fixed';
@@ -228,7 +242,6 @@ const presets = [
         document.body.removeChild(ta);
       }
 
-      // Success state
       if (iconCopy) iconCopy.style.display = 'none';
       if (iconCheck) iconCheck.style.display = 'block';
       if (label) label.textContent = 'Copied!';
@@ -242,6 +255,53 @@ const presets = [
       }, 2000);
     });
   });
+
+  // ── Like buttons ──
+  const liked = new Set<string>(JSON.parse(localStorage.getItem('cl-liked') ?? '[]'));
+
+  async function loadCounts() {
+    try {
+      const res = await fetch('/api/likes');
+      if (!res.ok) return;
+      const counts: Record<string, number> = await res.json();
+      document.querySelectorAll<HTMLElement>('.like-count').forEach((el) => {
+        const id = el.dataset.id ?? '';
+        el.textContent = String(counts[id] ?? 0);
+      });
+    } catch {}
+  }
+
+  function applyLikedState() {
+    document.querySelectorAll<HTMLButtonElement>('.like-btn').forEach((btn) => {
+      if (liked.has(btn.dataset.id ?? '')) btn.classList.add('liked');
+    });
+  }
+
+  document.querySelectorAll<HTMLButtonElement>('.like-btn').forEach((btn) => {
+    btn.addEventListener('click', async () => {
+      const id = btn.dataset.id ?? '';
+      if (liked.has(id)) return; // already liked
+
+      // Optimistic UI
+      liked.add(id);
+      localStorage.setItem('cl-liked', JSON.stringify([...liked]));
+      btn.classList.add('liked');
+      const countEl = btn.querySelector('.like-count') as HTMLElement | null;
+      if (countEl) countEl.textContent = String((parseInt(countEl.textContent ?? '0', 10) || 0) + 1);
+
+      // Persist to KV
+      try {
+        await fetch('/api/likes', {
+          method: 'POST',
+          headers: { 'Content-Type': 'application/json' },
+          body: JSON.stringify({ id }),
+        });
+      } catch {}
+    });
+  });
+
+  loadCounts();
+  applyLikedState();
 </script>
 
 <style>
@@ -447,6 +507,13 @@ const presets = [
     text-overflow: ellipsis;
   }
 
+  /* ── Actions row ── */
+  .card-actions {
+    display: flex;
+    gap: 0.6rem;
+    align-items: center;
+  }
+
   /* ── Copy button ── */
   .copy-btn {
     display: inline-flex;
@@ -462,7 +529,7 @@ const presets = [
     letter-spacing: 0.05em;
     cursor: pointer;
     transition: background var(--transition), box-shadow var(--transition), transform var(--transition);
-    width: 100%;
+    flex: 1;
     justify-content: center;
   }
 
@@ -477,6 +544,43 @@ const presets = [
     color: var(--accent);
     border: 1px solid var(--border-accent);
     box-shadow: var(--glow-sm);
+  }
+
+  /* ── Like button ── */
+  .like-btn {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.35rem;
+    padding: 0.6rem 0.9rem;
+    background: var(--bg-subtle);
+    color: var(--text-muted);
+    border: 1px solid var(--border);
+    border-radius: var(--radius-sm);
+    font-family: var(--font-pixel);
+    font-size: 8px;
+    cursor: pointer;
+    transition: all var(--transition);
+    flex-shrink: 0;
+  }
+
+  .like-btn:hover {
+    border-color: #e05c7a;
+    color: #e05c7a;
+  }
+
+  .like-btn.liked {
+    background: rgba(224, 92, 122, 0.1);
+    border-color: #e05c7a;
+    color: #e05c7a;
+  }
+
+  .like-btn.liked .heart-icon {
+    fill: #e05c7a;
+    stroke: #e05c7a;
+  }
+
+  .like-count {
+    min-width: 1ch;
   }
 
   /* ── More coming soon ── */
