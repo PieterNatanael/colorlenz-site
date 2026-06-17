@@ -140,11 +140,17 @@ import { APP_STORE_URL } from '../consts';
             <dl class="faq-list">
 
               <div class="faq-item">
+                <dt>Why does ColorLenz ask for Screen Recording permission?</dt>
+                <dd>
+                  macOS requires Screen Recording permission for apps that read your display in real time. ColorLenz reads your screen only to apply a color filter to each frame — like putting on tinted glasses, except it happens in software on your GPU.<br /><br />
+                  The captured pixels are processed instantly and discarded. Nothing is recorded, saved to disk, or transmitted anywhere. The permission is a technical requirement from Apple for this kind of real-time display access, not a sign that anything is being stored or shared.
+                </dd>
+              </div>
+
+              <div class="faq-item">
                 <dt>Does ColorLenz collect any data about me?</dt>
                 <dd>
-                  No. ColorLenz does not collect, store, or transmit personal data. It runs
-                  entirely on your device. See our <a href="/privacy">Privacy Policy</a> for
-                  the full details.
+                  No. ColorLenz does not collect, store, or transmit any personal data. The screen access it uses is processed entirely on your device, in real time, and never leaves it. The app works fully offline. See our <a href="/privacy">Privacy Policy</a> for the full details.
                 </dd>
               </div>
 
@@ -295,10 +301,18 @@ import { APP_STORE_URL } from '../consts';
     },
     {
       "@type": "Question",
+      "name": "Why does ColorLenz ask for Screen Recording permission?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "macOS requires Screen Recording permission for apps that read your display in real time. ColorLenz reads your screen only to apply a color filter to each frame — like putting on tinted glasses, except it happens in software on your GPU. The captured pixels are processed instantly and discarded. Nothing is recorded, saved to disk, or transmitted anywhere."
+      }
+    },
+    {
+      "@type": "Question",
       "name": "Does ColorLenz collect any data about me?",
       "acceptedAnswer": {
         "@type": "Answer",
-        "text": "No. ColorLenz does not collect, store, or transmit personal data. It runs entirely on your device. See our Privacy Policy for the full details."
+        "text": "No. ColorLenz does not collect, store, or transmit any personal data. The screen access it uses is processed entirely on your device, in real time, and never leaves it. The app works fully offline."
       }
     },
     {

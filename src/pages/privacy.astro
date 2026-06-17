@@ -98,11 +98,18 @@ import Footer from '../components/Footer.astro';
             filters in real time. No screen content ever leaves your device.
           </p>
 
-          <h3>Screen Recording</h3>
+          <h3>Screen Recording Permission</h3>
           <p>
-            ColorLenz requests Screen Recording permission to display a
-            filtered live preview of your screen. This data is processed entirely
-            on-device and is never saved, uploaded, or shared.
+            ColorLenz uses Apple's ScreenCaptureKit framework to read your display
+            in real time, passes each frame through a GPU-accelerated color filter
+            pipeline, and renders the result back to your screen as a transparent overlay.
+          </p>
+          <p>
+            Frames are never written to disk, uploaded, or transmitted to any server.
+            Everything happens in memory, on your device, in the moment. macOS requires
+            Screen Recording permission for this kind of real-time display access — it
+            is a technical requirement, not an indication that anything is being stored
+            or shared.
           </p>
 
           <h3>Subscription &amp; Payments</h3>
