@@ -3,6 +3,8 @@ const PRESET_IDS = [
   'green-tea-latte-light',
   'caramel-latte-dark',
   'caramel-latte-light',
+  'aluminum-dark',
+  'tank-blue-dark',
 ];
 
 function corsHeaders() {
