@@ -8,14 +8,11 @@ import AppStoreBadge from '../components/AppStoreBadge.astro';
 import userImage from '../assets/userimage3.png';
 import userImage2 from '../assets/userimage2.jpg';
 import logo from '../assets/logoaztec.png';
-import cl7 from '../assets/cl7.jpg';
-import cl8 from '../assets/cl8.jpg';
-import cl1 from '../assets/Cl1.jpg';
-import cl2 from '../assets/CL2.jpg';
-import cl3 from '../assets/CL3.jpg';
-import cl4 from '../assets/CL4.jpg';
-import cl5 from '../assets/CL5.jpg';
-import cl6 from '../assets/CL6.jpg';
+import appstore1 from '../assets/appstore1.jpg';
+import appstore2 from '../assets/appstore2.jpg';
+import appstore3 from '../assets/appstore3.jpg';
+import appstore4 from '../assets/appstore4.jpg';
+import appstore5 from '../assets/appstore5.jpg';
 import { SITE_TITLE, SITE_DESCRIPTION, APP_STORE_URL, WINDOWS_WAITLIST_FORM_ID } from '../consts';
 
 // Get latest blog posts
@@ -99,14 +96,11 @@ const latestPosts = allPosts
 
         <div class="screenshots-track" id="screenshots-track">
           {[
-            { img: cl7, label: "ColorLenz in action" },
-            { img: cl8, label: "Different colors, less brain power." },
-            { img: cl1, label: "Floating lens over any app" },
-            { img: cl2, label: "Color filter in action" },
-            { img: cl3, label: "Privacy Mode" },
-            { img: cl4, label: "Custom presets" },
-            { img: cl5, label: "14 pill themes" },
-            { img: cl6, label: "Works with everything" },
+            { img: appstore1, label: "ColorLenz in action" },
+            { img: appstore2, label: "ColorLenz in action" },
+            { img: appstore3, label: "ColorLenz in action" },
+            { img: appstore4, label: "ColorLenz in action" },
+            { img: appstore5, label: "ColorLenz in action" },
           ].map((item, i) => (
             <div class="screenshot-slide">
               <div class="mac-window">
