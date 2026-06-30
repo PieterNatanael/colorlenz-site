@@ -155,7 +155,7 @@ Users report being able to work 2-3x longer before needing a break when they com
 - 10:25: End session, mentally exhausted
 
 **With visual support:**
-- 9:00 AM: Log into Focusmate, ColorLenz active with calm visuals
+- 9:00 AM: Log into Focusmate, Goodmood active with calm visuals
 - 9:00-9:25: Great focus, calm screen
 - 9:25-9:30: Quick break
 - 9:30-9:55: Still focused, no eye strain
@@ -231,4 +231,4 @@ When all three work together, focus becomes possible. Not through willpower, but
 
 ---
 
-*Want to create the ultimate ADHD focus setup? Start with a body doubling app like Focusmate, then add visual support to maximize your focus. Explore more strategies in our [support page](/support), or learn how to optimize your screen environment with [ColorLenz](/pricing).*
+*Want to create the ultimate ADHD focus setup? Start with a body doubling app like Focusmate, then add visual support to maximize your focus. Explore more strategies in our [support page](/support), or learn how to optimize your screen environment with [Goodmood](/pricing).*

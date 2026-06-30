@@ -1,9 +1,9 @@
 ---
 title: "The Coffee Shop Series: A Custom Screen Experience for Claude AI on macOS"
-description: "How ColorLenz screen filter presets, Green Tea Latte and Caramel Latte, give Claude AI users on macOS a calmer, more focused experience. Customize how Claude feels without changing how it works."
+description: "How Goodmood screen filter presets, Green Tea Latte and Caramel Latte, give Claude AI users on macOS a calmer, more focused experience. Customize how Claude feels without changing how it works."
 pubDate: "Jun 15 2026"
 heroImage: "../../assets/donut1.jpg"
-keywords: "Claude AI custom experience macOS, Claude AI screen filter, customize Claude AI mac, Claude AI skin macOS, Claude AI overlay macOS, Claude AI dark mode mac, screen filter for Claude AI, Claude AI calm experience, Claude AI focus tool, Claude AI visual settings, Claude AI productivity macOS, best Claude AI setup mac, Claude AI color filter, screen overlay Claude AI, Anthropic Claude macOS customization, Claude AI theme mac, screen filter AI tools macOS, calm Claude AI, ColorLenz Claude AI, coffee shop series ColorLenz, Green Tea Latte preset, Caramel Latte preset, ADHD Claude AI macOS, neurodivergent AI tools"
+keywords: "Claude AI custom experience macOS, Claude AI screen filter, customize Claude AI mac, Claude AI skin macOS, Claude AI overlay macOS, Claude AI dark mode mac, screen filter for Claude AI, Claude AI calm experience, Claude AI focus tool, Claude AI visual settings, Claude AI productivity macOS, best Claude AI setup mac, Claude AI color filter, screen overlay Claude AI, Anthropic Claude macOS customization, Claude AI theme mac, screen filter AI tools macOS, calm Claude AI, Goodmood Claude AI, coffee shop series Goodmood, Green Tea Latte preset, Caramel Latte preset, ADHD Claude AI macOS, neurodivergent AI tools"
 ---
 
 Most people obsess over which Claude model to use. Almost nobody thinks about *how their screen feels* during a two-hour AI session.
@@ -24,9 +24,9 @@ Visual fatigue builds silently. By hour two of a deep Claude session, many users
 
 ---
 
-## What ColorLenz Does and What It Doesn't
+## What Goodmood Does and What It Doesn't
 
-ColorLenz is a lightweight macOS screen filter that floats gently on top of your entire display. It works with any app: Claude AI in the browser, the Claude desktop app, ChatGPT, Perplexity, Notion, your code editor, everything.
+Goodmood is a lightweight macOS screen filter that floats gently on top of your entire display. It works with any app: Claude AI in the browser, the Claude desktop app, ChatGPT, Perplexity, Notion, your code editor, everything.
 
 What it does:
 
@@ -40,13 +40,13 @@ What it doesn't do:
 - It doesn't interfere with your interface, buttons, or text selection
 - It doesn't block, modify, or slow down any app
 
-You get 100% of Claude. Every response, every feature, every keyboard shortcut. ColorLenz just changes how the light reaching your eyes feels, like putting on a pair of tinted glasses where the tint is tuned precisely for screen work.
+You get 100% of Claude. Every response, every feature, every keyboard shortcut. Goodmood just changes how the light reaching your eyes feels, like putting on a pair of tinted glasses where the tint is tuned precisely for screen work.
 
 ---
 
 ## Introducing the Coffee Shop Series
 
-The Coffee Shop Series is a set of ColorLenz preset codes designed for focused, sustained computer sessions. The kind of work you do when you open Claude and don't plan to close it for a while.
+The Coffee Shop Series is a set of Goodmood preset codes designed for focused, sustained computer sessions. The kind of work you do when you open Claude and don't plan to close it for a while.
 
 The idea came from a simple observation: the best cognitive environments tend to share something in common. A quiet café. A warm reading nook. A study at dusk. These spaces feel *right* for deep thinking because they reduce visual noise without reducing visibility. You can still read, still see, still work, but the environment isn't fighting your attention.
 
@@ -82,11 +82,11 @@ For users who work with Claude on writing, brainstorming, or any task that benef
 
 Getting either preset onto your screen takes under thirty seconds:
 
-1. Visit the [ColorLenz Preset Library](/presets) and click **Copy code** on the preset you want
-2. Open ColorLenz on your Mac (download free from the Mac App Store if you haven't already)
+1. Visit the [Goodmood Preset Library](/presets) and click **Copy code** on the preset you want
+2. Open Goodmood on your Mac (download free from the Mac App Store if you haven't already)
 3. Go to **Settings** and paste the code
 
-That's it. The filter applies instantly. Switch between presets anytime, or turn ColorLenz off entirely with one click when you don't need it.
+That's it. The filter applies instantly. Switch between presets anytime, or turn Goodmood off entirely with one click when you don't need it.
 
 ---
 
@@ -102,7 +102,7 @@ The users who get the most out of AI tools are the ones who treat the work serio
 
 ## Works with Every AI Tool on macOS
 
-Because ColorLenz is a system-level screen overlay, it works with any app running on your Mac:
+Because Goodmood is a system-level screen overlay, it works with any app running on your Mac:
 
 - **Claude AI** (claude.ai in any browser, Claude desktop app)
 - **ChatGPT** (chatgpt.com, macOS app)
@@ -117,10 +117,10 @@ One overlay. Every tool.
 
 ## Try It
 
-Both presets are free. [Visit the Preset Library](/presets), copy the code for whichever vibe fits your work today, and paste it into ColorLenz.
+Both presets are free. [Visit the Preset Library](/presets), copy the code for whichever vibe fits your work today, and paste it into Goodmood.
 
 If you notice your sessions feeling calmer, your thinking clearer, and your eyes less tired at the end of a long day, that's the point.
 
 ---
 
-*ColorLenz is free to download on the [Mac App Store](https://apps.apple.com/id/app/colorlenz/id6765573775?mt=12). The Coffee Shop Series presets are available free at [colorlenz.com/presets](/presets).*
+*Goodmood is free to download on the [Mac App Store](https://apps.apple.com/id/app/colorlenz/id6765573775?mt=12). The Coffee Shop Series presets are available free at [colorlenz.com/presets](/presets).*

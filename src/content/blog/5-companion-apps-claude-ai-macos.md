@@ -3,7 +3,7 @@ title: "5 Apps That Make Claude AI Better on macOS"
 description: "The best companion apps for Claude AI on Mac. From Raycast to Obsidian, these five tools pair with Claude to help you work faster, think clearer, and last longer in deep AI sessions."
 pubDate: "Jun 15 2026"
 heroImage: "../../assets/donut3.jpg"
-keywords: "best companion apps for Claude AI, apps to use with Claude AI macOS, Claude AI productivity tools, Claude AI setup mac, Claude AI companion apps, Raycast Claude AI, Superwhisper Claude AI, Obsidian Claude AI, ColorLenz Claude AI, Claude AI tools macOS, best Claude AI setup, Claude AI workflow mac, apps that work with Claude, Claude AI accessories mac, improve Claude AI experience, Claude AI power user tools"
+keywords: "best companion apps for Claude AI, apps to use with Claude AI macOS, Claude AI productivity tools, Claude AI setup mac, Claude AI companion apps, Raycast Claude AI, Superwhisper Claude AI, Obsidian Claude AI, Goodmood Claude AI, Claude AI tools macOS, best Claude AI setup, Claude AI workflow mac, apps that work with Claude, Claude AI accessories mac, improve Claude AI experience, Claude AI power user tools"
 ---
 
 Claude is already powerful on its own. But the right companion apps turn a good AI session into a great one.
@@ -40,7 +40,7 @@ For users with ADHD, dyslexia, or anyone who thinks faster than they type, this 
 
 ---
 
-## 3. ColorLenz — Make Your Screen Comfortable for Long Sessions
+## 3. Goodmood — Make Your Screen Comfortable for Long Sessions
 
 **Free. [colorlenz.com](https://colorlenz.com)**
 
@@ -48,14 +48,14 @@ Claude sessions are cognitively demanding. You are reading long responses, const
 
 Most AI interfaces, including Claude, use bright white backgrounds and high contrast text. That is fine for a ten-minute interaction. For a two-hour working session, it is a slow drain on your visual system that eventually shows up as fatigue, loss of concentration, and that end-of-day feeling of having stared too hard at a screen.
 
-ColorLenz is a free macOS screen filter that floats gently on top of your entire display. It does not change how Claude works. It does not interfere with any interface, block any button, or capture any data. It simply places a soft color overlay over your screen to reduce brightness and visual noise.
+Goodmood is a free macOS screen filter that floats gently on top of your entire display. It does not change how Claude works. It does not interfere with any interface, block any button, or capture any data. It simply places a soft color overlay over your screen to reduce brightness and visual noise.
 
 The [Coffee Shop Series presets](/presets) were designed specifically for AI work sessions:
 
 - **Green Tea Latte** softens the screen with a matcha tone, ideal for reading-heavy Claude sessions
 - **Caramel Latte** adds warmth for writing and creative collaboration
 
-Both are available free at the [ColorLenz Preset Library](/presets). Copy the code, open ColorLenz, paste in Settings.
+Both are available free at the [Goodmood Preset Library](/presets). Copy the code, open Goodmood, paste in Settings.
 
 **Best for:** Anyone doing sustained Claude sessions, users with ADHD or sensory sensitivity, evening workers.
 
@@ -99,7 +99,7 @@ If you want to run all five together:
 
 1. **Raycast** handles access — Claude anywhere, instantly
 2. **Superwhisper** handles input — speak your prompts instead of typing
-3. **ColorLenz** handles comfort — gentle screen filter for the long session
+3. **Goodmood** handles comfort — gentle screen filter for the long session
 4. **Obsidian** handles output — capture and connect what Claude produces
 5. **Lungo** handles continuity — your Mac stays awake for the whole thing
 
@@ -109,4 +109,4 @@ They just make the experience of using Claude better, in five different ways, fo
 
 ---
 
-*ColorLenz is free to download on the [Mac App Store](https://apps.apple.com/id/app/colorlenz/id6765573775?mt=12). The Coffee Shop Series screen filter presets for Claude AI sessions are available at [colorlenz.com/presets](/presets).*
+*Goodmood is free to download on the [Mac App Store](https://apps.apple.com/id/app/colorlenz/id6765573775?mt=12). The Coffee Shop Series screen filter presets for Claude AI sessions are available at [colorlenz.com/presets](/presets).*

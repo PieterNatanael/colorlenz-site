@@ -131,7 +131,7 @@ Dr. Edward Hallowell co-authored *Driven to Distraction*, one of the most influe
 >
 > If you notice your focus deteriorating as the day goes on — even when you're not doing anything particularly demanding — your screen's visual output may be part of the problem.
 >
-> **[ColorLenz](https://colorlenz.com)** is a free macOS screen filter built for this exact issue. It places a gentle color overlay over your screen to reduce visual noise and calm the constant stimulation your eyes send to your brain. There's no setup, no account, no tracking — just a floating lens that quietly works in the background while you do everything else. Free to download on the Mac App Store.
+> **[Goodmood](https://colorlenz.com)** is a free macOS screen filter built for this exact issue. It places a gentle color overlay over your screen to reduce visual noise and calm the constant stimulation your eyes send to your brain. There's no setup, no account, no tracking — just a floating lens that quietly works in the background while you do everything else. Free to download on the Mac App Store.
 
 ---
 
@@ -208,8 +208,8 @@ Strips web pages down to their core text and images, removing ads, sidebars, pop
 **49. [Speechify](https://www.speechify.com)**
 Text-to-speech app that reads articles, documents, PDFs, and web pages aloud. For ADHD brains that struggle with reading focus, listening while following the text can significantly improve comprehension and retention.
 
-**50. [ColorLenz](https://colorlenz.com)** *(free, macOS)*
-Built specifically for neurodivergent users, ColorLenz places a gentle, adjustable color filter over your entire screen to reduce visual overstimulation. It works with every app — browsers, editors, video players — and runs quietly in the menu bar without requiring any account or setup. 14 visual themes and a custom preset builder let you tune the experience to exactly what your brain needs. Free to download on the Mac App Store.
+**50. [Goodmood](https://colorlenz.com)** *(free, macOS)*
+Built specifically for neurodivergent users, Goodmood places a gentle, adjustable color filter over your entire screen to reduce visual overstimulation. It works with every app — browsers, editors, video players — and runs quietly in the menu bar without requiring any account or setup. 14 visual themes and a custom preset builder let you tune the experience to exactly what your brain needs. Free to download on the Mac App Store.
 
 ---
 
@@ -221,7 +221,7 @@ Don't try to use everything at once. ADHD brains don't need more tabs open — t
 
 - **Newly diagnosed?** → ADDitude Magazine (#1) + r/ADHD (#9) + How to ADHD on YouTube (#25)
 - **Struggling to start tasks?** → Goblin.tools (#23) + Focusmate (#20) + Tiimo (#16)
-- **Screen fatigue by 2pm?** → f.lux (#42) + Dark Reader (#47) + ColorLenz (#50)
+- **Screen fatigue by 2pm?** → f.lux (#42) + Dark Reader (#47) + Goodmood (#50)
 - **Supporting a child?** → Child Mind Institute (#36) + Wrightslaw (#39)
 - **Looking for a coach or therapist?** → ACO directory (#31) + Psychology Today (#32)
 

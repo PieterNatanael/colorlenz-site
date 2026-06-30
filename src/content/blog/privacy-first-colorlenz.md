@@ -1,6 +1,6 @@
 ---
-title: "Privacy-First Software: Why We Built ColorLenz Without Tracking"
-description: "Most apps track you. ColorLenz doesn't. Learn why privacy matters for neurodivergent users and how on-device processing keeps your data safe."
+title: "Privacy-First Software: Why We Built Goodmood Without Tracking"
+description: "Most apps track you. Goodmood doesn't. Learn why privacy matters for neurodivergent users and how on-device processing keeps your data safe."
 pubDate: "May 18 2026"
 heroImage: "../../assets/donut4.jpg"
 ---
@@ -9,7 +9,7 @@ When you use most apps, you're not the customer—you're the product. Your behav
 
 But for neurodivergent users, this constant tracking adds another layer of anxiety. You're not just using an app; you're being watched and profiled. Your focus settings, your stress times, your usage patterns—all of it is data.
 
-We built ColorLenz differently. No tracking. No data collection. No ads. Just a tool that works for your brain, not against it.
+We built Goodmood differently. No tracking. No data collection. No ads. Just a tool that works for your brain, not against it.
 
 ## The Tracking Problem: How Most Apps Use Your Data
 
@@ -45,13 +45,13 @@ Neurodivergent people often experience higher levels of anxiety and sensory sens
 
 You deserve tools that respect your privacy, not profit from your data.
 
-## How ColorLenz Works: Everything On-Device
+## How Goodmood Works: Everything On-Device
 
-ColorLenz operates on a simple principle: **your data never leaves your Mac**.
+Goodmood operates on a simple principle: **your data never leaves your Mac**.
 
 Here's how it works technically:
 
-**Screen capture:** ColorLenz captures your display locally—nothing is sent to our servers. Everything happens right on your Mac.
+**Screen capture:** Goodmood captures your display locally—nothing is sent to our servers. Everything happens right on your Mac.
 
 **GPU processing:** Your screen is processed using your graphics card (not your CPU). The color adjustments, contrast changes, and filter effects all happen in the moment, in memory.
 
@@ -59,9 +59,9 @@ Here's how it works technically:
 
 **No storage:** Frames are processed and immediately discarded. Nothing is written to disk. Nothing is logged. Nothing is sent anywhere.
 
-**Offline functionality:** ColorLenz works without an internet connection. You don't need to authenticate, log in, or connect to our servers. Ever.
+**Offline functionality:** Goodmood works without an internet connection. You don't need to authenticate, log in, or connect to our servers. Ever.
 
-This means your screen activity, your usage patterns, your focus times—none of it is tracked. We literally have no visibility into how you use ColorLenz. We can't see your data because we don't collect it.
+This means your screen activity, your usage patterns, your focus times—none of it is tracked. We literally have no visibility into how you use Goodmood. We can't see your data because we don't collect it.
 
 ## Why On-Device Processing Matters
 
@@ -71,7 +71,7 @@ But it's the only ethical approach for a tool designed to help people with neuro
 
 ## Apple's Privacy Protection
 
-ColorLenz lives in the Mac App Store, which means it's subject to Apple's App Privacy standards. We're transparent about what we collect: nothing.
+Goodmood lives in the Mac App Store, which means it's subject to Apple's App Privacy standards. We're transparent about what we collect: nothing.
 
 Your Mac is your trusted device. The data on it stays on it. That's the whole point.
 
@@ -79,7 +79,7 @@ Your Mac is your trusted device. The data on it stays on it. That's the whole po
 
 Some companies claim to be "privacy-first," but they still collect aggregate data, device fingerprints, or crash reports that can be used to track you. We don't.
 
-ColorLenz doesn't:
+Goodmood doesn't:
 - Log crash reports to external servers
 - Collect anonymous usage metrics
 - Track feature usage or preferences
@@ -116,4 +116,4 @@ Your screen. Your data. Your choice.
 
 ---
 
-*Learn how ColorLenz protects your privacy in our [support page](/support). Or check out [pricing](/pricing) to get started with a privacy-first screen filter.*
+*Learn how Goodmood protects your privacy in our [support page](/support). Or check out [pricing](/pricing) to get started with a privacy-first screen filter.*

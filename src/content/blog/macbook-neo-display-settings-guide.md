@@ -72,7 +72,7 @@ For many users that is not noticeable at all. For others, particularly those who
 
 If you want the kind of real-time display tuning that goes beyond what the built-in settings offer — adjusting warmth, brightness, saturation, and color tone together, saving those combinations as named presets, and switching between them instantly — that is where a dedicated screen filter comes in.
 
-[ColorLenz](https://apps.apple.com/id/app/colorlenz/id6765573775?mt=12) is a free macOS screen filter that runs as a transparent floating overlay above all your apps. It works on the MacBook Neo and every other Mac, and it complements the built-in settings rather than replacing them. Night Shift still handles your evening warmth. ColorLenz handles the finer tuning on top.
+[Goodmood](https://apps.apple.com/id/app/colorlenz/id6765573775?mt=12) is a free macOS screen filter that runs as a transparent floating overlay above all your apps. It works on the MacBook Neo and every other Mac, and it complements the built-in settings rather than replacing them. Night Shift still handles your evening warmth. Goodmood handles the finer tuning on top.
 
 What it adds:
 
@@ -87,7 +87,7 @@ The app is free to download. The core filter and Privacy Mode work with no subsc
 
 ## A Practical Starting Point
 
-If you want a preset designed for reading and focus work, the [ColorLenz Preset Library](/presets) has free codes you can copy and paste directly into the app.
+If you want a preset designed for reading and focus work, the [Goodmood Preset Library](/presets) has free codes you can copy and paste directly into the app.
 
 The Morning Series works particularly well on the Neo's display during daytime sessions:
 
@@ -99,7 +99,7 @@ The Coffee Shop Series is better for evening reading:
 - **Green Tea Latte** — soft matcha tone, calm and focused
 - **Caramel Latte** — warm sepia, good for writing and long sessions
 
-Copy any code from the Preset Library, open ColorLenz, go to Settings, and paste. It takes under thirty seconds and applies instantly.
+Copy any code from the Preset Library, open Goodmood, go to Settings, and paste. It takes under thirty seconds and applies instantly.
 
 ---
 
@@ -110,10 +110,10 @@ For most MacBook Neo owners, this setup covers everything:
 1. Enable **Automatically adjust brightness**
 2. Turn on **Night Shift** on a sunset schedule
 3. Enable **Reduce White Point** at around 30 percent if you work in dim environments
-4. Add [ColorLenz](https://apps.apple.com/id/app/colorlenz/id6765573775?mt=12) if you want real-time warmth and tone control beyond what the built-in settings offer
+4. Add [Goodmood](https://apps.apple.com/id/app/colorlenz/id6765573775?mt=12) if you want real-time warmth and tone control beyond what the built-in settings offer
 
 The Neo is a great Mac. A few minutes of display setup makes it a comfortable one for the long sessions it was built for.
 
 ---
 
-*ColorLenz is available free on the [Mac App Store](https://apps.apple.com/id/app/colorlenz/id6765573775?mt=12). Screen filter presets are at [colorlenz.com/presets](/presets).*
+*Goodmood is available free on the [Mac App Store](https://apps.apple.com/id/app/colorlenz/id6765573775?mt=12). Screen filter presets are at [colorlenz.com/presets](/presets).*

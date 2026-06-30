@@ -58,7 +58,7 @@ It sounds too simple to matter. But screen use genuinely reduces how often peopl
 
 This is where a screen filter makes a difference. Reducing the brightness and shifting the color tone of your display, beyond what Night Shift and the brightness slider offer, takes some of the visual load off your eyes during long sessions.
 
-[ColorLenz](https://apps.apple.com/id/app/colorlenz/id6765573775?mt=12) is a free macOS screen filter that sits as a transparent overlay above all your apps. You can adjust temperature, brightness, saturation, and contrast independently, and save combinations as presets. The [Coffee Shop Series presets](/presets) are specifically designed for reading and writing sessions.
+[Goodmood](https://apps.apple.com/id/app/colorlenz/id6765573775?mt=12) is a free macOS screen filter that sits as a transparent overlay above all your apps. You can adjust temperature, brightness, saturation, and contrast independently, and save combinations as presets. The [Coffee Shop Series presets](/presets) are specifically designed for reading and writing sessions.
 
 ---
 
@@ -66,8 +66,8 @@ This is where a screen filter makes a difference. Reducing the brightness and sh
 
 If you only do two things: turn on Night Shift, and try the 20-20-20 rule for a week. Those two changes alone are enough to feel a noticeable difference for most people.
 
-If you want more control over your screen environment, [ColorLenz is free to download](https://apps.apple.com/id/app/colorlenz/id6765573775?mt=12) and takes about two minutes to set up.
+If you want more control over your screen environment, [Goodmood is free to download](https://apps.apple.com/id/app/colorlenz/id6765573775?mt=12) and takes about two minutes to set up.
 
 ---
 
-*More tips for comfortable screen use are on our [support page](/support). The ColorLenz [Preset Library](/presets) has free screen filter codes for common work sessions.*
+*More tips for comfortable screen use are on our [support page](/support). The Goodmood [Preset Library](/presets) has free screen filter codes for common work sessions.*

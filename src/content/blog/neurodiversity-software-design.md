@@ -127,4 +127,4 @@ Your brain isn't broken. The software just wasn't designed for you yet.
 
 ---
 
-*Want tools designed with neurodiversity in mind? Check out how [ColorLenz](/pricing) applies these principles to screen filtering. Or explore more in our [support page](/support) about making technology work for your brain.*
+*Want tools designed with neurodiversity in mind? Check out how [Goodmood](/pricing) applies these principles to screen filtering. Or explore more in our [support page](/support) about making technology work for your brain.*

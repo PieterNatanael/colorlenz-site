@@ -74,4 +74,4 @@ Your screen doesn't have to feel like a sensory assault. Let's make it work *for
 
 ---
 
-*Want to learn how to reduce screen fatigue? Check out our [support page](/support) for practical tips and frequently asked questions. Or explore how [ColorLenz](/pricing) can help create a calmer visual environment for your work.*
+*Want to learn how to reduce screen fatigue? Check out our [support page](/support) for practical tips and frequently asked questions. Or explore how [Goodmood](/pricing) can help create a calmer visual environment for your work.*
