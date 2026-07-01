@@ -123,4 +123,4 @@ If you notice your sessions feeling calmer, your thinking clearer, and your eyes
 
 ---
 
-*Goodmood is free to download on the [Mac App Store](https://apps.apple.com/id/app/colorlenz/id6765573775?mt=12). The Coffee Shop Series presets are available free at [colorlenz.com/presets](/presets).*
+*Goodmood is free to download on the [Mac App Store](https://apps.apple.com/id/app/goodmood-screen-companion/id6765573775?mt=12). The Coffee Shop Series presets are available free at [colorlenz.com/presets](/presets).*

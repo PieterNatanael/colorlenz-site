@@ -101,10 +101,10 @@ Each setting targets a different variable — ambient adaptation, evening warmth
 
 Apple's built-in tools cover the common cases well. For users who want finer control over their screen environment — adjusting temperature, brightness, saturation, contrast, and color tone together and saving combinations as named presets — a dedicated screen filter app fills that role.
 
-[Goodmood](https://apps.apple.com/id/app/colorlenz/id6765573775?mt=12) is a free macOS screen filter that runs as a floating overlay above all your apps. It complements the built-in settings by adding a real-time filter layer you can tune precisely and switch between instantly. The [Preset Library](/presets) has free codes for common use cases — morning reading, evening focus sessions, and more — so you do not have to start from scratch.
+[Goodmood](https://apps.apple.com/id/app/goodmood-screen-companion/id6765573775?mt=12) is a free macOS screen filter that runs as a floating overlay above all your apps. It complements the built-in settings by adding a real-time filter layer you can tune precisely and switch between instantly. The [Preset Library](/presets) has free codes for common use cases — morning reading, evening focus sessions, and more — so you do not have to start from scratch.
 
 Start with what macOS provides. Add Goodmood if you want to go further.
 
 ---
 
-*Goodmood is available free on the [Mac App Store](https://apps.apple.com/id/app/colorlenz/id6765573775?mt=12). Screen filter presets are at [colorlenz.com/presets](/presets).*
+*Goodmood is available free on the [Mac App Store](https://apps.apple.com/id/app/goodmood-screen-companion/id6765573775?mt=12). Screen filter presets are at [colorlenz.com/presets](/presets).*

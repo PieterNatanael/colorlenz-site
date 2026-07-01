@@ -109,4 +109,4 @@ They just make the experience of using Claude better, in five different ways, fo
 
 ---
 
-*Goodmood is free to download on the [Mac App Store](https://apps.apple.com/id/app/colorlenz/id6765573775?mt=12). The Coffee Shop Series screen filter presets for Claude AI sessions are available at [colorlenz.com/presets](/presets).*
+*Goodmood is free to download on the [Mac App Store](https://apps.apple.com/id/app/goodmood-screen-companion/id6765573775?mt=12). The Coffee Shop Series screen filter presets for Claude AI sessions are available at [colorlenz.com/presets](/presets).*
