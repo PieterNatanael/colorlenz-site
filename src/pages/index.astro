@@ -49,10 +49,14 @@ const latestPosts = allPosts
       <section class="feeling">
         <div class="container">
           <div class="feeling-intro reveal">
-            <p class="feeling-why">We spend hours looking at our screens every day.<br />Yet most of us only have two choices: Light Mode or Dark Mode.</p>
-            <p class="feeling-story">I kept wondering, why can't I choose what feels best for my own eyes and brain? So I built Goodmood for myself.</p>
-            <p class="feeling-story">I used it every day for over a month. My eyes felt less dry and less fatigued. My mind felt calmer. I found myself feeling better throughout the day. I kept updating it, tweaking it, trying to make myself feel really good at my screen.</p>
-            <p class="feeling-story">That was the moment I thought: I might be onto something useful. Now you can join and use this too.</p>
+            <Image src={logo} alt="Goodmood" width={120} height={120} class="feeling-intro-logo" />
+            <div class="feeling-intro-text">
+              <p class="feeling-why">We spend hours looking at our screens every day.<br />Yet most of us only have two choices: Light Mode or Dark Mode.</p>
+              <p class="feeling-story">I kept wondering, why can't I choose what feels best for my own eyes and brain? So I built Goodmood for myself.</p>
+              <p class="feeling-story">I used it every day for over a month. My eyes felt less dry and less fatigued. My mind felt calmer. I found myself feeling better throughout the day. I kept updating it, tweaking it, trying to make myself feel really good at my screen.</p>
+              <p class="feeling-story">That was the moment I thought: I might be onto something useful. Now you can join and use this too.</p>
+              <p class="feeling-signature">— Pieter, founder of Goodmood</p>
+            </div>
           </div>
         </div>
         <div class="container feeling-inner">
@@ -514,12 +518,27 @@ const latestPosts = allPosts
 
   /* ── Feeling ── */
   .feeling-intro {
-    max-width: 640px;
+    display: flex;
+    align-items: flex-start;
+    gap: 2rem;
+    max-width: 760px;
     margin-bottom: 3rem;
   }
 
+  .feeling-intro-logo {
+    width: 88px;
+    height: 88px;
+    border-radius: 22px;
+    flex-shrink: 0;
+    box-shadow: 0 8px 32px rgba(125, 211, 168, 0.12);
+  }
+
+  .feeling-intro-text {
+    flex: 1;
+  }
+
   .feeling-why {
-    font-size: 1.15rem;
+    font-size: 1.1rem;
     font-weight: 600;
     color: var(--text);
     line-height: 1.7;
@@ -527,10 +546,24 @@ const latestPosts = allPosts
   }
 
   .feeling-story {
-    font-size: 1rem;
+    font-size: 0.97rem;
     color: var(--text-muted);
     line-height: 1.8;
-    margin: 0;
+    margin: 0 0 0.75rem;
+  }
+
+  .feeling-signature {
+    font-size: 0.88rem;
+    color: var(--text-subtle);
+    font-style: italic;
+    margin: 1rem 0 0;
+  }
+
+  @media (max-width: 560px) {
+    .feeling-intro {
+      flex-direction: column;
+      gap: 1.25rem;
+    }
   }
 
   .feeling {
