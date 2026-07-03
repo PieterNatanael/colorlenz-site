@@ -48,15 +48,18 @@ const latestPosts = allPosts
       <!-- ── FEELING ── -->
       <section class="feeling">
         <div class="container">
-          <div class="feeling-intro reveal">
-            <Image src={logo} alt="Goodmood" width={120} height={120} class="feeling-intro-logo" />
-            <div class="feeling-intro-text">
-              <p class="feeling-why">We spend hours looking at our screens every day.<br />Yet most of us only have two choices: Light Mode or Dark Mode.</p>
-              <p class="feeling-story">I kept wondering, why can't I choose what feels best for my own eyes and brain? So I built Goodmood for myself.</p>
-              <p class="feeling-story">I used it every day for over a month. My eyes felt less dry and less fatigued. My mind felt calmer. I found myself feeling better throughout the day. I kept updating it, tweaking it, trying to make myself feel really good at my screen.</p>
-              <p class="feeling-story">That was the moment I thought: I might be onto something useful. Now you can join and use this too.</p>
-              <p class="feeling-signature">— Pieter, founder of Goodmood</p>
+          <div class="founder-note reveal">
+            <div class="founder-note-header">
+              <Image src={logo} alt="Goodmood" width={48} height={48} class="founder-logo" />
+              <div>
+                <p class="founder-label">From the founder</p>
+                <p class="founder-name">Pieter, Goodmood</p>
+              </div>
             </div>
+            <p class="feeling-why">We spend hours looking at our screens every day. Yet most of us only have two choices: Light Mode or Dark Mode.</p>
+            <p class="feeling-story">I kept wondering, why can't I choose what feels best for my own eyes and brain? So I built Goodmood for myself.</p>
+            <p class="feeling-story">I used it every day for over a month. My eyes felt less dry and less fatigued. My mind felt calmer. I found myself feeling better throughout the day. I kept updating it, tweaking it, trying to make myself feel really good at my screen.</p>
+            <p class="feeling-story">That was the moment I thought: I might be onto something useful. Now you can join and use this too.</p>
           </div>
         </div>
         <div class="container feeling-inner">
@@ -517,53 +520,64 @@ const latestPosts = allPosts
   }
 
   /* ── Feeling ── */
-  .feeling-intro {
+  .founder-note {
+    max-width: 640px;
+    margin: 0 auto 3.5rem;
+    padding: 2rem;
+    border: 1px solid var(--border);
+    border-radius: var(--radius);
+    background: var(--bg-card);
+  }
+
+  .founder-note-header {
     display: flex;
-    align-items: flex-start;
-    gap: 2rem;
-    max-width: 760px;
-    margin-bottom: 3rem;
+    align-items: center;
+    gap: 0.85rem;
+    margin-bottom: 1.5rem;
+    padding-bottom: 1.25rem;
+    border-bottom: 1px solid var(--border);
   }
 
-  .feeling-intro-logo {
-    width: 88px;
-    height: 88px;
-    border-radius: 22px;
+  .founder-logo {
+    width: 48px;
+    height: 48px;
+    border-radius: 12px;
     flex-shrink: 0;
-    box-shadow: 0 8px 32px rgba(125, 211, 168, 0.12);
   }
 
-  .feeling-intro-text {
-    flex: 1;
+  .founder-label {
+    font-size: 0.72rem;
+    font-weight: 600;
+    letter-spacing: 0.07em;
+    text-transform: uppercase;
+    color: var(--accent);
+    margin: 0 0 0.15rem;
+  }
+
+  .founder-name {
+    font-size: 0.88rem;
+    font-weight: 500;
+    color: var(--text);
+    margin: 0;
   }
 
   .feeling-why {
-    font-size: 1.1rem;
+    font-size: 1rem;
     font-weight: 600;
     color: var(--text);
     line-height: 1.7;
-    margin: 0 0 1rem;
+    margin: 0 0 0.85rem;
   }
 
   .feeling-story {
-    font-size: 0.97rem;
+    font-size: 0.93rem;
     color: var(--text-muted);
     line-height: 1.8;
     margin: 0 0 0.75rem;
   }
 
-  .feeling-signature {
-    font-size: 0.88rem;
-    color: var(--text-subtle);
-    font-style: italic;
-    margin: 1rem 0 0;
-  }
-
-  @media (max-width: 560px) {
-    .feeling-intro {
-      flex-direction: column;
-      gap: 1.25rem;
-    }
+  .feeling-story:last-child {
+    margin-bottom: 0;
   }
 
   .feeling {
