@@ -53,7 +53,7 @@ The website at colorlenz.com is still here while the domain transition is underw
 
 Everything that made ColorLenz worth using:
 
-- Free to download, with the core filter included
+- Available on the Mac App Store, with the core filter included
 - No data collected, no screen content ever leaving your device
 - A quiet overlay that works on top of any app
 - Presets you can build, save, and switch between instantly
@@ -73,4 +73,4 @@ That is what Goodmood is trying to be.
 
 ---
 
-*Goodmood: Screen Companion is available free on the [Mac App Store](https://apps.apple.com/id/app/goodmood-screen-companion/id6765573775?mt=12). Free screen filter presets are at [colorlenz.com/presets](/presets).*
+*Goodmood: Screen Companion is on the [Mac App Store](https://apps.apple.com/id/app/goodmood-screen-companion/id6765573775?mt=12). Screen filter preset codes are at [colorlenz.com/presets](/presets).*
