@@ -45,8 +45,8 @@ const latestPosts = allPosts
 
       <hr class="pixel-divider" />
 
-      <!-- ── FEELING ── -->
-      <section class="feeling">
+      <!-- ── FOUNDER NOTE ── -->
+      <section class="founder-section">
         <div class="container">
           <div class="founder-note reveal">
             <div class="founder-note-header">
@@ -71,6 +71,10 @@ const latestPosts = allPosts
             </div>
           </div>
         </div>
+      </section>
+
+      <!-- ── FEELING ── -->
+      <section class="feeling">
         <div class="container feeling-inner">
           <Image src={logo} alt="Goodmood" width={288} height={288} class="feeling-logo reveal" />
           <div class="feeling-text reveal">
@@ -526,6 +530,11 @@ const latestPosts = allPosts
     height: auto;
     border-radius: var(--radius);
     filter: drop-shadow(0 20px 60px rgba(125, 211, 168, 0.08));
+  }
+
+  /* ── Founder section ── */
+  .founder-section {
+    background: var(--bg);
   }
 
   /* ── Feeling ── */
