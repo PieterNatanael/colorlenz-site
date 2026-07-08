@@ -57,7 +57,7 @@ Here's how it works technically:
 
 **Real-time overlay:** The adjusted image is rendered as a transparent overlay on top of your apps. It's instantaneous and lightweight.
 
-**No storage:** Frames are processed and immediately discarded. Nothing is written to disk. Nothing is logged. Nothing is sent anywhere.
+**No frame storage:** Frames are processed and immediately discarded. Nothing is written to disk. Nothing is logged. Nothing is sent anywhere. (Your settings and presets are saved locally on your device only.)
 
 **Offline functionality:** Goodmood works without an internet connection. You don't need to authenticate, log in, or connect to our servers. Ever.
 
