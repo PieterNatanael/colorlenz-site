@@ -47,7 +47,7 @@ You deserve tools that respect your privacy, not profit from your data.
 
 ## How Goodmood Works: Everything On-Device
 
-Goodmood operates on a simple principle: **your data never leaves your Mac**.
+Goodmood operates on a simple principle: **your screen and personal information never leave your Mac**. The only network contact is Apple's App Store, which shows prices and handles your subscription.
 
 Here's how it works technically:
 
