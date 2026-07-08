@@ -1,4 +1,5 @@
 ---
+draft: true
 title: "5 Apps That Make Claude AI Better on macOS"
 description: "The best companion apps for Claude AI on Mac. From Raycast to Obsidian, these five tools pair with Claude to help you work faster, think clearer, and last longer in deep AI sessions."
 pubDate: "Jun 15 2026"

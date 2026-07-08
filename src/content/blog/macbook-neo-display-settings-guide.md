@@ -1,4 +1,5 @@
 ---
+draft: true
 title: "New MacBook Neo? Here's How to Set Up Your Display for Comfort"
 description: "A setup guide for MacBook Neo owners who want to get the most out of their display. Covers every built-in screen setting and how to go further with a free screen filter."
 pubDate: "Jun 19 2026"

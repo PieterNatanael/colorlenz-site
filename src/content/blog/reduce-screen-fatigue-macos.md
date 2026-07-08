@@ -1,4 +1,5 @@
 ---
+draft: true
 title: "Reduce Screen Fatigue on macOS: A 5-Minute Fix"
 description: "Screen fatigue is real. Learn what causes it, who's most affected, and 5 practical ways to reduce eye strain and mental exhaustion while working on your Mac."
 pubDate: "May 18 2026"

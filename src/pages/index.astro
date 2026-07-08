@@ -16,7 +16,7 @@ import appstore5 from '../assets/appstore5.jpg';
 import { SITE_TITLE, SITE_DESCRIPTION, APP_STORE_URL, WINDOWS_WAITLIST_FORM_ID } from '../consts';
 
 // Get latest blog posts
-const allPosts = await getCollection('blog');
+const allPosts = await getCollection('blog', ({ data }) => !data.draft);
 const latestPosts = allPosts
   .sort((a, b) => new Date(b.data.pubDate).getTime() - new Date(a.data.pubDate).getTime())
   .slice(0, 3);

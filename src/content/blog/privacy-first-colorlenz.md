@@ -1,4 +1,5 @@
 ---
+draft: true
 title: "Privacy-First Software: Why We Built Goodmood Without Tracking"
 description: "Most apps track you. Goodmood doesn't. Learn why privacy matters for neurodivergent users and how on-device processing keeps your data safe."
 pubDate: "May 18 2026"

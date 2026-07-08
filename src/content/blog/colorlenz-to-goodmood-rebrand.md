@@ -1,4 +1,5 @@
 ---
+draft: true
 title: "From ColorLenz to Goodmood: Why We Changed Our Name"
 description: "We renamed our Mac screen filter app from ColorLenz to Goodmood. Here's the honest story behind why — and what stays exactly the same."
 pubDate: "Jul 02 2026"

@@ -1,4 +1,5 @@
 ---
+draft: true
 title: "The Neurodiversity Perspective: Building Software for Different Brains"
 description: "What is neurodiversity? How do ADHD, autism, and dyslexia affect how we use technology? Learn the design principles that work for different brains."
 pubDate: "May 18 2026"

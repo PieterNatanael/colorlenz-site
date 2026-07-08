@@ -1,4 +1,5 @@
 ---
+draft: true
 title: "The Coffee Shop Series: A Custom Screen Experience for Claude AI on macOS"
 description: "How Goodmood screen filter presets, Green Tea Latte and Caramel Latte, give Claude AI users on macOS a calmer, more focused experience. Customize how Claude feels without changing how it works."
 pubDate: "Jun 15 2026"

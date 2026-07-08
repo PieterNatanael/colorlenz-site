@@ -1,4 +1,5 @@
 ---
+draft: true
 title: "Mac Display Settings: What Each One Does and When to Use It"
 description: "A clear guide to every color and display setting on your Mac — Night Shift, True Tone, Color Filters, Reduce White Point — what each one is designed for, and how they work together."
 pubDate: "Jun 19 2026"
